@@ -68,7 +68,93 @@
         </div>
         <div class="layout-content" id="main-content">
           <div class="container margin-lg-40 chapter">
-            <h1 class="chapter-title">Introduction</h1>
+            <h1 class="chapter-title">Toolbars</h1>
+            <h2 class="article-title">Simple toolbar</h2>
+            <div class="example-box">
+              <div class="example-box-header">
+                <div class="toolbar">
+                  <div class="toolbar-row">
+                    <div class="toolbar-icon">
+                      <button class="btn-borderless btn-default" type="button"><i class="mdi mdi-menu"></i></button>
+                    </div>
+                    <div class="toolbar-title">Title here</div>
+                    <div class="toolbar-actions">
+                      <button class="btn-borderless btn-default" type="button" disabled=""><i class="mdi mdi-phone"></i></button>
+                      <button class="btn-borderless btn-default" type="button"><i class="mdi mdi-dots-vertical"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="html">&lt;div class=&quot;toolbar&quot;&gt;
+  &lt;div class=&quot;toolbar-row&quot;&gt;
+    &lt;div class=&quot;toolbar-icon&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn-borderless btn-default&quot;&gt;&lt;i class=&quot;mdi mdi-menu&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;toolbar-title&quot;&gt;Title here&lt;/div&gt;
+    &lt;div class=&quot;toolbar-actions&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn-borderless btn-default&quot;&gt;&lt;i class=&quot;mdi mdi-phone&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn-borderless btn-default&quot;&gt;&lt;i class=&quot;mdi mdi-dots-vertical&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <h2 class="article-title">Toolbar with tabs</h2>
+            <div class="example-box">
+              <div class="example-box-header">
+                <div class="toolbar">
+                  <div class="toolbar-row">
+                    <div class="toolbar-icon">
+                      <button class="btn-borderless btn-default"><i class="mdi mdi-menu"></i></button>
+                    </div>
+                    <div class="toolbar-title">Title here</div>
+                    <button class="btn-borderless btn-default"><i class="mdi mdi-dots-vertical"></i></button>
+                  </div>
+                  <div class="tab-bar toolbar-icon-padding">
+                    <div class="tab active">
+                      <div class="tab-content">
+                        <div class="tab-text">Item one</div>
+                      </div>
+                    </div>
+                    <div class="tab">
+                      <div class="tab-content">
+                        <div class="tab-text">Item two</div>
+                      </div>
+                    </div>
+                    <div class="tab">
+                      <div class="tab-content">
+                        <div class="tab-text">Item three</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <pre><code class="html">&lt;div class=&quot;toolbar&quot;&gt;
+  &lt;div class=&quot;toolbar-row&quot;&gt;
+    &lt;div class=&quot;toolbar-icon&quot;&gt;
+      &lt;button class=&quot;btn-borderless btn-default&quot;&gt;&lt;i class=&quot;mdi mdi-menu&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;toolbar-title&quot;&gt;Title here&lt;/div&gt;
+    &lt;button class=&quot;btn-borderless btn-default&quot;&gt;&lt;i class=&quot;mdi mdi-dots-vertical&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-bar toolbar-icon-padding&quot;&gt;
+    &lt;div class=&quot;tab active&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;div class=&quot;tab-text&quot;&gt;Item one&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;div class=&quot;tab-text&quot;&gt;Item two&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab&quot;&gt;
+      &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;div class=&quot;tab-text&quot;&gt;Item three&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
           </div>
         </div>
       </div>

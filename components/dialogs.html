@@ -68,7 +68,41 @@
         </div>
         <div class="layout-content" id="main-content">
           <div class="container margin-lg-40 chapter">
-            <h1 class="chapter-title">Introduction</h1>
+            <h1 class="chapter-title">Dialogs</h1>
+            <button class="btn btn-raised btn-primary">Launch dialog</button>
+            <div class="dialog">
+              <div class="dialog-backdrop"></div>
+              <div class="dialog-content">
+                <div class="dialog-title">Dialog example</div>
+                <div class="dialog-body">
+                  <p>Content</p>
+                </div>
+                <div class="dialog-actions">
+                  <button class="btn-flat btn-primary">Cancel</button>
+                  <button class="btn-flat btn-primary">Ok</button>
+                </div>
+              </div>
+            </div>
+            <script>
+              (function () {
+                var dialog = document.querySelector(".dialog");
+              
+                function toggleDialogVisibility() {
+                  if (dialog.classList.contains("show")) {
+                    dialog.classList.remove("show");
+                  } else {
+                    dialog.classList.add("show");
+                  }
+                }
+              
+                document.querySelector(".dialog-backdrop").addEventListener("click", toggleDialogVisibility);
+                var buttons = document.querySelectorAll("button");
+                buttons.forEach(function (button) {
+                  button.addEventListener("click", toggleDialogVisibility);
+                });
+              
+              })();
+            </script>
           </div>
         </div>
       </div>

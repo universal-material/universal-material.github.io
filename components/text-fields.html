@@ -68,7 +68,93 @@
         </div>
         <div class="layout-content" id="main-content">
           <div class="container margin-lg-40 chapter">
-            <h1 class="chapter-title">Introduction</h1>
+            <h1 class="chapter-title">Text fields</h1>
+            <div class="text-field"><small class="helper-text">Helper Text</small>
+              <input class="text-input" type="text" placeholder="Placeholder" id="text-field-1">
+              <label for="text-field-1">Normal</label>
+            </div>
+            <div class="text-field focus">
+              <input class="text-input" type="text" placeholder="Placeholder">
+              <label>Normal focused</label>
+            </div>
+            <div class="text-field invalid"><small class="helper-text error-text">Error Text</small>
+              <input class="text-input" type="text" placeholder="Placeholder">
+              <label>Normal</label>
+            </div>
+            <div class="text-field floating-label">
+              <input class="text-input" type="text" placeholder="Placeholder">
+              <label>Floating label</label>
+            </div>
+            <div class="text-field floating-label not-empty">
+              <input class="text-input" type="text" placeholder="Placeholder" value="some value">
+              <label>Floating label not empty</label>
+            </div>
+            <div class="text-field floating-label focus">
+              <input class="text-input" type="text" placeholder="Placeholder">
+              <label>Floating label focus</label>
+            </div>
+            <div class="text-field">
+              <div class="text-input-group">
+                <div class="text-input-icon"><i class="mdi mdi-calendar"></i></div>
+                <input class="text-input" type="text" placeholder="Placeholder">
+              </div>
+              <label>Icon signifier</label>
+            </div>
+            <div class="text-field dropdown">
+              <button class="text-input dropdown-toggle" type="button">
+                <div class="placeholder">Placeholder</div>
+                <div class="dropdown-toggle-icon"></div>
+              </button>
+              <label>Action icon</label>
+              <div class="dropdown-menu down-right fit-width">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">Ice cream</div>
+                  <div class="dropdown-item">Pastry</div>
+                  <div class="dropdown-item">Other</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-field">
+              <div class="text-input-group">
+                <div class="text-input">
+                  <div class="text-input-prefix">$</div>
+                  <input type="text" placeholder="Placeholder">
+                </div>
+              </div>
+              <label>Input prefix</label>
+            </div>
+            <div class="text-field">
+              <div class="text-input-group">
+                <div class="text-input">
+                  <input type="text" placeholder="Placeholder">
+                  <div class="text-input-suffix">kg</div>
+                </div>
+              </div>
+              <label>Input suffix</label>
+            </div>
+            <div class="text-field-elevated">
+              <div class="text-input-group">
+                <div class="text-input-icon"><i class="mdi mdi-magnify"></i></div>
+                <input class="text-input" placeholder="Search">
+                <div class="text-input-icon"><i class="mdi mdi-microphone"></i></div>
+              </div>
+            </div>
+            <div class="text-field text-field-box">
+              <input class="text-input" placeholder="Placeholder">
+              <label>Label</label>
+            </div>
+            <div class="text-field text-field-box">
+              <textarea class="text-input" rows="5" placeholder="Description here..."></textarea>
+              <label>Label</label>
+            </div>
+            <div class="text-field">
+              <textarea class="text-input" rows="5"></textarea>
+              <label>Multi-line text field</label>
+            </div>
+            <div class="text-field text-area">
+              <textarea class="text-input" rows="5" placeholder="Description here..."></textarea>
+              <label class="floating-label">Text area</label>
+            </div>
           </div>
         </div>
       </div>

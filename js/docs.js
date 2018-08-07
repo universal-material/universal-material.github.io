@@ -15,6 +15,10 @@
         document.body.classList.toggle("dense-layout");
     }
 
+    function toggleRtl() {
+        document.body.classList.toggle("rtl");
+    }
+
     function mainContentScroll(e) {
         if (e.target.scrollTop) {
             appbar.classList.add('elevation-6dp');
@@ -31,10 +35,19 @@
         .getElementById("dense-toggle")
         .addEventListener("click", toggleDenseLayout);
 
+    document
+        .getElementById("rtl-toggle")
+        .addEventListener("click", toggleRtl);
+
+
     sidebarBackdrop.addEventListener("click", toggleSidebar);
 
 
     document.getElementById("main-content").addEventListener("scroll", mainContentScroll);
+
+    Ripple.initializeRipples();
+    TextField.initializeTextFields();
 })();
 
 hljs.initHighlightingOnLoad();
+

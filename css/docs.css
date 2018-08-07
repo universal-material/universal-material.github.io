@@ -1,4 +1,6 @@
 .sidebar {
+  height: 100%;
+  overflow: auto;
   border-right: 1px solid rgba(0, 0, 0, 0.12); }
 
 .sidebar .toolbar {
@@ -12,16 +14,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #e0e0e0;
+  padding: .5rem;
   overflow: auto;
-  padding: .5rem; }
+  background: #e0e0e0; }
   .example-box .toolbar {
     background: #e0e0e0; }
 
 .example-box-header {
-  background: #f5f5f5;
   padding: 1rem;
-  margin-bottom: .5rem; }
+  margin-bottom: .5rem;
+  background: #f5f5f5; }
 
 .limited-height {
   max-height: 300px;
@@ -39,32 +41,30 @@
   height: 14rem; }
 
 .menu-example .toolbar {
-  background-color: white; }
+  background-color: #fff; }
 
 .card {
   margin-bottom: 8px; }
 
 .card-media,
 .card-media-wide {
-  background: url(../img/card-media-background.jpg);
+  background: url("http://via.placeholder.com/640x400") center;
   background-size: cover; }
 
-.sidebar {
-  overflow: auto;
-  height: 100%; }
-
-.chapter, .article-title {
+.chapter,
+.article-title {
   margin-top: 80px; }
 
-.chapter-title, .article-title {
+.chapter-title,
+.article-title {
+  margin-bottom: 48px;
   font-size: 2rem;
   font-weight: 400;
-  margin-bottom: 48px;
-  color: #563d7c; }
+  color: #512da8; }
 
 .article-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-size: 1.5rem; }
 
 pre {
   margin: 0; }

@@ -19,6 +19,11 @@
   background: #e0e0e0; }
   .example-box .toolbar {
     background: #e0e0e0; }
+  .example-box .floating-action-area {
+    position: static; }
+  .example-box .floating-menu {
+    position: relative;
+    margin-top: 200px; }
 
 .example-box-header {
   padding: 1rem;
@@ -48,7 +53,7 @@
 
 .card-media,
 .card-media-wide {
-  background: url("http://via.placeholder.com/640x400") center;
+  background: url("/img/venice.jpg") center;
   background-size: cover; }
 
 .chapter,
@@ -60,7 +65,7 @@
   margin-bottom: 48px;
   font-size: 2rem;
   font-weight: 400;
-  color: #512da8; }
+  color: #6200ee; }
 
 .article-title {
   margin-bottom: 1rem;

@@ -10,17 +10,17 @@
     <title>Universal Material</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i">
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/css/universal-material.css">
     <link rel="stylesheet" href="/css/docs.css">
     <body class="sidebar-layout">
-      <nav class="sidebar sidebar-left sidebar-lg-fixed">
+      <div class="sidebar sidebar-left sidebar-lg-pinned">
         <div class="toolbar">
           <div class="toolbar-row">
             <div class="toolbar-title">Material Design</div>
           </div>
         </div>
-        <div class="list list-hover"><a class="list-item" href="/">
+        <nav class="list list-hover"><a class="list-item" href="/">
             <div class="list-item-icon"><i class="mdi mdi-home"></i></div>
             <div class="list-item-primary-content">Introduction</div></a><a class="list-item" href="/layout/grid.html">
             <div class="list-item-icon"><i class="mdi mdi-view-grid"></i></div>
@@ -28,7 +28,9 @@
             <div class="list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
             <div class="list-item-primary-content"><span>Typography</span></div></a><a class="list-item" href="/components/buttons.html">
             <div class="list-item-icon"><i class="mdi mdi-arrow-right"></i></div>
-            <div class="list-item-primary-content"><span>Buttons</span></div></a><a class="list-item" href="/components/cards.html">
+            <div class="list-item-primary-content"><span>Buttons</span></div></a><a class="list-item" href="/components/floating-action-button.html">
+            <div class="list-item-icon"><i class="mdi mdi-plus-circle-outline"></i></div>
+            <div class="list-item-primary-content"><span>Floating action button</span></div></a><a class="list-item" href="/components/cards.html">
             <div class="list-item-icon"><i class="mdi mdi-page-layout-body"></i></div>
             <div class="list-item-primary-content"><span>Cards</span></div></a><a class="list-item" href="/components/chips.html">
             <div class="list-item-icon"><i class="mdi mdi-label"></i></div>
@@ -52,20 +54,20 @@
             <div class="list-item-icon"><i class="mdi mdi-textbox"></i></div>
             <div class="list-item-primary-content"><span>Text fields</span></div></a><a class="list-item" href="/components/toolbars.html">
             <div class="list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
-            <div class="list-item-primary-content"><span>Toolbars</span></div></a></div>
-      </nav>
+            <div class="list-item-primary-content"><span>Toolbars</span></div></a></nav>
+      </div>
       <div class="sidebar-backdrop"></div>
       <div class="layout-content toolbar-layout">
         <div class="toolbar toolbar-primary" id="app-bar">
           <div class="toolbar-row">
             <div class="toolbar-start">
-              <div class="toolbar-navigation btn-borderless btn-default d-lg-none" id="menu-toggle"><i class="mdi mdi-menu"></i></div>
+              <div class="toolbar-navigation btn-borderless btn-default d-lg-none" id="menu-toggle"><i class="btn-icon mdi mdi-menu"></i></div>
             </div>
             <div class="toolbar-title">Material</div>
             <div class="toolbar-end">
               <div class="toolbar-actions">
-                <button class="toolbar-action btn-borderless btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="mdi mdi-format-align-right"></i></button>
-                <button class="toolbar-action btn-borderless btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="mdi mdi-format-size"></i></button>
+                <button class="toolbar-action btn-borderless btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="btn-icon mdi mdi-format-align-right"></i></button>
+                <button class="toolbar-action btn-borderless btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="btn-icon mdi mdi-format-size"></i></button>
               </div>
             </div>
           </div>

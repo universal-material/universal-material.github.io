@@ -74,57 +74,117 @@
         </div>
         <div class="layout-content" id="main-content">
           <div class="container margin-lg-40 chapter">
-            <h4 class="headline4 chapter-title">Progress</h4>
-            <h5 class="headline5 article-title">Determinate</h5>
-            <div class="example-box">
-              <div class="example-box-header">
-                <div class="progress show">
-                  <div class="progress-indicator" style="width: 30%;"></div>
+            <div class="container">
+              <h4 class="headline4 chapter-title">Floating action button</h4>
+              <h5 class="headline5 article-title">Floating buttons</h5>
+              <div class="example-box">
+                <div class="example-box-header">
+                  <button class="btn-floating btn-default"><i class="btn-icon mdi mdi-plus"></i></button>
+                  <button class="btn-floating btn-default" disabled><i class="btn-icon mdi mdi-plus"></i></button>
                 </div>
+                <pre><code class="html">&lt;button class=&quot;btn-floating btn-default&quot;&gt;
+  &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-floating btn-default&quot; disabled&gt;
+  &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
               </div>
-              <pre><code class="html">&lt;div class=&quot;progress show&quot;&gt;
-  &lt;div style=&quot;width: 30%&quot; class=&quot;progress-indicator&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <h5 class="headline5 article-title">Indeterminate</h5>
-            <div class="example-box">
-              <div class="example-box-header">
-                <div class="progress indeterminate show">
-                  <div class="progress-indicator"></div>
+              <h5 class="headline5 article-title">Small floating buttons</h5>
+              <div class="example-box">
+                <div class="example-box-header">
+                  <button class="btn-floating btn-floating-sm btn-default"><i class="btn-icon mdi mdi-plus"></i></button>
+                  <button class="btn-floating btn-floating-sm btn-default" disabled><i class="btn-icon mdi mdi-plus"></i></button>
                 </div>
+                <pre><code class="html">&lt;button class=&quot;btn-floating btn-floating-sm btn-default&quot;&gt;
+  &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-floating btn-floating-sm btn-default&quot; disabled&gt;
+  &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
               </div>
-              <pre><code class="html">&lt;div class=&quot;progress indeterminate show&quot;&gt;
-  &lt;div class=&quot;progress-indicator&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <h5 class="headline5 article-title">Changing color</h5>
-            <p>Just set progress color and the magic is done</p>
-            <div class="example-box">
-              <div class="example-box-header">
-                <div class="progress indeterminate show text-secondary">
-                  <div class="progress-indicator"></div>
+              <h5 class="headline5 article-title">Floating extended buttons</h5>
+              <div class="example-box">
+                <div class="example-box-header">
+                  <button class="btn-floating btn-floating-extended btn-default"><i class="btn-icon mdi mdi-plus"></i>Floating extended</button>
+                  <button class="btn-floating btn-floating-extended btn-default" disabled><i class="btn-icon mdi mdi-plus"></i>Floating extended</button>
                 </div>
+                <pre><code class="html">&lt;button class=&quot;btn-floating btn-floating-extended btn-default&quot;&gt;
+  &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;Floating extended
+&lt;/button&gt;
+&lt;button class=&quot;btn-floating btn-floating-extended btn-default&quot; disabled&gt;
+  &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;Floating extended
+&lt;/button&gt;</code></pre>
               </div>
-              <pre><code class="html">&lt;div class=&quot;progress indeterminate show text-secondary&quot;&gt;
-  &lt;div class=&quot;progress-indicator&quot;&gt;&lt;/div&gt;
+              <h5 class="headline5 article-title">Floating action area</h5>
+              <div class="example-box">
+                <div class="example-box-header">
+                  <div class="floating-action-area text-end">
+                    <button class="btn-floating btn-primary"><i class="btn-icon mdi mdi-plus"></i></button>
+                  </div>
+                </div>
+                <pre><code class="html">&lt;div class=&quot;floating-action-area&quot;&gt;
+  &lt;button class=&quot;btn-floating btn-primary&quot;&gt;
+    &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
+  &lt;/button&gt;
 &lt;/div&gt;</code></pre>
-            </div>
-            <h5 class="headline5 article-title">Circular progress</h5>
-            <div class="example-box">
-              <div class="example-box-header text-center">
-                <div class="preloader-wrapper">
-                  <div class="spinner-layer">
-                    <div class="circle-clipper left">
-                      <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                      <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                      <div class="circle"></div>
+              </div>
+              <h5 class="headline5 article-title">Floating menu</h5>
+              <div class="example-box">
+                <div class="example-box-header">
+                  <div class="floating-action-area floating-menu text-end"><span class="btn-floating btn-danger floating-menu-toggle" tabindex="1"><i class="btn-icon mdi mdi-plus"></i></span>
+                    <div class="floating-menu-items">
+                      <div class="floating-menu-item">
+                        <div class="floating-menu-label">Write</div>
+                        <div class="floating-menu-action">
+                          <button class="btn-floating btn-danger"><i class="btn-icon mdi mdi-pencil"></i></button>
+                        </div>
+                      </div>
+                      <div class="floating-menu-item">
+                        <div class="floating-menu-label">Reminder</div>
+                        <div class="floating-menu-action">
+                          <button class="btn-floating btn-floating-sm btn-primary"><i class="btn-icon mdi mdi-reminder"></i></button>
+                        </div>
+                      </div>
+                      <div class="floating-menu-item">
+                        <div class="floating-menu-label">Checklist</div>
+                        <div class="floating-menu-action">
+                          <button class="btn-floating btn-floating-sm btn-default"><i class="btn-icon mdi mdi-format-list-checkbox"></i></button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <pre><code class="html">&lt;div class=&quot;floating-action-area floating-menu&quot;&gt;
+  &lt;span class=&quot;btn-floating btn-danger floating-menu-toggle&quot; tabindex=&quot;1&quot;&gt;
+    &lt;i class=&quot;btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  &lt;div class=&quot;floating-menu-items&quot;&gt;
+    &lt;div class=&quot;floating-menu-item&quot;&gt;
+      &lt;div class=&quot;floating-menu-label&quot;&gt;Write&lt;/div&gt;
+      &lt;div class=&quot;floating-menu-action&quot;&gt;
+        &lt;button class=&quot;btn-floating btn-danger&quot;&gt;
+          &lt;i class=&quot;btn-icon mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+         &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;floating-menu-item&quot;&gt;
+      &lt;div class=&quot;floating-menu-label&quot;&gt;Reminder&lt;/div&gt;
+      &lt;div class=&quot;floating-menu-action&quot;&gt;
+        &lt;button class=&quot;btn-floating btn-floating-sm btn-primary&quot;&gt;
+          &lt;i class=&quot;btn-icon mdi mdi-reminder&quot;&gt;&lt;/i&gt;
+         &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;floating-menu-item&quot;&gt;
+      &lt;div class=&quot;floating-menu-label&quot;&gt;Checklist&lt;/div&gt;
+      &lt;div class=&quot;floating-menu-action&quot;&gt;
+        &lt;button class=&quot;btn-floating btn-floating-sm btn-default&quot;&gt;
+          &lt;i class=&quot;btn-icon mdi mdi-format-list-checkbox&quot;&gt;&lt;/i&gt;
+         &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
               </div>
             </div>
           </div>

@@ -89,26 +89,6 @@
                 </div>
               </div>
             </div>
-            <script>
-              (function () {
-                var dialog = document.querySelector(".dialog");
-              
-                function toggleDialogVisibility() {
-                  if (dialog.classList.contains("show")) {
-                    dialog.classList.remove("show");
-                  } else {
-                    dialog.classList.add("show");
-                  }
-                }
-              
-                document.querySelector(".dialog-backdrop").addEventListener("click", toggleDialogVisibility);
-                var buttons = document.querySelectorAll("button");
-                buttons.forEach(function (button) {
-                  button.addEventListener("click", toggleDialogVisibility);
-                });
-              
-              })();
-            </script>
           </div>
         </div>
       </div>
@@ -116,5 +96,32 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="/js/universal-material.js"></script>
     <script src="/js/docs.js"></script>
+    <script>
+      (function () {
+        var dialog = umd.Dialog.attach(document.querySelector(".dialog"));
+      
+        document.querySelector(".dialog-backdrop").addEventListener("click", function () { dialog.toggle() });
+        var buttons = document.querySelectorAll("button");
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () { dialog.toggle() });
+        });
+      
+        //
+        // function toggleDialogVisibility() {
+        //   if (dialog.classList.contains("show")) {
+        //     dialog.classList.remove("show");
+        //   } else {
+        //     dialog.classList.add("show");
+        //   }
+        // }
+        //
+        // document.querySelector(".dialog-backdrop").addEventListener("click", toggleDialogVisibility);
+        // var buttons = document.querySelectorAll("button");
+        // buttons.forEach(function (button) {
+        //   button.addEventListener("click", toggleDialogVisibility);
+        // });
+      
+      })();
+    </script>
   </head>
 </html>

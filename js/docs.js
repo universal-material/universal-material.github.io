@@ -42,11 +42,11 @@
 
   sidebarBackdrop.addEventListener("click", toggleSidebar);
 
-
   document.getElementById("main-content").addEventListener("scroll", mainContentScroll);
 
   umd.Ripple.initializeRipples();
   umd.TextField.initializeTextFields();
+  umd.Dropdown.initializeDropdowns();
 
   var textField = document.querySelector('.text-field-box');
   var textInput = document.querySelector('#text-field-box');

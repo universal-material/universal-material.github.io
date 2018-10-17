@@ -173,6 +173,20 @@ var umd;
                     _this._dialogElement.classList.remove('hide');
                 }
             };
+            this.toggle = function () {
+                var action = _this._showing ? _this.close : _this.open;
+                action();
+            };
+            this.open = function () {
+                _this._dialogElement.classList.add('show');
+                _this._showing = true;
+            };
+            this.close = function () {
+                _this._dialogElement.classList.add('hide');
+                _this._dialogElement.classList.remove('show');
+                _this._showing = false;
+                _this.addAnimationEndEvents();
+            };
             this._dialogConfig = __assign({}, DialogConfig.default, dialogConfig);
             this._dialogBodyElement = this._dialogElement.querySelector('.dialog-body');
             if (this._dialogBodyElement) {
@@ -188,14 +202,6 @@ var umd;
         };
         Dialog.attach = function (element, dialogConfig) {
             return new Dialog(element, dialogConfig);
-        };
-        Dialog.prototype.open = function () {
-            this._dialogElement.classList.add('show');
-        };
-        Dialog.prototype.close = function () {
-            this._dialogElement.classList.add('hide');
-            this._dialogElement.classList.remove('show');
-            this.addAnimationEndEvents();
         };
         Dialog.prototype._setBodyDividers = function () {
             if (this._dialogBodyElement.scrollTop) {
@@ -219,6 +225,80 @@ var umd;
         return Dialog;
     }());
     umd.Dialog = Dialog;
+    var DropdownConfig = (function () {
+        function DropdownConfig() {
+        }
+        DropdownConfig.default = {};
+        return DropdownConfig;
+    }());
+    umd.DropdownConfig = DropdownConfig;
+    var closeEvent = new CustomEvent('close');
+    var openEvent = new CustomEvent('open');
+    var EnterKey = 13;
+    var EscapeKey = 27;
+    var SpaceKey = 32;
+    var Dropdown = (function () {
+        function Dropdown(_dropdownElement, dropdownConfig) {
+            var _this = this;
+            this._dropdownElement = _dropdownElement;
+            this.toggle = function () {
+                var action = _this._showing ? _this.close : _this.open;
+                action();
+            };
+            this.open = function () {
+                _this._dropdownElement.classList.add('open');
+                _this._showing = true;
+                _this._dropdownElement.dispatchEvent(openEvent);
+            };
+            this.close = function () {
+                _this._dropdownElement.classList.remove('open');
+                _this._showing = false;
+                _this._dropdownElement.dispatchEvent(closeEvent);
+            };
+            this._dropdownToggle = _dropdownElement.querySelector('.dropdown-toggle');
+            if (!this._dropdownToggle)
+                return;
+            this._dropdownConfig = __assign({}, DropdownConfig.default, dropdownConfig);
+            this._attachEvents();
+        }
+        Dropdown.attach = function (element, dropdownConfig) {
+            return new Dropdown(element, dropdownConfig);
+        };
+        Dropdown.prototype._attachEvents = function () {
+            var _this = this;
+            this._dropdownToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+            document.addEventListener('click', function () {
+                _this.close();
+            });
+            this._dropdownToggle.addEventListener('mouseup', function (e) {
+                _this.toggle();
+            });
+            this._dropdownToggle.addEventListener('keyup', function (e) {
+                switch (e.which) {
+                    case EscapeKey:
+                        _this.close();
+                        break;
+                    case SpaceKey:
+                        _this.open();
+                        break;
+                    case EnterKey:
+                        _this.toggle();
+                        break;
+                }
+            });
+        };
+        Dropdown.initializeDropdowns = function () {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            for (var i = 0; i < dropdowns.length; i++) {
+                var dropdown = dropdowns[i];
+                Dropdown.attach(dropdown);
+            }
+        };
+        return Dropdown;
+    }());
+    umd.Dropdown = Dropdown;
     var ProgressDialogConfig = (function (_super) {
         __extends(ProgressDialogConfig, _super);
         function ProgressDialogConfig() {
@@ -261,7 +341,8 @@ var umd;
         '.tab',
         '.dropdown-item',
         '.chip-remove',
-        '.chip-hover'
+        '.chip-hover',
+        '.text-input.dropdown-toggle'
     ].join(',');
     var RippleConfig = (function () {
         function RippleConfig() {
@@ -500,7 +581,7 @@ var umd;
     var TextField = (function () {
         function TextField(element) {
             var _this = this;
-            var input = element.querySelector('input, textarea');
+            var input = element.querySelector('input, textarea, .text-input');
             if (input) {
                 input.addEventListener('focus', function () {
                     element.classList.add('focus');
@@ -508,16 +589,19 @@ var umd;
                 input.addEventListener('blur', function () {
                     element.classList.remove('focus');
                 });
-                input.addEventListener('input', function () {
-                    _this.setEmpty();
-                });
+                this.element = element;
                 var prototype = void 0;
                 if (input.nodeName.toLowerCase() === 'input') {
                     prototype = HTMLInputElement.prototype;
                 }
-                else {
+                else if (input.nodeName.toLowerCase() === 'textarea') {
                     prototype = HTMLTextAreaElement.prototype;
                 }
+                if (!prototype)
+                    return;
+                input.addEventListener('input', function () {
+                    _this.setEmpty();
+                });
                 var descriptor_1 = Object.getOwnPropertyDescriptor(prototype, 'value');
                 var inputSetter_1 = descriptor_1.set;
                 descriptor_1.set = function (val) {
@@ -527,11 +611,7 @@ var umd;
                     Object.defineProperty(input, "value", descriptor_1);
                 };
                 Object.defineProperty(input, "value", descriptor_1);
-                element.addEventListener('click', function () {
-                    input.focus();
-                });
                 this.input = input;
-                this.element = element;
                 this.setEmpty();
             }
         }

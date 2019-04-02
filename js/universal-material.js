@@ -54,7 +54,7 @@ var umd;
             var _this = this;
             var dialogContainer = document.createElement('div');
             dialogContainer.innerHTML = this._template;
-            var dialogElement = dialogContainer.querySelector('.dialog');
+            var dialogElement = dialogContainer.querySelector('.u-dialog');
             this._configureDialog(dialogElement);
             document.body.appendChild(dialogContainer);
             dialogElement.addEventListener('closed', function () {
@@ -70,7 +70,7 @@ var umd;
             }
             if (this._config.closeOnBackdropClick) {
                 dialogElement
-                    .querySelector('.dialog-backdrop')
+                    .querySelector('.u-dialog-backdrop')
                     .addEventListener('click', function () { return _this._innerDialog.close(); }, true);
             }
         };
@@ -94,7 +94,7 @@ var umd;
         return ConfirmDialogConfig;
     }(QuickDialogConfig));
     umd.ConfirmDialogConfig = ConfirmDialogConfig;
-    var confirmDialogTemplate = "\n<div class=\"dialog show\">\n  <div class=\"dialog-backdrop\"></div>\n  <div class=\"dialog-content\">\n    <div class=\"dialog-title\"></div>\n    <div class=\"dialog-body\"></div>\n    <div class=\"dialog-actions\">\n      <button type=\"button\" class=\"btn-flat btn-primary\" cancelButton></button>\n      <button type=\"button\" class=\"btn-flat btn-primary\" confirmButton></button>\n    </div>\n  </div>\n</div>";
+    var confirmDialogTemplate = "\n<div class=\"u-dialog show\">\n  <div class=\"u-dialog-backdrop\"></div>\n  <div class=\"u-dialog-content\">\n    <div class=\"u-dialog-title\"></div>\n    <div class=\"u-dialog-body\"></div>\n    <div class=\"u-dialog-actions\">\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" cancelButton></button>\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" confirmButton></button>\n    </div>\n  </div>\n</div>";
     var ConfirmDialog = (function (_super) {
         __extends(ConfirmDialog, _super);
         function ConfirmDialog(message, config) {
@@ -107,14 +107,14 @@ var umd;
         };
         ConfirmDialog.prototype._configureDialog = function (dialogElement) {
             var _this = this;
-            var titleElement = dialogElement.querySelector('.dialog-title');
+            var titleElement = dialogElement.querySelector('.u-dialog-title');
             if (this._config.title) {
                 titleElement.innerText = this._config.title;
             }
             else {
                 titleElement.parentNode.removeChild(titleElement);
             }
-            dialogElement.querySelector('.dialog-body').innerText = this._config['_message'];
+            dialogElement.querySelector('.u-dialog-body').innerText = this._config['_message'];
             var confirmButton = dialogElement.querySelector('[confirmButton]');
             var cancelButton = dialogElement.querySelector('[cancelButton]');
             confirmButton.innerText = this._config.confirmLabel;
@@ -157,8 +157,8 @@ var umd;
     }());
     umd.DialogConfig = DialogConfig;
     var closedEvent = new CustomEvent('closed');
-    var dialogBodyTopDividerClassName = 'dialog-body-top-divider';
-    var dialogBodyBottomDividerClassName = 'dialog-body-bottom-divider';
+    var dialogBodyTopDividerClassName = 'u-dialog-body-top-divider';
+    var dialogBodyBottomDividerClassName = 'u-dialog-body-bottom-divider';
     var Dialog = (function () {
         function Dialog(_dialogElement, dialogConfig) {
             var _this = this;
@@ -188,7 +188,7 @@ var umd;
                 _this.addAnimationEndEvents();
             };
             this._dialogConfig = __assign({}, DialogConfig.default, dialogConfig);
-            this._dialogBodyElement = this._dialogElement.querySelector('.dialog-body');
+            this._dialogBodyElement = this._dialogElement.querySelector('.u-dialog-body');
             if (this._dialogBodyElement) {
                 this._setBodyDividers();
                 this._setDialogBodyScrollHandler();
@@ -246,17 +246,18 @@ var umd;
                 action();
             };
             this.open = function () {
-                _this._dropdownElement.classList.add('open');
+                _this._dropdownMenu.classList.add('show');
                 _this._showing = true;
                 _this._dropdownElement.dispatchEvent(openEvent);
             };
             this.close = function () {
-                _this._dropdownElement.classList.remove('open');
+                _this._dropdownMenu.classList.remove('show');
                 _this._showing = false;
                 _this._dropdownElement.dispatchEvent(closeEvent);
             };
-            this._dropdownToggle = _dropdownElement.querySelector('.dropdown-toggle');
-            if (!this._dropdownToggle)
+            this._dropdownToggle = _dropdownElement.querySelector('.u-dropdown-toggle');
+            this._dropdownMenu = _dropdownElement.querySelector('.u-dropdown-menu');
+            if (!this._dropdownToggle || !this._dropdownToggle)
                 return;
             this._dropdownConfig = __assign({}, DropdownConfig.default, dropdownConfig);
             this._attachEvents();
@@ -290,7 +291,7 @@ var umd;
             });
         };
         Dropdown.initializeDropdowns = function () {
-            var dropdowns = document.querySelectorAll('.dropdown');
+            var dropdowns = document.querySelectorAll('.u-dropdown');
             for (var i = 0; i < dropdowns.length; i++) {
                 var dropdown = dropdowns[i];
                 Dropdown.attach(dropdown);
@@ -308,7 +309,7 @@ var umd;
         return ProgressDialogConfig;
     }(QuickDialogConfig));
     umd.ProgressDialogConfig = ProgressDialogConfig;
-    var progressDialogTemplate = "\n<div class=\"dialog dialog-progress show\">\n  <div class=\"dialog-backdrop\"></div>\n  <div class=\"dialog-content\">\n    <div class=\"dialog-body\">\n      <div class=\"preloader-wrapper\">\n        <div class=\"spinner-layer\">\n          <div class=\"circle-clipper left\">\n            <div class=\"circle\"></div>\n          </div>\n          <div class=\"gap-patch\">\n            <div class=\"circle\"></div>\n          </div>\n          <div class=\"circle-clipper right\">\n            <div class=\"circle\"></div>\n          </div>\n        </div>\n      </div>\n      <div class=\"dialog-progress-message headline6 text-low-contrast text-nowrap\"></div>\n    </div>\n  </div>\n</div>";
+    var progressDialogTemplate = "\n<div class=\"u-dialog u-dialog-progress show\">\n  <div class=\"u-dialog-backdrop\"></div>\n  <div class=\"u-dialog-content\">\n    <div class=\"u-dialog-body\">\n      <div class=\"preloader-wrapper\">\n        <div class=\"spinner-layer\">\n          <div class=\"circle-clipper left\">\n            <div class=\"circle\"></div>\n          </div>\n          <div class=\"gap-patch\">\n            <div class=\"circle\"></div>\n          </div>\n          <div class=\"circle-clipper right\">\n            <div class=\"circle\"></div>\n          </div>\n        </div>\n      </div>\n      <div class=\"u-dialog-progress-message u-headline6 text-low-contrast text-nowrap\"></div>\n    </div>\n  </div>\n</div>";
     var ProgressDialog = (function (_super) {
         __extends(ProgressDialog, _super);
         function ProgressDialog(message, config) {
@@ -322,27 +323,27 @@ var umd;
         ProgressDialog.prototype._configureDialog = function (dialogElement) {
             var message = this._config['_message'];
             if (message) {
-                dialogElement.querySelector('.dialog-progress-message').innerText = message;
+                dialogElement.querySelector('.u-dialog-progress-message').innerText = message;
             }
             else {
-                dialogElement.querySelector('.dialog-progress-message').style.display = 'none';
+                dialogElement.querySelector('.u-dialog-progress-message').style.display = 'none';
             }
         };
         return ProgressDialog;
     }(QuickDialog));
     umd.ProgressDialog = ProgressDialog;
     umd.RippleContainersSelector = [
-        '.btn',
-        '.btn-flat',
-        '.btn-solid',
-        '.btn-raised',
-        '.btn-outline',
-        '.btn-floating',
-        '.tab',
-        '.dropdown-item',
-        '.chip-remove',
-        '.chip-hover',
-        '.text-input.dropdown-toggle'
+        '.u-btn',
+        '.u-btn-flat',
+        '.u-btn-solid',
+        '.u-btn-raised',
+        '.u-btn-outline',
+        '.u-btn-floating',
+        '.u-tab',
+        '.u-dropdown-item',
+        '.u-chip-remove',
+        '.u-chip-hover',
+        '.u-text-input.u-dropdown-toggle'
     ].join(',');
     var RippleConfig = (function () {
         function RippleConfig() {
@@ -356,32 +357,32 @@ var umd;
     };
     umd.RippleConfigMap = [
         {
-            selector: '.list-hover',
-            subSelector: '.list-item',
+            selector: '.u-list-hover',
+            subSelector: '.u-list-item',
             config: null
         },
         {
-            selector: '.list-item',
-            subSelector: '.list-item-hover',
+            selector: '.u-list-item',
+            subSelector: '.u-list-item-hover',
             config: null
         },
         {
-            selector: '.radio',
-            subSelector: '.selection-control',
+            selector: '.u-radio',
+            subSelector: '.u-selection-control',
             config: null
         },
         {
-            selector: '.switch',
-            subSelector: '.check-indicator',
+            selector: '.u-switch',
+            subSelector: '.u-check-indicator',
             config: null
         },
         {
-            selector: '.checkbox',
-            subSelector: '.selection-control',
+            selector: '.u-checkbox',
+            subSelector: '.u-selection-control',
             config: roundClickableConfig
         },
         {
-            selector: '.btn-borderless',
+            selector: '.u-btn-borderless',
             config: roundClickableConfig
         }
     ];
@@ -416,9 +417,9 @@ var umd;
             if (this.disabled)
                 return;
             var rippleWrapper = document.createElement('DIV');
-            rippleWrapper.classList.add('ripple-wrapper');
+            rippleWrapper.classList.add('u-ripple-wrapper');
             var ripple = document.createElement('DIV');
-            ripple.classList.add('ripple');
+            ripple.classList.add('u-ripple');
             rippleWrapper.appendChild(ripple);
             rippleContainer.insertAdjacentElement('afterbegin', rippleWrapper);
             if (this._config.size) {
@@ -524,19 +525,19 @@ var umd;
         };
         Snackbar.createSnackbar = function () {
             var snackbar = document.createElement("div");
-            snackbar.className = "snackbar";
+            snackbar.className = "u-snackbar";
             return snackbar;
         };
         Snackbar.createSnackbarText = function (text) {
             var snackbarText = document.createElement("div");
             snackbarText.innerText = text;
-            snackbarText.className = "snackbar-text";
+            snackbarText.className = "u-snackbar-text";
             return snackbarText;
         };
         Snackbar.createButton = function (buttonDefinition) {
             var snackbarButton = document.createElement("button");
             snackbarButton.type = "button";
-            snackbarButton.className = "btn-flat btn-secondary";
+            snackbarButton.className = "u-btn-flat u-btn-secondary";
             snackbarButton.innerText = buttonDefinition.text;
             new Ripple(snackbarButton);
             if (buttonDefinition.action) {
@@ -578,10 +579,77 @@ var umd;
         return SnackbarButtonDefinition;
     }());
     umd.SnackbarButtonDefinition = SnackbarButtonDefinition;
+    var TabBar = (function () {
+        function TabBar(_tabBarElement) {
+            var _this = this;
+            this._tabBarElement = _tabBarElement;
+            this._tabMap = [];
+            this._tabClick = function (event) {
+                var tab = event.currentTarget;
+                _this.setActiveTab(tab.index);
+            };
+            this._tabIndicatorElement = _tabBarElement.querySelector('.u-tab-indicator');
+            this._setTabInfoMap();
+            this.setActiveTab(0);
+            if (window) {
+                window.addEventListener('resize', function () {
+                    _this._updateTabIndicator();
+                });
+            }
+        }
+        TabBar.prototype.setActiveTab = function (tabIndex) {
+            var _this = this;
+            if (!isNaN(this.currentTabIndex)) {
+                this._tabMap[this.currentTabIndex].classList.remove('active');
+            }
+            this.currentTabIndex = tabIndex;
+            this._tabBarElement.dispatchEvent(new CustomEvent('tabchange', {
+                detail: {
+                    tabIndex: tabIndex
+                }
+            }));
+            this._tabMap[this.currentTabIndex].classList.add('active');
+            setTimeout(function () { return _this._updateTabIndicator(); }, 100);
+        };
+        TabBar.prototype.recalculateBounds = function () {
+            this._tabMap.length = 0;
+            this._setTabInfoMap();
+            this._updateTabIndicator();
+        };
+        TabBar.prototype._updateTabIndicator = function () {
+            var tab = this._tabMap[this.currentTabIndex];
+            var tabBounds = tab.getBoundingClientRect();
+            var offset = tabBounds.left - this._tabBarElement.getBoundingClientRect().left;
+            this._tabIndicatorElement.style.left = offset + 'px';
+            this._tabIndicatorElement.style.width = tabBounds.width + 'px';
+        };
+        TabBar.prototype._setTabInfoMap = function () {
+            var tabs = this._tabBarElement.querySelectorAll('.u-tab');
+            for (var i = 0; i < tabs.length; i++) {
+                var tab = tabs[i];
+                tab.removeEventListener('click', this._tabClick);
+                tab.addEventListener('click', this._tabClick);
+                tab.index = i;
+                this._tabMap.push(tab);
+            }
+        };
+        TabBar.attach = function (tabBarElement) {
+            return new TabBar(tabBarElement);
+        };
+        TabBar.initializeTabBars = function () {
+            var tabBars = document.querySelectorAll('.u-tab-bar');
+            for (var i = 0; i < tabBars.length; i++) {
+                var tabBar = tabBars[i];
+                TabBar.attach(tabBar);
+            }
+        };
+        return TabBar;
+    }());
+    umd.TabBar = TabBar;
     var TextField = (function () {
         function TextField(element) {
             var _this = this;
-            var input = element.querySelector('input, textarea, .text-input');
+            var input = element.querySelector('input, textarea, .u-text-input');
             if (input) {
                 input.addEventListener('focus', function () {
                     element.classList.add('focus');
@@ -624,7 +692,7 @@ var umd;
             }
         };
         TextField.initializeTextFields = function () {
-            var textFields = document.querySelectorAll('.text-field');
+            var textFields = document.querySelectorAll('.u-text-field');
             for (var i = 0; i < textFields.length; i++) {
                 var textField = textFields[i];
                 new TextField(textField);

@@ -1,9 +1,9 @@
-.sidebar {
+.u-drawer {
   height: 100%;
   overflow: auto;
   border-right: 1px solid rgba(0, 0, 0, 0.12); }
 
-.sidebar .toolbar {
+.u-drawer .u-toolbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
 
 .example-box {
@@ -17,11 +17,11 @@
   padding: .5rem;
   overflow: auto;
   background: #e0e0e0; }
-  .example-box .toolbar {
+  .example-box .u-toolbar {
     background: #e0e0e0; }
-  .example-box .floating-action-area {
+  .example-box .u-floating-action-area {
     position: static; }
-  .example-box .floating-menu {
+  .example-box .u-floating-menu {
     position: relative;
     margin-top: 200px; }
 
@@ -34,7 +34,7 @@
   max-height: 300px;
   overflow: auto; }
 
-.example-box .chip-avatar {
+.example-box .u-chip-avatar {
   background: rgba(0, 0, 0, 0.54); }
 
 .example-step-content {
@@ -45,14 +45,14 @@
 .menu-example .example-box-header {
   height: 14rem; }
 
-.menu-example .toolbar {
+.menu-example .u-toolbar {
   background-color: #fff; }
 
-.card {
+.u-card {
   margin-bottom: 8px; }
 
-.card-media,
-.card-media-wide {
+.u-card-media,
+.u-card-media-wide {
   background: url("/img/venice.jpg") center;
   background-size: cover; }
 

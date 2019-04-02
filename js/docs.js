@@ -1,13 +1,19 @@
 (function () {
-  var sidebar = document.querySelector(".sidebar");
-  var sidebarBackdrop = document.querySelector(".sidebar-backdrop");
-  var appbar = document.getElementById("app-bar");
+  const sidebar = document.querySelector(".u-drawer");
+  const sidebarBackdrop = document.querySelector(".u-drawer-backdrop");
+  const appbar = document.getElementById("app-bar");
 
   function toggleSidebar() {
     if (sidebar.classList.contains("open")) {
       sidebar.classList.remove("open");
     } else {
       sidebar.classList.add("open");
+    }
+
+    if (sidebar.classList.contains("dismiss")) {
+      sidebar.classList.remove("dismiss");
+    } else {
+      sidebar.classList.add("dismiss");
     }
   }
 
@@ -47,9 +53,10 @@
   umd.Ripple.initializeRipples();
   umd.TextField.initializeTextFields();
   umd.Dropdown.initializeDropdowns();
+  umd.TabBar.initializeTabBars();
 
-  var textField = document.querySelector('.text-field-box');
-  var textInput = document.querySelector('#text-field-box');
+  let textField = document.querySelector('.u-text-field-box');
+  const textInput = document.querySelector('#text-field-box');
   if (textInput) {
     textInput.addEventListener('input', function () {
       if (textInput.value) {
@@ -61,10 +68,10 @@
   }
 
   function setActiveNavigationItem() {
-    var navItems = document.querySelectorAll('nav .list-item');
+    const navItems = document.querySelectorAll('nav .u-list-item');
 
-    for (var i = 0; i < navItems.length; i++) {
-      var navItem = navItems[i];
+    for (let i = 0; i < navItems.length; i++) {
+      const navItem = navItems[i];
       if (navItem.pathname === location.pathname) {
         navItem.classList.add('active');
         break;
@@ -77,10 +84,10 @@
 
 function showSnackbar() {
 
-  var text = document.getElementById('snackbarText').value;
-  var buttonText = document.getElementById('snackbarButtonText').value;
+  const text = document.getElementById('snackbarText').value;
+  const buttonText = document.getElementById('snackbarButtonText').value;
 
-  umd.Snackbar.show(document.getElementById('snackbarText').value, umd.SnackbarDuration.long, buttonText ? {
+  umd.Snackbar.show(text, umd.SnackbarDuration.long, buttonText ? {
     text: buttonText,
     action: function () {
       alert('Snackbar action!')
@@ -89,4 +96,3 @@ function showSnackbar() {
 }
 
 hljs.initHighlightingOnLoad();
-

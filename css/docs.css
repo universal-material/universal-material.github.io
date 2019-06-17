@@ -1,10 +1,16 @@
-.u-drawer {
+.u-drawer-content {
   height: 100%;
   overflow: auto;
   border-right: 1px solid rgba(0, 0, 0, 0.12); }
+  .u-drawer-content .u-toolbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
 
-.u-drawer .u-toolbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+#main-content {
+  padding-top: 56px; }
+
+@media (min-width: 992px) {
+  #app-bar {
+    left: 256px; } }
 
 .example-box {
   display: -webkit-box;

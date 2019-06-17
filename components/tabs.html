@@ -20,7 +20,7 @@
             <div class="u-toolbar-title">Material Design</div>
           </div>
         </div>
-        <nav class="u-list u-list-hover"><a class="u-list-item" href="/">
+        <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
             <div class="u-list-item-icon"><i class="mdi mdi-home"></i></div>
             <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
             <div class="u-list-item-icon"><i class="mdi mdi-view-grid"></i></div>
@@ -57,69 +57,65 @@
             <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
       </aside>
       <div class="u-drawer-backdrop d-lg-none"></div>
-      <div class="u-toolbar-layout">
-        <div class="u-toolbar u-toolbar-primary" id="app-bar">
-          <div class="u-toolbar-row">
-            <div class="u-toolbar-start">
-              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
-            </div>
-            <div class="u-toolbar-title">Material</div>
-            <div class="u-toolbar-end">
-              <div class="u-toolbar-actions">
-                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
-                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
-              </div>
+      <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
+        <div class="u-toolbar-row">
+          <div class="u-toolbar-start">
+            <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+          </div>
+          <div class="u-toolbar-title">Material</div>
+          <div class="u-toolbar-end">
+            <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
+              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
             </div>
           </div>
         </div>
-        <div class="layout-content" id="main-content">
-          <div class="u-container u-margin-lg-40 chapter">
-            <h4 class="u-headline4 chapter-title">Tabs</h4>
-            <h5 class="u-headline5 article-title">Button colors</h5>
-            <div class="example-box">
-              <div class="example-box-header">
-                <div class="u-toolbar example-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-navigation u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-menu"></i></div>
-                    <div class="u-toolbar-title">Page title</div>
-                    <div class="u-toolbar-actions">
-                      <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-magnify"></i></div>
-                      <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-phone"></i></div>
-                      <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></div>
-                    </div>
-                  </div>
-                  <div class="u-tab-bar u-toolbar-icon-padding">
-                    <div class="u-tab active">
-                      <div class="u-tab-content">
-                        <div class="u-tab-text">Item one</div>
-                      </div>
-                    </div>
-                    <div class="u-tab">
-                      <div class="u-tab-content">
-                        <div class="u-tab-text">Item two</div>
-                      </div>
-                    </div>
-                    <div class="u-tab">
-                      <div class="u-tab-content">
-                        <div class="u-tab-text">Item three</div>
-                      </div>
-                    </div>
-                    <div class="u-tab">
-                      <div class="u-tab-content">
-                        <div class="u-tab-text">Item four Item four Item four</div>
-                      </div>
-                    </div>
-                    <div class="u-tab-indicator"></div>
-                  </div>
+      </div>
+      <div class="u-container u-margin-lg-40 chapter" id="main-content">
+        <h4 class="u-headline4 chapter-title">Tabs</h4>
+        <h5 class="u-headline5 article-title">Button colors</h5>
+        <div class="example-box">
+          <div class="example-box-header">
+            <div class="u-toolbar example-toolbar">
+              <div class="u-toolbar-row">
+                <div class="u-toolbar-navigation u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-menu"></i></div>
+                <div class="u-toolbar-title">Page title</div>
+                <div class="u-toolbar-actions">
+                  <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-magnify"></i></div>
+                  <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-phone"></i></div>
+                  <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></div>
                 </div>
               </div>
-              <pre><code class="html">&lt;button class=&quot;u-btn-solid u-btn-default&quot;&gt;Default&lt;/button&gt;
+              <div class="u-tab-bar u-toolbar-icon-padding">
+                <div class="u-tab active">
+                  <div class="u-tab-content">
+                    <div class="u-tab-text">Item one</div>
+                  </div>
+                </div>
+                <div class="u-tab">
+                  <div class="u-tab-content">
+                    <div class="u-tab-text">Item two</div>
+                  </div>
+                </div>
+                <div class="u-tab">
+                  <div class="u-tab-content">
+                    <div class="u-tab-text">Item three</div>
+                  </div>
+                </div>
+                <div class="u-tab">
+                  <div class="u-tab-content">
+                    <div class="u-tab-text">Item four Item four Item four</div>
+                  </div>
+                </div>
+                <div class="u-tab-indicator"></div>
+              </div>
+            </div>
+          </div>
+          <pre><code class="html">&lt;button class=&quot;u-btn-solid u-btn-default&quot;&gt;Default&lt;/button&gt;
 &lt;button class=&quot;u-btn-solid u-btn-primary&quot;&gt;Primary&lt;/button&gt;
 &lt;button class=&quot;u-btn-solid u-btn-secondary&quot;&gt;Secondary&lt;/button&gt;
 &lt;button class=&quot;u-btn-solid u-btn-danger&quot;&gt;Danger&lt;/button&gt;
 &lt;button class=&quot;u-btn-solid u-btn-primary&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
-            </div>
-          </div>
         </div>
       </div>
     </body>

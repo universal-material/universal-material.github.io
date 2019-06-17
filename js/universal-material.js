@@ -94,7 +94,7 @@ var umd;
         return ConfirmDialogConfig;
     }(QuickDialogConfig));
     umd.ConfirmDialogConfig = ConfirmDialogConfig;
-    var confirmDialogTemplate = "\n<div class=\"u-dialog show\">\n  <div class=\"u-dialog-backdrop\"></div>\n  <div class=\"u-dialog-content\">\n    <div class=\"u-dialog-title\"></div>\n    <div class=\"u-dialog-body\"></div>\n    <div class=\"u-dialog-actions\">\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" cancelButton></button>\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" confirmButton></button>\n    </div>\n  </div>\n</div>";
+    var confirmDialogTemplate = "\n<div class=\"u-dialog show\">\n  <div class=\"u-dialog-backdrop\"></div>\n  <div class=\"u-dialog-content\">\n    <div class=\"u-dialog-header\">\n      <div class=\"u-dialog-title\"></div>\n    </div>    \n    <div class=\"u-dialog-body\"></div>\n    <div class=\"u-dialog-actions\">\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" cancelButton></button>\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" confirmButton></button>\n    </div>\n  </div>\n</div>";
     var ConfirmDialog = (function (_super) {
         __extends(ConfirmDialog, _super);
         function ConfirmDialog(message, config) {
@@ -157,8 +157,8 @@ var umd;
     }());
     umd.DialogConfig = DialogConfig;
     var closedEvent = new CustomEvent('closed');
-    var dialogBodyTopDividerClassName = 'u-dialog-body-top-divider';
-    var dialogBodyBottomDividerClassName = 'u-dialog-body-bottom-divider';
+    var dialogBodyTopDividerClassName = 'u-dialog-scroll-top-divider';
+    var dialogBodyBottomDividerClassName = 'u-dialog-scroll-bottom-divider';
     var Dialog = (function () {
         function Dialog(_dialogElement, dialogConfig) {
             var _this = this;
@@ -339,6 +339,7 @@ var umd;
         '.u-btn-raised',
         '.u-btn-outline',
         '.u-btn-floating',
+        '.u-btn-borderless',
         '.u-tab',
         '.u-dropdown-item',
         '.u-chip-remove',
@@ -351,13 +352,9 @@ var umd;
         return RippleConfig;
     }());
     umd.RippleConfig = RippleConfig;
-    var roundClickableConfig = {
-        size: 40,
-        borderRadius: '50%'
-    };
     umd.RippleConfigMap = [
         {
-            selector: '.u-list-hover',
+            selector: '.u-list-selectable',
             subSelector: '.u-list-item',
             config: null
         },
@@ -379,11 +376,7 @@ var umd;
         {
             selector: '.u-checkbox',
             subSelector: '.u-selection-control',
-            config: roundClickableConfig
-        },
-        {
-            selector: '.u-btn-borderless',
-            config: roundClickableConfig
+            config: null
         }
     ];
     var Ripple = (function () {

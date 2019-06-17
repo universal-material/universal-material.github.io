@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Universal Material</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/universal-material.css">
+    <link rel="stylesheet" href="/css/docs.css">
+    <body class="u-drawer u-drawer-lg-dismissible">
+      <aside class="u-drawer-content u-navigation-drawer">
+        <div class="u-toolbar">
+          <div class="u-toolbar-row">
+            <div class="u-toolbar-title">Material Design</div>
+          </div>
+        </div>
+        <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
+            <div class="u-list-item-icon"><i class="mdi mdi-home"></i></div>
+            <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-view-grid"></i></div>
+            <div class="u-list-item-primary-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
+            <div class="u-list-item-primary-content"><span>Typography</span></div></a><a class="u-list-item" href="/components/buttons.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-arrow-right"></i></div>
+            <div class="u-list-item-primary-content"><span>Buttons</span></div></a><a class="u-list-item" href="/components/floating-action-button.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-plus-circle-outline"></i></div>
+            <div class="u-list-item-primary-content"><span>Floating action button</span></div></a><a class="u-list-item" href="/components/cards.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-body"></i></div>
+            <div class="u-list-item-primary-content"><span>Cards</span></div></a><a class="u-list-item" href="/components/chips.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-label"></i></div>
+            <div class="u-list-item-primary-content"><span>Chips</span></div></a><a class="u-list-item" href="/components/data-tables.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-table"></i></div>
+            <div class="u-list-item-primary-content"><span>Data tables</span></div></a><a class="u-list-item" href="/components/dialogs.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-window-maximize"></i></div>
+            <div class="u-list-item-primary-content"><span>Dialogs</span></div></a><a class="u-list-item" href="/components/lists.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-format-list-bulleted"></i></div>
+            <div class="u-list-item-primary-content"><span>Lists</span></div></a><a class="u-list-item" href="/components/menus.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-menu"></i></div>
+            <div class="u-list-item-primary-content"><span>Menus</span></div></a><a class="u-list-item" href="/components/progress.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-loading"></i></div>
+            <div class="u-list-item-primary-content"><span>Progress</span></div></a><a class="u-list-item" href="/components/selection-controls.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-toggle-switch"></i></div>
+            <div class="u-list-item-primary-content"><span>Selection controls</span></div></a><a class="u-list-item" href="/components/snackbars.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-footer"></i></div>
+            <div class="u-list-item-primary-content"><span>Snackbars</span></div></a><a class="u-list-item" href="/components/tabs.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-tab"></i></div>
+            <div class="u-list-item-primary-content"><span>Tabs</span></div></a><a class="u-list-item" href="/components/text-fields.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-textbox"></i></div>
+            <div class="u-list-item-primary-content"><span>Text fields</span></div></a><a class="u-list-item" href="/components/toolbars.html">
+            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
+            <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
+      </aside>
+      <div class="u-drawer-backdrop d-lg-none"></div>
+      <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
+        <div class="u-toolbar-row">
+          <div class="u-toolbar-start">
+            <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+          </div>
+          <div class="u-toolbar-title">Material</div>
+          <div class="u-toolbar-end">
+            <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
+              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-container u-margin-lg-40 chapter" id="main-content">
+        <h4 class="u-headline4 chapter-title">Datepicker</h4>
+        <div class="u-datepicker">
+          <div class="u-datepicker-header">
+            <button class="mr-auto u-btn-flat u-btn-default" type="button">Jun 2019</button>
+            <button class="u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-chevron-left"></i></button>
+            <button class="u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-chevron-right"></i></button>
+          </div>
+          <div class="u-datepicker-body">
+            <div class="u-datepicker-weekdays"><span class="u-datepicker-weekday">S</span><span class="u-datepicker-weekday">M</span><span class="u-datepicker-weekday">T</span><span class="u-datepicker-weekday">W</span><span class="u-datepicker-weekday">T</span><span class="u-datepicker-weekday">F</span><span class="u-datepicker-weekday">S</span></div>
+            <div class="u-datepicker-week">
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">26</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">27</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">28</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">29</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">30</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">31</button>
+              <button class="u-datepicker-day" type="button">1</button>
+            </div>
+            <div class="u-datepicker-week">
+              <button class="u-datepicker-day" type="button">2</button>
+              <button class="u-datepicker-day" type="button">3</button>
+              <button class="u-datepicker-day" type="button">4</button>
+              <button class="u-datepicker-day" type="button">5</button>
+              <button class="u-datepicker-day" type="button">6</button>
+              <button class="u-datepicker-day" type="button">7</button>
+              <button class="u-datepicker-day" type="button">8</button>
+            </div>
+            <div class="u-datepicker-week">
+              <button class="u-datepicker-day" type="button">9</button>
+              <button class="u-datepicker-day" type="button">10</button>
+              <button class="u-datepicker-day" type="button">11</button>
+              <button class="u-datepicker-day" type="button">12</button>
+              <button class="u-datepicker-day" type="button">13</button>
+              <button class="u-datepicker-day" type="button">14</button>
+              <button class="u-datepicker-day" type="button">15</button>
+            </div>
+            <div class="u-datepicker-week">
+              <button class="u-datepicker-day" type="button">16</button>
+              <button class="u-datepicker-day" type="button">17</button>
+              <button class="u-datepicker-day" type="button">18</button>
+              <button class="u-datepicker-day" type="button">19</button>
+              <button class="u-datepicker-day" type="button">20</button>
+              <button class="u-datepicker-day" type="button">21</button>
+              <button class="u-datepicker-day u-datepicker-current-day" type="button">22</button>
+            </div>
+            <div class="u-datepicker-week">
+              <button class="u-datepicker-day" type="button">23</button>
+              <button class="u-datepicker-day" type="button">24</button>
+              <button class="u-datepicker-day" type="button">25</button>
+              <button class="u-datepicker-day" type="button">26</button>
+              <button class="u-datepicker-day" type="button">27</button>
+              <button class="u-datepicker-day" type="button">28</button>
+              <button class="u-datepicker-day" type="button">29</button>
+            </div>
+            <div class="u-datepicker-week">
+              <button class="u-datepicker-day" type="button">30</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">1</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">2</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">3</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">4</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">5</button>
+              <button class="u-datepicker-day u-datepicker-day-outside-month" type="button">6</button>
+            </div>
+          </div>
+        </div>
+        <div class="u-datepicker">
+          <div class="u-datepicker-header">
+            <button class="u-btn-flat u-btn-default" type="button">2019</button>
+            <button class="u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-chevron-left"></i></button>
+            <button class="u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-chevron-right"></i></button>
+          </div>
+          <div class="u-datepicker-body">
+            <div class="u-datepicker-year-group">
+              <div class="u-datepicker-year-month-button">1969</div>
+              <div class="u-datepicker-year-month-button">1970</div>
+              <div class="u-datepicker-year-month-button">1971</div>
+              <div class="u-datepicker-year-month-button">1972</div>
+            </div>
+            <div class="u-datepicker-year-group">
+              <div class="u-datepicker-year-month-button">1973</div>
+              <div class="u-datepicker-year-month-button">1974</div>
+              <div class="u-datepicker-year-month-button">1975</div>
+              <div class="u-datepicker-year-month-button">1976</div>
+            </div>
+            <div class="u-datepicker-year-group">
+              <div class="u-datepicker-year-month-button">1977</div>
+              <div class="u-datepicker-year-month-button">1978</div>
+              <div class="u-datepicker-year-month-button">1979</div>
+              <div class="u-datepicker-year-month-button">1980</div>
+            </div>
+            <div class="u-datepicker-year-group">
+              <div class="u-datepicker-year-month-button">1981</div>
+              <div class="u-datepicker-year-month-button">1982</div>
+              <div class="u-datepicker-year-month-button">1983</div>
+              <div class="u-datepicker-year-month-button">1984</div>
+            </div>
+            <div class="u-datepicker-year-group">
+              <div class="u-datepicker-year-month-button">1985</div>
+              <div class="u-datepicker-year-month-button">1986</div>
+              <div class="u-datepicker-year-month-button">1987</div>
+              <div class="u-datepicker-year-month-button">1988</div>
+            </div>
+            <div class="u-datepicker-year-group">
+              <div class="u-datepicker-year-month-button">1989</div>
+              <div class="u-datepicker-year-month-button">1990</div>
+              <div class="u-datepicker-year-month-button">1991</div>
+              <div class="u-datepicker-year-month-button">1992</div>
+            </div>
+          </div>
+        </div>
+        <div class="u-datepicker">
+          <div class="u-datepicker-header">
+            <button class="u-btn-flat u-btn-default" type="button">2019</button>
+          </div>
+          <div class="u-datepicker-body">
+            <div class="u-datepicker-month-group">
+              <div class="u-datepicker-year-month-button">JAN</div>
+              <div class="u-datepicker-year-month-button">FEB</div>
+              <div class="u-datepicker-year-month-button">MAR</div>
+              <div class="u-datepicker-year-month-button">APR</div>
+            </div>
+            <div class="u-datepicker-month-group">
+              <div class="u-datepicker-year-month-button">MAY</div>
+              <div class="u-datepicker-year-month-button active">JUN</div>
+              <div class="u-datepicker-year-month-button">JUL</div>
+              <div class="u-datepicker-year-month-button">AUG</div>
+            </div>
+            <div class="u-datepicker-month-group">
+              <div class="u-datepicker-year-month-button">SEP</div>
+              <div class="u-datepicker-year-month-button">OCT</div>
+              <div class="u-datepicker-year-month-button">NOV</div>
+              <div class="u-datepicker-year-month-button">DEC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="/js/universal-material.js"></script>
+    <script src="/js/docs.js"></script>
+  </head>
+</html>

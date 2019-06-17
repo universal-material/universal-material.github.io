@@ -20,7 +20,7 @@
             <div class="u-toolbar-title">Material Design</div>
           </div>
         </div>
-        <nav class="u-list u-list-hover"><a class="u-list-item" href="/">
+        <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
             <div class="u-list-item-icon"><i class="mdi mdi-home"></i></div>
             <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
             <div class="u-list-item-icon"><i class="mdi mdi-view-grid"></i></div>
@@ -57,214 +57,210 @@
             <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
       </aside>
       <div class="u-drawer-backdrop d-lg-none"></div>
-      <div class="u-toolbar-layout">
-        <div class="u-toolbar u-toolbar-primary" id="app-bar">
-          <div class="u-toolbar-row">
-            <div class="u-toolbar-start">
-              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
-            </div>
-            <div class="u-toolbar-title">Material</div>
-            <div class="u-toolbar-end">
-              <div class="u-toolbar-actions">
-                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
-                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
-              </div>
+      <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
+        <div class="u-toolbar-row">
+          <div class="u-toolbar-start">
+            <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+          </div>
+          <div class="u-toolbar-title">Material</div>
+          <div class="u-toolbar-end">
+            <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
+              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
             </div>
           </div>
         </div>
-        <div class="layout-content" id="main-content">
-          <div class="u-container u-margin-lg-40 chapter">
-            <h4 class="u-headline4 chapter-title">Data tables</h4>
-            <div class="u-card">
-              <div class="u-data-table u-data-table-hover">
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Nome</th>
-                      <td>Eric Kono</td>
-                    </tr>
-                    <tr>
-                      <th>Email</th>
-                      <td>eric.kono@impeto.com.br</td>
-                    </tr>
-                  </tbody>
-                </table>
+      </div>
+      <div class="u-container u-margin-lg-40 chapter" id="main-content">
+        <h4 class="u-headline4 chapter-title">Data tables</h4>
+        <div class="u-card">
+          <div class="u-data-table u-data-table-hover">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Nome</th>
+                  <td>Eric Kono</td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td>eric.kono@impeto.com.br</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <h4 class="u-headline4 chapter-title">Data tables</h4>
+        <div class="u-card">
+          <div class="u-data-table u-data-table-hover">
+            <table>
+              <thead>
+                <tr>
+                  <th>Dessert (100g serving)&#x200E;</th>
+                  <th class="text-end">Calories</th>
+                  <th class="text-end">Fat (g)&#x200E;</th>
+                  <th class="text-end">Carbs(g)&#x200E;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frozen yogurt</td>
+                  <td class="text-end">159</td>
+                  <td class="text-end">6.0</td>
+                  <td class="text-end">24</td>
+                </tr>
+                <tr>
+                  <td>Ice cream sandwich</td>
+                  <td class="text-end">237</td>
+                  <td class="text-end">9.0</td>
+                  <td class="text-end">37</td>
+                </tr>
+                <tr>
+                  <td>Eclair</td>
+                  <td class="text-end">262</td>
+                  <td class="text-end">16.0</td>
+                  <td class="text-end">24</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="u-card">
+          <div class="u-data-table u-data-table-hover">
+            <div class="u-toolbar">
+              <div class="u-toolbar-row">
+                <div class="u-toolbar-title">Nutrients</div>
+                <div class="u-toolbar-end">
+                  <div class="u-toolbar-actions">
+                    <button class="u-toolbar-action u-btn-borderless u-btn-default" disabled><i class="u-btn-icon mdi mdi-phone"></i></button>
+                    <button class="u-toolbar-action u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
+                  </div>
+                </div>
               </div>
             </div>
-            <h4 class="u-headline4 chapter-title">Data tables</h4>
-            <div class="u-card">
-              <div class="u-data-table u-data-table-hover">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Dessert (100g serving)&#x200E;</th>
-                      <th class="text-end">Calories</th>
-                      <th class="text-end">Fat (g)&#x200E;</th>
-                      <th class="text-end">Carbs(g)&#x200E;</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Frozen yogurt</td>
-                      <td class="text-end">159</td>
-                      <td class="text-end">6.0</td>
-                      <td class="text-end">24</td>
-                    </tr>
-                    <tr>
-                      <td>Ice cream sandwich</td>
-                      <td class="text-end">237</td>
-                      <td class="text-end">9.0</td>
-                      <td class="text-end">37</td>
-                    </tr>
-                    <tr>
-                      <td>Eclair</td>
-                      <td class="text-end">262</td>
-                      <td class="text-end">16.0</td>
-                      <td class="text-end">24</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="u-card">
-              <div class="u-data-table u-data-table-hover">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-title">Nutrients</div>
-                    <div class="u-toolbar-end">
-                      <div class="u-toolbar-actions">
-                        <button class="u-toolbar-action u-btn-borderless u-btn-default" disabled><i class="u-btn-icon mdi mdi-phone"></i></button>
-                        <button class="u-toolbar-action u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                      </div>
+            <table>
+              <thead>
+                <tr>
+                  <tr>
+                    <th>Dessert (100g serving)&#x200E;</th>
+                    <th class="text-end">Calories</th>
+                    <th class="text-end">Fat (g)&#x200E;</th>
+                    <th class="text-end">Carbs(g)&#x200E;</th>
+                  </tr>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>Frozen yogurt</td>
+                    <td class="text-end">159</td>
+                    <td class="text-end">6.0</td>
+                    <td class="text-end">24</td>
+                  </tr>
+                  <tr>
+                    <td>Ice cream sandwich</td>
+                    <td class="text-end">237</td>
+                    <td class="text-end">9.0</td>
+                    <td class="text-end">37</td>
+                  </tr>
+                  <tr>
+                    <td>Eclair</td>
+                    <td class="text-end">262</td>
+                    <td class="text-end">16.0</td>
+                    <td class="text-end">24</td>
+                  </tr>
+                </tbody>
+              </thead>
+            </table>
+          </div>
+        </div>
+        <div class="u-card">
+          <div class="u-data-table u-data-table-hover">
+            <div class="u-data-table-header">
+              <div class="u-toolbar">
+                <div class="u-toolbar-row">
+                  <div class="u-toolbar-title">Nutrients</div>
+                  <div class="u-toolbar-end">
+                    <div class="u-toolbar-actions">
+                      <button class="u-toolbar-action u-btn-borderless u-btn-default" disabled><i class="u-btn-icon mdi mdi-phone"></i></button>
+                      <button class="u-toolbar-action u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
                     </div>
                   </div>
                 </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <tr>
-                        <th>Dessert (100g serving)&#x200E;</th>
-                        <th class="text-end">Calories</th>
-                        <th class="text-end">Fat (g)&#x200E;</th>
-                        <th class="text-end">Carbs(g)&#x200E;</th>
-                      </tr>
-                    </tr>
-                    <tbody>
-                      <tr>
-                        <td>Frozen yogurt</td>
-                        <td class="text-end">159</td>
-                        <td class="text-end">6.0</td>
-                        <td class="text-end">24</td>
-                      </tr>
-                      <tr>
-                        <td>Ice cream sandwich</td>
-                        <td class="text-end">237</td>
-                        <td class="text-end">9.0</td>
-                        <td class="text-end">37</td>
-                      </tr>
-                      <tr>
-                        <td>Eclair</td>
-                        <td class="text-end">262</td>
-                        <td class="text-end">16.0</td>
-                        <td class="text-end">24</td>
-                      </tr>
-                    </tbody>
-                  </thead>
-                </table>
               </div>
             </div>
-            <div class="u-card">
-              <div class="u-data-table u-data-table-hover">
-                <div class="u-data-table-header">
-                  <div class="u-toolbar">
-                    <div class="u-toolbar-row">
-                      <div class="u-toolbar-title">Nutrients</div>
-                      <div class="u-toolbar-end">
-                        <div class="u-toolbar-actions">
-                          <button class="u-toolbar-action u-btn-borderless u-btn-default" disabled><i class="u-btn-icon mdi mdi-phone"></i></button>
-                          <button class="u-toolbar-action u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
+            <div class="u-data-table-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="text-nowrap">Dessert (100g serving)&#x200E;</th>
+                    <th>Type</th>
+                    <th class="text-end">Calories</th>
+                    <th class="text-end">Fat (g)&#x200E;</th>
+                    <th class="text-end">Carbs(g)&#x200E;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-nowrap">Frozen yogurt</td>
+                    <td class="text-nowrap u-dropdown">
+                      <button class="u-btn-flat u-btn-default u-dropdown-toggle">
+                        <div class="u-dropdown-toggle-label">Ice cream</div>
+                        <div class="u-dropdown-toggle-icon"></div>
+                      </button>
+                      <div class="u-dropdown-menu down-right fit-width">
+                        <div class="u-dropdown-content">
+                          <div class="u-dropdown-item">Ice cream</div>
+                          <div class="u-dropdown-item">Pastry</div>
+                          <div class="u-dropdown-item">Other</div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="u-data-table-content">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th class="text-nowrap">Dessert (100g serving)&#x200E;</th>
-                        <th>Type</th>
-                        <th class="text-end">Calories</th>
-                        <th class="text-end">Fat (g)&#x200E;</th>
-                        <th class="text-end">Carbs(g)&#x200E;</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="text-nowrap">Frozen yogurt</td>
-                        <td class="text-nowrap u-dropdown">
-                          <button class="u-btn-flat u-btn-default u-dropdown-toggle">
-                            <div class="u-dropdown-toggle-label">Ice cream</div>
-                            <div class="u-dropdown-toggle-icon"></div>
-                          </button>
-                          <div class="u-dropdown-menu down-right fit-width">
-                            <div class="u-dropdown-content">
-                              <div class="u-dropdown-item">Ice cream</div>
-                              <div class="u-dropdown-item">Pastry</div>
-                              <div class="u-dropdown-item">Other</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="text-end">159</td>
-                        <td class="text-end">6.0</td>
-                        <td class="text-end">24</td>
-                      </tr>
-                      <tr>
-                        <td class="text-nowrap">Ice cream sandwich</td>
-                        <td class="text-nowrap u-dropdown">
-                          <button class="u-btn-flat u-btn-default u-dropdown-toggle">
-                            <div class="u-dropdown-toggle-label">Ice cream</div>
-                            <div class="u-dropdown-toggle-icon"></div>
-                          </button>
-                          <div class="u-dropdown-menu up-right fit-width">
-                            <div class="u-dropdown-content">
-                              <div class="u-dropdown-item">Ice cream</div>
-                              <div class="u-dropdown-item">Pastry</div>
-                              <div class="u-dropdown-item">Other</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="text-end">237</td>
-                        <td class="text-end">9.0</td>
-                        <td class="text-end">37</td>
-                      </tr>
-                      <tr>
-                        <td class="text-nowrap">Eclair</td>
-                        <td class="text-nowrap u-dropdown">
-                          <button class="u-btn-flat u-btn-default u-dropdown-toggle">
-                            <div class="u-dropdown-toggle-label">Pastry</div>
-                            <div class="u-dropdown-toggle-icon"></div>
-                          </button>
-                          <div class="u-dropdown-menu up-right fit-width">
-                            <div class="u-dropdown-content">
-                              <div class="u-dropdown-item">Ice cream</div>
-                              <div class="u-dropdown-item">Pastry</div>
-                              <div class="u-dropdown-item">Other</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="text-end">262</td>
-                        <td class="text-end">16.0</td>
-                        <td class="text-end">24</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="u-data-table-footer">
-                  <button class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-chevron-left"></i></button>
-                  <button class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-chevron-right"></i></button>
-                </div>
-              </div>
+                    </td>
+                    <td class="text-end">159</td>
+                    <td class="text-end">6.0</td>
+                    <td class="text-end">24</td>
+                  </tr>
+                  <tr>
+                    <td class="text-nowrap">Ice cream sandwich</td>
+                    <td class="text-nowrap u-dropdown">
+                      <button class="u-btn-flat u-btn-default u-dropdown-toggle">
+                        <div class="u-dropdown-toggle-label">Ice cream</div>
+                        <div class="u-dropdown-toggle-icon"></div>
+                      </button>
+                      <div class="u-dropdown-menu up-right fit-width">
+                        <div class="u-dropdown-content">
+                          <div class="u-dropdown-item">Ice cream</div>
+                          <div class="u-dropdown-item">Pastry</div>
+                          <div class="u-dropdown-item">Other</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-end">237</td>
+                    <td class="text-end">9.0</td>
+                    <td class="text-end">37</td>
+                  </tr>
+                  <tr>
+                    <td class="text-nowrap">Eclair</td>
+                    <td class="text-nowrap u-dropdown">
+                      <button class="u-btn-flat u-btn-default u-dropdown-toggle">
+                        <div class="u-dropdown-toggle-label">Pastry</div>
+                        <div class="u-dropdown-toggle-icon"></div>
+                      </button>
+                      <div class="u-dropdown-menu up-right fit-width">
+                        <div class="u-dropdown-content">
+                          <div class="u-dropdown-item">Ice cream</div>
+                          <div class="u-dropdown-item">Pastry</div>
+                          <div class="u-dropdown-item">Other</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-end">262</td>
+                    <td class="text-end">16.0</td>
+                    <td class="text-end">24</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="u-data-table-footer">
+              <button class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-chevron-left"></i></button>
+              <button class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-chevron-right"></i></button>
             </div>
           </div>
         </div>

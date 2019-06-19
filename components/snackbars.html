@@ -73,25 +73,65 @@
       </div>
       <div class="u-container u-margin-lg-40 chapter" id="main-content">
         <h4 class="u-headline4 chapter-title">Snackbars</h4>
-        <div class="u-text-field-container">
-          <div class="u-text-field u-text-field-box">
-            <input class="u-text-input" id="snackbarText">
-            <label>Snackbar text</label>
+        <h5 class="u-headline5 article-title">Example</h5>
+        <div class="example-box">
+          <div class="example-box-header"><div class="u-form-field">
+  <div class="u-text-field-container">
+    <div class="u-text-field u-text-field-box">
+      <input class="u-text-input" id="snackbarText" />
+      <label>Snackbar text</label>
+    </div>
+  </div>
+</div>
+
+<div class="u-form-field">
+  <div class="u-text-field-container">
+    <div class="u-text-field u-text-field-box">
+      <input class="u-text-input" id="snackbarButtonText" />
+      <label>Snackbar button text</label>
+    </div>
+  </div>
+</div>
+
+<div class="u-text-end">
+  <button class="u-btn-raised u-btn-primary" onclick="showSnackbar()">Show snackbar</button>
+</div>
+<script>
+  function showSnackbar() {
+
+    const text = document.getElementById('snackbarText').value;
+    const buttonText = document.getElementById('snackbarButtonText').value;
+
+    umd.Snackbar.show(text, umd.SnackbarDuration.long, buttonText ? {
+      text: buttonText,
+      action: function () {
+        alert('Snackbar action!')
+      }
+    } : null);
+  }
+</script>
+
           </div>
-        </div>
-        <div class="u-text-field-container">
-          <div class="u-text-field u-text-field-box">
-            <input class="u-text-input" id="snackbarButtonText">
-            <label>Snackbar button text</label>
-          </div>
-        </div>
-        <div class="text-end">
-          <button class="u-btn-raised u-btn-primary" onclick="showSnackbar()">Show snackbar</button>
+          <pre><code class="html"></code></pre>
         </div>
       </div>
     </body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script src="/js/universal-material.js"></script>
     <script src="/js/docs.js"></script>
+    <script>
+      function showSnackbar() {
+      
+        const text = document.getElementById('snackbarText').value;
+        const buttonText = document.getElementById('snackbarButtonText').value;
+      
+        umd.Snackbar.show(text, umd.SnackbarDuration.long, buttonText ? {
+          text: buttonText,
+          action: function () {
+            alert('Snackbar action!')
+          }
+        } : null);
+      }
+    </script>
   </head>
 </html>

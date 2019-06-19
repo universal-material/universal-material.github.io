@@ -1,4 +1,7 @@
 (function () {
+
+  setExampleCodeText();
+
   const sidebar = document.querySelector(".u-drawer");
   const sidebarBackdrop = document.querySelector(".u-drawer-backdrop");
   const appbar = document.getElementById("app-bar");
@@ -82,17 +85,28 @@
   setActiveNavigationItem();
 })();
 
-function showSnackbar() {
+function getHTML(who, deep){
+  if(!who || !who.tagName) return '';
+  let txt, ax, el = document.createElement("div");
+  el.appendChild(who.cloneNode(false));
+  txt= el.innerHTML;
+  if(deep){
+    ax= txt.indexOf('>')+1;
+    txt= txt.substring(0, ax)+who.innerHTML+ txt.substring(ax);
+  }
+  el= null;
+  return txt;
+}
 
-  const text = document.getElementById('snackbarText').value;
-  const buttonText = document.getElementById('snackbarButtonText').value;
+function setExampleCodeText() {
+  const exampleBoxHeaders = document.querySelectorAll('.example-box-header');
+  for (let i = 0; i < exampleBoxHeaders.length; i++) {
+    const exampleBoxHeader = exampleBoxHeaders[i];
+    let tagText = getHTML(exampleBoxHeader, true).replace('<div class="example-box-header">', '');
+    tagText = tagText.substring(0, tagText.length - 6).trim();
 
-  umd.Snackbar.show(text, umd.SnackbarDuration.long, buttonText ? {
-    text: buttonText,
-    action: function () {
-      alert('Snackbar action!')
-    }
-  } : null);
+    exampleBoxHeader.parentElement.getElementsByTagName('code')[0].innerText = tagText;
+  }
 }
 
 hljs.initHighlightingOnLoad();

@@ -28,9 +28,9 @@
   overflow: auto;
   background: $gray-300;
 
-  .u-toolbar {
-    background: $gray-300;
-  }
+  //.u-toolbar {
+  //  background: $gray-300;
+  //}
 
 
   .u-floating-action-area {
@@ -95,7 +95,7 @@
   margin-bottom: 48px;
   font-size: 2rem;
   font-weight: 400;
-  color: $primary-color;
+  color: $u-primary-color;
 }
 
 .article-title {

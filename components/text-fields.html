@@ -13,163 +13,149 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/css/universal-material.css">
     <link rel="stylesheet" href="/css/docs.css">
-    <body class="u-drawer u-drawer-lg-dismissible">
-      <aside class="u-drawer-content u-navigation-drawer">
-        <div class="u-toolbar">
+    <body>
+      <div class="u-drawer u-drawer-lg-dismissible">
+        <aside class="u-drawer-content u-navigation-drawer">
+          <div class="u-toolbar">
+            <div class="u-toolbar-row">
+              <div class="u-toolbar-title">Material Design</div>
+            </div>
+          </div>
+          <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
+              <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
+              <div class="u-list-item-primary-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
+              <div class="u-list-item-primary-content"><span>Typography</span></div></a><a class="u-list-item" href="/components/buttons.html">
+              <div class="u-list-item-primary-content"><span>Buttons</span></div></a><a class="u-list-item" href="/components/floating-action-button.html">
+              <div class="u-list-item-primary-content"><span>Floating action button</span></div></a><a class="u-list-item" href="/components/cards.html">
+              <div class="u-list-item-primary-content"><span>Cards</span></div></a><a class="u-list-item" href="/components/chips.html">
+              <div class="u-list-item-primary-content"><span>Chips</span></div></a><a class="u-list-item" href="/components/data-tables.html">
+              <div class="u-list-item-primary-content"><span>Data tables</span></div></a><a class="u-list-item" href="/components/dialogs.html">
+              <div class="u-list-item-primary-content"><span>Dialogs</span></div></a><a class="u-list-item" href="/components/lists.html">
+              <div class="u-list-item-primary-content"><span>Lists</span></div></a><a class="u-list-item" href="/components/menus.html">
+              <div class="u-list-item-primary-content"><span>Menus</span></div></a><a class="u-list-item" href="/components/progress.html">
+              <div class="u-list-item-primary-content"><span>Progress</span></div></a><a class="u-list-item" href="/components/selection-controls.html">
+              <div class="u-list-item-primary-content"><span>Selection controls</span></div></a><a class="u-list-item" href="/components/sliders.html">
+              <div class="u-list-item-primary-content"><span>Sliders</span></div></a><a class="u-list-item" href="/components/snackbars.html">
+              <div class="u-list-item-primary-content"><span>Snackbars</span></div></a><a class="u-list-item" href="/components/tabs.html">
+              <div class="u-list-item-primary-content"><span>Tabs</span></div></a><a class="u-list-item" href="/components/text-fields.html">
+              <div class="u-list-item-primary-content"><span>Text fields</span></div></a><a class="u-list-item" href="/components/toolbars.html">
+              <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
+        </aside>
+        <div class="u-drawer-backdrop d-lg-none"></div>
+        <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
-            <div class="u-toolbar-title">Material Design</div>
-          </div>
-        </div>
-        <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
-            <div class="u-list-item-icon"><i class="mdi mdi-home"></i></div>
-            <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-view-grid"></i></div>
-            <div class="u-list-item-primary-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
-            <div class="u-list-item-primary-content"><span>Typography</span></div></a><a class="u-list-item" href="/components/buttons.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-arrow-right"></i></div>
-            <div class="u-list-item-primary-content"><span>Buttons</span></div></a><a class="u-list-item" href="/components/floating-action-button.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-plus-circle-outline"></i></div>
-            <div class="u-list-item-primary-content"><span>Floating action button</span></div></a><a class="u-list-item" href="/components/cards.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-body"></i></div>
-            <div class="u-list-item-primary-content"><span>Cards</span></div></a><a class="u-list-item" href="/components/chips.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-label"></i></div>
-            <div class="u-list-item-primary-content"><span>Chips</span></div></a><a class="u-list-item" href="/components/data-tables.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-table"></i></div>
-            <div class="u-list-item-primary-content"><span>Data tables</span></div></a><a class="u-list-item" href="/components/dialogs.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-window-maximize"></i></div>
-            <div class="u-list-item-primary-content"><span>Dialogs</span></div></a><a class="u-list-item" href="/components/lists.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-format-list-bulleted"></i></div>
-            <div class="u-list-item-primary-content"><span>Lists</span></div></a><a class="u-list-item" href="/components/menus.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-menu"></i></div>
-            <div class="u-list-item-primary-content"><span>Menus</span></div></a><a class="u-list-item" href="/components/progress.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-loading"></i></div>
-            <div class="u-list-item-primary-content"><span>Progress</span></div></a><a class="u-list-item" href="/components/selection-controls.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-toggle-switch"></i></div>
-            <div class="u-list-item-primary-content"><span>Selection controls</span></div></a><a class="u-list-item" href="/components/snackbars.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-footer"></i></div>
-            <div class="u-list-item-primary-content"><span>Snackbars</span></div></a><a class="u-list-item" href="/components/tabs.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-tab"></i></div>
-            <div class="u-list-item-primary-content"><span>Tabs</span></div></a><a class="u-list-item" href="/components/text-fields.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-textbox"></i></div>
-            <div class="u-list-item-primary-content"><span>Text fields</span></div></a><a class="u-list-item" href="/components/toolbars.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
-            <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
-      </aside>
-      <div class="u-drawer-backdrop d-lg-none"></div>
-      <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
-        <div class="u-toolbar-row">
-          <div class="u-toolbar-start">
-            <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
-          </div>
-          <div class="u-toolbar-title">Material</div>
-          <div class="u-toolbar-end">
-            <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
-              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
-              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
+            <div class="u-toolbar-start">
+              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-container u-margin-lg-40 chapter" id="main-content">
-        <h4 class="u-headline4 chapter-title">Text fields</h4>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field">
-            <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-standard" aria-describedby="standardHelper">
-            <label for="text-field-standard">Standard</label>
-          </div><small class="u-text-field-helper-text" id="standardHelper">Standard text field</small>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-floating-label">
-            <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-floating-label" aria-describedby="standardWithFloatinglabelHelper">
-            <label for="text-field-floating-label">Standard floating label</label>
-          </div><small class="u-text-field-helper-text" id="standardWithFloatinglabelHelper">Standard text field with floating label</small>
-        </div>
-        <div class="u-text-field-container u-form-field disabled">
-          <div class="u-text-field u-text-field-floating-label">
-            <input class="u-text-input" type="text" placeholder="Placeholder" disabled aria-describedby="standardWithFloatinglabelHelper">
-            <label for="text-field-floating-label">Standard floating label</label>
-          </div>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-box">
-            <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
-            <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
-            <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-box" aria-describedby="textFieldBox">
-            <label for="text-field-box">Text field box</label>
-          </div><small class="u-text-field-helper-text" id="textFieldBox">
-            <div class="d-flex position-relative">
-              <div class="flex-fill"><span class="u-text-field-helper-text-default">Text field box</span><span class="u-text-field-helper-text-invalid">Error</span></div><span>0 / 10</span>
-            </div></small>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-box disabled">
-            <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
-            <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
-            <input class="u-text-input" type="text" placeholder="Placeholder" disabled aria-describedby="textFieldBox">
-            <label>Text field box</label>
-          </div>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-outline">
-            <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
-            <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
-            <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-outline" aria-describedby="textFieldOutline">
-            <label for="text-field-outline">Text field outline</label>
-          </div><small class="u-text-field-helper-text" id="textFieldOutline">Text field outline</small>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-outline disabled">
-            <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
-            <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
-            <input class="u-text-input" type="text" placeholder="Placeholder" disabled>
-            <label for="text-field-outline">Text field outline</label>
-          </div>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-search-field">
-            <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
-            <div class="u-text-field-trailing-icon">
-              <button class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-calendar"></i></button>
-            </div>
-            <input class="u-text-input" type="text" placeholder="Search" id="search-field">
-          </div>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-search-field u-search-field-elevated">
-            <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
-            <div class="u-text-field-trailing-icon u-btn-borderless"><i class="u-btn-icon mdi mdi-calendar"></i></div>
-            <input class="u-text-input" type="text" placeholder="Search" id="search-field-elevated">
-          </div>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-box">
-            <textarea class="u-text-input" type="text" placeholder="Placeholder" id="text-area-box" aria-describedby="textAreaBox"></textarea>
-            <label for="text-area-box">Text area box</label>
-          </div><small class="u-text-field-helper-text" id="textAreaBox">Text area box</small>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-outline">
-            <textarea class="u-text-input" type="text" placeholder="Placeholder" id="text-area-outline" aria-describedby="textAreaOutline"></textarea>
-            <label for="text-area-outline">Text area outline</label>
-          </div><small class="u-text-field-helper-text" id="textAreaOutline">Text area outline</small>
-        </div>
-        <div class="u-text-field-container u-form-field">
-          <div class="u-text-field u-text-field-box u-dropdown">
-            <div class="u-text-field-trailing-icon">
-              <div class="u-dropdown-toggle-icon"></div>
-            </div>
-            <button class="u-text-input u-dropdown-toggle" type="button" disabled>
-              <div class="u-text-input-placeholder">No value</div>
-            </button>
-            <div class="u-dropdown-menu up w-100">
-              <div class="u-dropdown-content">
-                <button class="u-dropdown-item" type="button">Option A</button>
-                <button class="u-dropdown-item" type="button">Option B</button>
-                <button class="u-dropdown-item" type="button">Option C</button>
+            <div class="u-toolbar-title">Material</div>
+            <div class="u-toolbar-end">
+              <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
+                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
               </div>
             </div>
-            <label>Dropdown</label>
+          </div>
+        </div>
+        <div class="u-container u-margin-lg-40 chapter" id="main-content">
+          <h4 class="u-headline4 chapter-title">Text fields</h4>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field">
+              <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-standard" aria-describedby="standardHelper">
+              <label for="text-field-standard">Standard</label>
+            </div><small class="u-text-field-helper-text" id="standardHelper">Standard text field</small>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-floating-label">
+              <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-floating-label" aria-describedby="standardWithFloatinglabelHelper">
+              <label for="text-field-floating-label">Standard floating label</label>
+            </div><small class="u-text-field-helper-text" id="standardWithFloatinglabelHelper">Standard text field with floating label</small>
+          </div>
+          <div class="u-text-field-container u-form-field disabled">
+            <div class="u-text-field u-text-field-floating-label">
+              <input class="u-text-input" type="text" placeholder="Placeholder" disabled aria-describedby="standardWithFloatinglabelHelper">
+              <label for="text-field-floating-label">Standard floating label</label>
+            </div>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-box">
+              <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
+              <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
+              <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-box" aria-describedby="textFieldBox">
+              <label for="text-field-box">Text field box</label>
+            </div><small class="u-text-field-helper-text" id="textFieldBox">
+              <div class="d-flex position-relative">
+                <div class="flex-fill"><span class="u-text-field-helper-text-default">Text field box</span><span class="u-text-field-helper-text-invalid">Error</span></div><span>0 / 10</span>
+              </div></small>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-box disabled">
+              <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
+              <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
+              <input class="u-text-input" type="text" placeholder="Placeholder" disabled aria-describedby="textFieldBox">
+              <label>Text field box</label>
+            </div>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-outline">
+              <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
+              <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
+              <input class="u-text-input" type="text" placeholder="Placeholder" id="text-field-outline" aria-describedby="textFieldOutline">
+              <label for="text-field-outline">Text field outline</label>
+            </div><small class="u-text-field-helper-text" id="textFieldOutline">Text field outline</small>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-outline disabled">
+              <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
+              <div class="u-text-field-trailing-icon"><i class="mdi mdi-calendar"></i></div>
+              <input class="u-text-input" type="text" placeholder="Placeholder" disabled>
+              <label for="text-field-outline">Text field outline</label>
+            </div>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-search-field">
+              <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
+              <div class="u-text-field-trailing-icon">
+                <button class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-calendar"></i></button>
+              </div>
+              <input class="u-text-input" type="text" placeholder="Search" id="search-field">
+            </div>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-search-field u-search-field-elevated">
+              <div class="u-text-field-leading-icon"><i class="mdi mdi-calendar"></i></div>
+              <div class="u-text-field-trailing-icon u-btn-borderless"><i class="u-btn-icon mdi mdi-calendar"></i></div>
+              <input class="u-text-input" type="text" placeholder="Search" id="search-field-elevated">
+            </div>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-box">
+              <textarea class="u-text-input" type="text" placeholder="Placeholder" id="text-area-box" aria-describedby="textAreaBox"></textarea>
+              <label for="text-area-box">Text area box</label>
+            </div><small class="u-text-field-helper-text" id="textAreaBox">Text area box</small>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-outline">
+              <textarea class="u-text-input" type="text" placeholder="Placeholder" id="text-area-outline" aria-describedby="textAreaOutline"></textarea>
+              <label for="text-area-outline">Text area outline</label>
+            </div><small class="u-text-field-helper-text" id="textAreaOutline">Text area outline</small>
+          </div>
+          <div class="u-text-field-container u-form-field">
+            <div class="u-text-field u-text-field-box u-dropdown">
+              <div class="u-text-field-trailing-icon">
+                <div class="u-dropdown-toggle-icon"></div>
+              </div>
+              <button class="u-text-input u-dropdown-toggle" type="button" disabled>
+                <div class="u-text-input-placeholder">No value</div>
+              </button>
+              <div class="u-dropdown-menu up w-100">
+                <div class="u-dropdown-content">
+                  <button class="u-dropdown-item" type="button">Option A</button>
+                  <button class="u-dropdown-item" type="button">Option B</button>
+                  <button class="u-dropdown-item" type="button">Option C</button>
+                </div>
+              </div>
+              <label>Dropdown</label>
+            </div>
           </div>
         </div>
       </div>

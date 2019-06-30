@@ -57,6 +57,7 @@
   umd.TextField.initializeTextFields();
   umd.Dropdown.initializeDropdowns();
   umd.TabBar.initializeTabBars();
+  umd.Slider.initializeSliders();
 
   let textField = document.querySelector('.u-text-field-box');
   const textInput = document.querySelector('#text-field-box');

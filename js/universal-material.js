@@ -476,6 +476,66 @@ var umd;
         return Ripple;
     }());
     umd.Ripple = Ripple;
+    var Slider = (function () {
+        function Slider(_sliderElement) {
+            var _this = this;
+            this._sliderElement = _sliderElement;
+            this._sliderTrack = _sliderElement.querySelector('.u-slider-track');
+            this._sliderTrackContainer = _sliderElement.querySelector('.u-slider-track-container');
+            this._sliderTrackMarkerContainer = _sliderElement.querySelector('.u-slider-track-marker-container');
+            this._sliderTrackMarker = _sliderElement.querySelector('.u-slider-track-marker');
+            this._sliderThumb = _sliderElement.querySelector('.u-slider-thumb');
+            this._sliderInputElement = _sliderElement.querySelector('input[type=range]');
+            this._sliderInputElement.addEventListener(window.navigator.userAgent.indexOf('Trident/') > -1 ? 'change' : 'input', function () { return _this._setThumbAndTrack(); });
+            this._sliderInputElement.setAttribute('aria-valuemin', this._sliderInputElement.min);
+            this._sliderInputElement.setAttribute('aria-valuemax', this._sliderInputElement.max);
+            this._sliderElement['slider'] = this;
+            this._setTrackMarkers();
+            this._setThumbAndTrack();
+        }
+        Slider.prototype._setTrackMarkers = function () {
+            if (!this._sliderTrackMarker || !this._sliderTrackMarkerContainer) {
+                return;
+            }
+            var min = parseInt(this._sliderInputElement.min, 10);
+            var max = parseInt(this._sliderInputElement.max, 10);
+            var step = parseInt(this._sliderInputElement.step || "1", 10);
+            for (var i = 0; i < max - min; i += step) {
+                var node = this._sliderTrackMarker.cloneNode(true);
+                this._sliderTrackMarkerContainer.appendChild(node);
+            }
+        };
+        Slider.prototype._setThumbAndTrack = function () {
+            var value = this._sliderInputElement.valueAsNumber;
+            var min = parseInt(this._sliderInputElement.min, 10);
+            var max = parseInt(this._sliderInputElement.max, 10);
+            this._sliderInputElement.setAttribute('aria-valuenow', value.toString());
+            var offset = max - min;
+            value -= min;
+            var position = value * 100 / offset;
+            this._sliderThumb.style.width = position + "%";
+            this._sliderTrack.style.width = position + "%";
+        };
+        Slider.prototype.setDisabled = function (disabled) {
+            if (disabled) {
+                this._sliderInputElement.setAttribute('aria-disabled', disabled.toString());
+                this._sliderInputElement.setAttribute('disabled', '');
+            }
+            else {
+                this._sliderInputElement.removeAttribute('aria-disabled');
+                this._sliderInputElement.removeAttribute('disabled');
+            }
+        };
+        Slider.initializeSliders = function () {
+            var sliders = document.querySelectorAll('.u-slider');
+            for (var i = 0; i < sliders.length; i++) {
+                var slider = sliders[i];
+                new Slider(slider);
+            }
+        };
+        return Slider;
+    }());
+    umd.Slider = Slider;
     var Snackbar = (function () {
         function Snackbar() {
         }
@@ -695,5 +755,3 @@ var umd;
     }());
     umd.TextField = TextField;
 })(umd || (umd = {}));
-
-//# sourceMappingURL=universal-material.js.map

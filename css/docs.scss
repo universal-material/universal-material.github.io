@@ -15,11 +15,11 @@
   padding-top: 56px;
 }
 
-@include media-breakpoint-up(lg) {
-  #app-bar {
-    left: 256px;
-  }
-}
+//@include media-breakpoint-up(lg) {
+//  #app-bar {
+//    left: 256px;
+//  }
+//}
 
 .example-box {
   display: flex;

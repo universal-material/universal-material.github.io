@@ -13,268 +13,254 @@
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/css/universal-material.css">
     <link rel="stylesheet" href="/css/docs.css">
-    <body class="u-drawer u-drawer-lg-dismissible">
-      <aside class="u-drawer-content u-navigation-drawer">
-        <div class="u-toolbar">
+    <body>
+      <div class="u-drawer u-drawer-lg-dismissible">
+        <aside class="u-drawer-content u-navigation-drawer">
+          <div class="u-toolbar">
+            <div class="u-toolbar-row">
+              <div class="u-toolbar-title">Material Design</div>
+            </div>
+          </div>
+          <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
+              <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
+              <div class="u-list-item-primary-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
+              <div class="u-list-item-primary-content"><span>Typography</span></div></a><a class="u-list-item" href="/components/buttons.html">
+              <div class="u-list-item-primary-content"><span>Buttons</span></div></a><a class="u-list-item" href="/components/floating-action-button.html">
+              <div class="u-list-item-primary-content"><span>Floating action button</span></div></a><a class="u-list-item" href="/components/cards.html">
+              <div class="u-list-item-primary-content"><span>Cards</span></div></a><a class="u-list-item" href="/components/chips.html">
+              <div class="u-list-item-primary-content"><span>Chips</span></div></a><a class="u-list-item" href="/components/data-tables.html">
+              <div class="u-list-item-primary-content"><span>Data tables</span></div></a><a class="u-list-item" href="/components/dialogs.html">
+              <div class="u-list-item-primary-content"><span>Dialogs</span></div></a><a class="u-list-item" href="/components/lists.html">
+              <div class="u-list-item-primary-content"><span>Lists</span></div></a><a class="u-list-item" href="/components/menus.html">
+              <div class="u-list-item-primary-content"><span>Menus</span></div></a><a class="u-list-item" href="/components/progress.html">
+              <div class="u-list-item-primary-content"><span>Progress</span></div></a><a class="u-list-item" href="/components/selection-controls.html">
+              <div class="u-list-item-primary-content"><span>Selection controls</span></div></a><a class="u-list-item" href="/components/sliders.html">
+              <div class="u-list-item-primary-content"><span>Sliders</span></div></a><a class="u-list-item" href="/components/snackbars.html">
+              <div class="u-list-item-primary-content"><span>Snackbars</span></div></a><a class="u-list-item" href="/components/tabs.html">
+              <div class="u-list-item-primary-content"><span>Tabs</span></div></a><a class="u-list-item" href="/components/text-fields.html">
+              <div class="u-list-item-primary-content"><span>Text fields</span></div></a><a class="u-list-item" href="/components/toolbars.html">
+              <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
+        </aside>
+        <div class="u-drawer-backdrop d-lg-none"></div>
+        <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
-            <div class="u-toolbar-title">Material Design</div>
-          </div>
-        </div>
-        <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
-            <div class="u-list-item-icon"><i class="mdi mdi-home"></i></div>
-            <div class="u-list-item-primary-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-view-grid"></i></div>
-            <div class="u-list-item-primary-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
-            <div class="u-list-item-primary-content"><span>Typography</span></div></a><a class="u-list-item" href="/components/buttons.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-arrow-right"></i></div>
-            <div class="u-list-item-primary-content"><span>Buttons</span></div></a><a class="u-list-item" href="/components/floating-action-button.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-plus-circle-outline"></i></div>
-            <div class="u-list-item-primary-content"><span>Floating action button</span></div></a><a class="u-list-item" href="/components/cards.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-body"></i></div>
-            <div class="u-list-item-primary-content"><span>Cards</span></div></a><a class="u-list-item" href="/components/chips.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-label"></i></div>
-            <div class="u-list-item-primary-content"><span>Chips</span></div></a><a class="u-list-item" href="/components/data-tables.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-table"></i></div>
-            <div class="u-list-item-primary-content"><span>Data tables</span></div></a><a class="u-list-item" href="/components/dialogs.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-window-maximize"></i></div>
-            <div class="u-list-item-primary-content"><span>Dialogs</span></div></a><a class="u-list-item" href="/components/lists.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-format-list-bulleted"></i></div>
-            <div class="u-list-item-primary-content"><span>Lists</span></div></a><a class="u-list-item" href="/components/menus.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-menu"></i></div>
-            <div class="u-list-item-primary-content"><span>Menus</span></div></a><a class="u-list-item" href="/components/progress.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-loading"></i></div>
-            <div class="u-list-item-primary-content"><span>Progress</span></div></a><a class="u-list-item" href="/components/selection-controls.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-toggle-switch"></i></div>
-            <div class="u-list-item-primary-content"><span>Selection controls</span></div></a><a class="u-list-item" href="/components/snackbars.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-footer"></i></div>
-            <div class="u-list-item-primary-content"><span>Snackbars</span></div></a><a class="u-list-item" href="/components/tabs.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-tab"></i></div>
-            <div class="u-list-item-primary-content"><span>Tabs</span></div></a><a class="u-list-item" href="/components/text-fields.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-textbox"></i></div>
-            <div class="u-list-item-primary-content"><span>Text fields</span></div></a><a class="u-list-item" href="/components/toolbars.html">
-            <div class="u-list-item-icon"><i class="mdi mdi-page-layout-header"></i></div>
-            <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
-      </aside>
-      <div class="u-drawer-backdrop d-lg-none"></div>
-      <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
-        <div class="u-toolbar-row">
-          <div class="u-toolbar-start">
-            <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
-          </div>
-          <div class="u-toolbar-title">Material</div>
-          <div class="u-toolbar-end">
-            <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
-              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
-              <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
+            <div class="u-toolbar-start">
+              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-container u-margin-lg-40 chapter" id="main-content">
-        <h4 class="u-headline4 chapter-title">Lists</h4>
-        <div class="example-box">
-          <div class="example-box-header">
-            <div class="u-list">
-              <div class="u-list-item">
-                <div class="u-list-item-primary-content">Item A</div>
-              </div>
-              <div class="u-list-item">
-                <div class="u-list-item-primary-content">Item B</div>
-              </div>
-              <div class="u-list-item">
-                <div class="u-list-item-primary-content">Item C</div>
+            <div class="u-toolbar-title">Material</div>
+            <div class="u-toolbar-end">
+              <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
+                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
               </div>
             </div>
           </div>
         </div>
-        <div class="example-box">
-          <div class="example-box-header">
-            <ul class="u-list u-list-selectable">
-              <li class="u-list-item u-list-item-two-lines">
-                <div class="u-list-item-primary-content">Item A
-                  <div class="secondary-text text-low-contrast">Subtitle</div>
+        <div class="u-container u-margin-lg-40 chapter" id="main-content">
+          <h4 class="u-headline4 chapter-title">Lists</h4>
+          <div class="example-box">
+            <div class="example-box-header">
+              <div class="u-list">
+                <div class="u-list-item">
+                  <div class="u-list-item-primary-content">Item A</div>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="example-box">
-          <div class="example-box-header">
-            <div class="u-list u-list-selectable">
-              <div class="u-list-item">
-                <div class="u-list-item-primary-content">Item A</div>
-              </div>
-              <div class="u-list-item">
-                <div class="u-list-item-primary-content">Item B</div>
-              </div>
-              <div class="u-list-item">
-                <div class="u-list-item-primary-content">Item C</div>
+                <div class="u-list-item">
+                  <div class="u-list-item-primary-content">Item B</div>
+                </div>
+                <div class="u-list-item">
+                  <div class="u-list-item-primary-content">Item C</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="example-box">
-          <div class="example-box-header">
-            <ul class="u-list u-list-selectable u-list-item-dividers">
-              <li class="u-list-item">
-                <div class="u-list-item-primary-content">Item A</div>
-              </li>
-              <li class="u-list-item">
-                <div class="u-list-item-primary-content">Item B</div>
-              </li>
-              <li class="u-list-item">
-                <div class="u-list-item-primary-content">Item C</div>
-              </li>
-            </ul>
+          <div class="example-box">
+            <div class="example-box-header">
+              <ul class="u-list u-list-selectable">
+                <li class="u-list-item u-list-item-two-lines">
+                  <div class="u-list-item-primary-content">Item A
+                    <div class="secondary-text text-low-contrast">Subtitle</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="example-box">
-          <div class="example-box-header">
-            <ul class="u-list">
-              <li class="u-list-item">
-                <div class="u-list-item-hover"></div>
-                <div class="u-list-item-primary-content">Item A</div>
-                <div class="u-list-item-icon u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-star"></i></div>
-              </li>
-              <li class="u-list-item">
-                <div class="u-list-item-hover"></div>
-                <div class="u-list-item-primary-content">Item B</div>
-                <div class="u-list-item-icon u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-star"></i></div>
-              </li>
-              <li class="u-list-item">
-                <div class="u-list-item-hover"></div>
-                <div class="u-list-item-primary-content">Item C</div>
-                <div class="u-list-item-icon u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-star"></i></div>
-              </li>
-            </ul>
+          <div class="example-box">
+            <div class="example-box-header">
+              <div class="u-list u-list-selectable">
+                <div class="u-list-item">
+                  <div class="u-list-item-primary-content">Item A</div>
+                </div>
+                <div class="u-list-item">
+                  <div class="u-list-item-primary-content">Item B</div>
+                </div>
+                <div class="u-list-item">
+                  <div class="u-list-item-primary-content">Item C</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="example-box">
-          <div class="example-box-header limited-height">
-            <ul class="u-list u-list-indexed">
-              <li class="u-list-group">
-                <div class="u-list-index">A</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Angelita Kellar  </div>
+          <div class="example-box">
+            <div class="example-box-header">
+              <ul class="u-list u-list-selectable u-list-item-dividers">
+                <li class="u-list-item">
+                  <div class="u-list-item-primary-content">Item A</div>
+                </li>
+                <li class="u-list-item">
+                  <div class="u-list-item-primary-content">Item B</div>
+                </li>
+                <li class="u-list-item">
+                  <div class="u-list-item-primary-content">Item C</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="example-box">
+            <div class="example-box-header">
+              <ul class="u-list">
+                <li class="u-list-item">
+                  <div class="u-list-item-hover"></div>
+                  <div class="u-list-item-primary-content">Item A</div>
+                  <div class="u-list-item-icon u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-star"></i></div>
+                </li>
+                <li class="u-list-item">
+                  <div class="u-list-item-hover"></div>
+                  <div class="u-list-item-primary-content">Item B</div>
+                  <div class="u-list-item-icon u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-star"></i></div>
+                </li>
+                <li class="u-list-item">
+                  <div class="u-list-item-hover"></div>
+                  <div class="u-list-item-primary-content">Item C</div>
+                  <div class="u-list-item-icon u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-star"></i></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="example-box">
+            <div class="example-box-header limited-height">
+              <ul class="u-list u-list-indexed">
+                <li class="u-list-group">
+                  <div class="u-list-index">A</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Angelita Kellar  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Ayesha Commons  </div>
+                    </div>
                   </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Ayesha Commons  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">B</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Bella Drayton  </div>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">B</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Bella Drayton  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">C</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Carlita Baum  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Collette Morena  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Corliss Vaughan  </div>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">C</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Carlita Baum  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">E</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Earline Marcoux  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Eilene Mcarthur  </div>
+                    </div>
                   </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Collette Morena  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">J</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Jerold Sancho  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Josef Ariza  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Jospeh Wooten</div>
+                    </div>
                   </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Corliss Vaughan  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">L</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Lupe Kerry</div>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">E</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Earline Marcoux  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">M</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Marin Whitwell  </div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Matt Tugwell</div>
+                    </div>
                   </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Eilene Mcarthur  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">N</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Norine Woodell  </div>
+                    </div>
+                    <div class="u-list-item"></div>
                   </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">J</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Jerold Sancho  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">O</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Olen Beumer</div>
+                    </div>
                   </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Josef Ariza  </div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">S</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Shannan Mathews</div>
+                    </div>
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Stephaine Fraise  </div>
+                    </div>
                   </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Jospeh Wooten</div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">T</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Timika Soller</div>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">L</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Lupe Kerry</div>
+                </li>
+                <li class="u-list-group">
+                  <div class="u-list-index">V</div>
+                  <div class="u-list-group-items">
+                    <div class="u-list-item">
+                      <div class="u-list-item-primary-content">Vannessa Armer</div>
+                    </div>
                   </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">M</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Marin Whitwell  </div>
-                  </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Matt Tugwell</div>
-                  </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">N</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Norine Woodell  </div>
-                  </div>
-                  <div class="u-list-item"></div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">O</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Olen Beumer</div>
-                  </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">S</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Shannan Mathews</div>
-                  </div>
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Stephaine Fraise  </div>
-                  </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">T</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Timika Soller</div>
-                  </div>
-                </div>
-              </li>
-              <li class="u-list-group">
-                <div class="u-list-index">V</div>
-                <div class="u-list-group-items">
-                  <div class="u-list-item">
-                    <div class="u-list-item-primary-content">Vannessa Armer</div>
-                  </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

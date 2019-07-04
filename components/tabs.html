@@ -45,7 +45,7 @@
         <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
-              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+              <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
             </div>
             <div class="u-toolbar-title">Material</div>
             <div class="u-toolbar-end">
@@ -70,30 +70,31 @@
       <div class="u-btn-borderless u-btn-default"><i class="u-btn-icon mdi mdi-dots-vertical"></i></div>
     </div>
   </div>
-  <div class="u-tab-bar u-tab-bar-primary u-toolbar-icon-padding">
-    <div class="u-tab active">
+  <div class="u-tab-bar u-tab-bar-primary u-toolbar-icon-padding" role="tablist" aria-label="Example tab">
+    <button type="button" role="tab" class="u-tab active">
       <div class="u-tab-content">
         <div class="u-tab-text">Item one</div>
       </div>
-    </div>
-    <div class="u-tab">
+    </button>
+    <button type="button" role="tab" class="u-tab">
       <div class="u-tab-content">
         <div class="u-tab-text">Item two</div>
       </div>
-    </div>
-    <div class="u-tab">
+    </button>
+    <button type="button" role="tab" class="u-tab">
       <div class="u-tab-content">
         <div class="u-tab-text">Item three</div>
       </div>
-    </div>
-    <div class="u-tab">
+    </button>
+    <button type="button" role="tab" class="u-tab">
       <div class="u-tab-content">
         <div class="u-tab-text">Item four Item four Item four</div>
       </div>
-    </div>
+    </button>
     <div class="u-tab-indicator"></div>
   </div>
 </div>
+
 
             </div>
             <pre><code class="html"></code></pre>

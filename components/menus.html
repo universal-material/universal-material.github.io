@@ -45,7 +45,7 @@
         <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
-              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+              <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
             </div>
             <div class="u-toolbar-title">Material</div>
             <div class="u-toolbar-end">
@@ -61,174 +61,163 @@
           <div class="menu-example">
             <h5 class="u-headline5 article-title">Down</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-actions">
-                      <div class="u-toolbar-action u-dropdown">
-                        <button class="u-btn-borderless u-btn-default u-dropdown-toggle"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                        <div class="u-dropdown-menu down">
-                          <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="example-box-header"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu down">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
               </div>
-              <pre><code class="html">&lt;div class=&quot;u-dropdown&quot;&gt;
-  &lt;button class=&quot;u-btn-borderless u-btn-default dropdown-toggle&quot;&gt;
-    &lt;i class=&quot;mdi mdi-dots-vertical&quot;&gt;&lt;/i&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;u-dropdown-menu down&quot;&gt;
-    &lt;div class=&quot;u-dropdown-content&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item A&lt;/a&gt;
-      &lt;a href=&quot;#&quot; class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item B&lt;/a&gt;
-      &lt;a href=&quot;#&quot; class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item C&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <h5 class="u-headline5 article-title">Up</h5>
-            <div class="example-box">
-              <div class="example-box-header d-flex align-items-end">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-actions">
-                      <div class="u-toolbar-action u-dropdown">
-                        <button class="u-btn-borderless u-btn-default u-dropdown-toggle"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                        <div class="u-dropdown-menu up">
-                          <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <pre><code class="html">&lt;div class=&quot;u-dropdown&quot;&gt;
-  &lt;button class=&quot;u-btn-borderless u-btn-default dropdown-toggle&quot;&gt;
-    &lt;i class=&quot;mdi mdi-dots-vertical&quot;&gt;&lt;/i&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;u-dropdown-menu up&quot;&gt;
-    &lt;div class=&quot;u-dropdown-content&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item A&lt;/a&gt;
-      &lt;a href=&quot;#&quot; class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item B&lt;/a&gt;
-      &lt;a href=&quot;#&quot; class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item C&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            <h5 class="u-headline5 article-title">Down right</h5>
-            <div class="example-box">
-              <div class="example-box-header">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-actions">
-                      <div class="u-toolbar-action u-dropdown">
-                        <button class="u-btn-borderless u-btn-default u-dropdown-toggle"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                        <div class="u-dropdown-menu down-right">
-                          <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <pre><code class="html">&lt;div class=&quot;u-dropdown&quot;&gt;
-  &lt;button class=&quot;btn-borderless u-btn-default&quot;&gt;
-    &lt;i class=&quot;mdi mdi-dots-vertial&quot;&nbsp;/&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;u-dropdown-menu down-right&quot;&gt;
-    &lt;div class=&quot;u-dropdown-content&quot;&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item A&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item B&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item C&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
             <h5 class="u-headline5 article-title">Down left</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-actions">
-                      <div class="u-toolbar-actions u-dropdown">
-                        <button class="u-btn-borderless u-btn-default u-dropdown-toggle"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                        <div class="u-dropdown-menu down-left">
-                          <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="example-box-header"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu down-left">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
               </div>
-              <pre><code class="html">&lt;div class=&quot;u-dropdown&quot;&gt;
-  &lt;button class=&quot;btn-borderless u-btn-default&quot;&gt;
-    &lt;i class=&quot;mdi mdi-dots-vertial&quot;&nbsp;/&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;u-dropdown-menu down-left&quot;&gt;
-    &lt;div class=&quot;u-dropdown-content&quot;&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item A&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item B&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item C&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
-            <h5 class="u-headline5 article-title">Up right</h5>
+            <h5 class="u-headline5 article-title">Down right</h5>
             <div class="example-box">
-              <div class="example-box-header d-flex align-items-end">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-actions">
-                      <div class="u-toolbar-action u-dropdown">
-                        <button class="u-btn-borderless u-btn-default u-dropdown-toggle"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                        <div class="u-dropdown-menu up-right">
-                          <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="example-box-header"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu down-right">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
               </div>
-              <pre><code class="html">&lt;div class=&quot;u-dropdown&quot;&gt;
-  &lt;button class=&quot;btn-borderless u-btn-default&quot;&gt;
-    &lt;i class=&quot;mdi mdi-dots-vertial&quot;&nbsp;/&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;u-dropdown-menu up-right&quot;&gt;
-    &lt;div class=&quot;u-dropdown-content&quot;&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item A&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item B&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item C&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+              <pre><code class="html"></code></pre>
+            </div>
+            <h5 class="u-headline5 article-title">Down start</h5>
+            <div class="example-box">
+              <div class="example-box-header"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu down-start">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
+              </div>
+              <pre><code class="html"></code></pre>
+            </div>
+            <h5 class="u-headline5 article-title">Down end</h5>
+            <div class="example-box">
+              <div class="example-box-header"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu down-end">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
+              </div>
+              <pre><code class="html"></code></pre>
+            </div>
+            <h5 class="u-headline5 article-title">Up</h5>
+            <div class="example-box">
+              <div class="example-box-header d-flex align-items-end"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu up">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
+              </div>
+              <pre><code class="html"></code></pre>
             </div>
             <h5 class="u-headline5 article-title">Up left</h5>
             <div class="example-box">
-              <div class="example-box-header d-flex align-items-end">
-                <div class="u-toolbar">
-                  <div class="u-toolbar-row">
-                    <div class="u-toolbar-title"></div>
-                    <div class="u-dropdown">
-                      <button class="u-btn-borderless u-btn-default u-dropdown-toggle"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                      <div class="u-dropdown-menu up-left">
-                        <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="example-box-header d-flex align-items-end"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu up-left">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
               </div>
-              <pre><code class="html">&lt;div class=&quot;u-dropdown&quot;&gt;
-  &lt;button class=&quot;btn-borderless u-btn-default&quot;&gt;
-    &lt;i class=&quot;mdi mdi-dots-vertial&quot;&nbsp;/&gt;
-  &lt;/button&gt;
-  &lt;div class=&quot;u-dropdown-menu up-left&quot;&gt;
-    &lt;div class=&quot;u-dropdown-content&quot;&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item A&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item B&lt;/a&gt;
-      &lt;a class=&quot;u-dropdown-item text-nowrap&quot;&gt;Item C&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+              <pre><code class="html"></code></pre>
+            </div>
+            <h5 class="u-headline5 article-title">Up right</h5>
+            <div class="example-box">
+              <div class="example-box-header d-flex align-items-end"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu up-right">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
+              </div>
+              <pre><code class="html"></code></pre>
+            </div>
+            <h5 class="u-headline5 article-title">Up start</h5>
+            <div class="example-box">
+              <div class="example-box-header d-flex align-items-end"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu up-start">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
+              </div>
+              <pre><code class="html"></code></pre>
+            </div>
+            <h5 class="u-headline5 article-title">Up end</h5>
+            <div class="example-box">
+              <div class="example-box-header d-flex align-items-end"><span class="u-dropdown">
+  <button class="u-btn-flat u-btn-default u-dropdown-toggle">Menu</button>
+  <div class="u-dropdown-menu up-end">
+    <div class="u-dropdown-content">
+      <a href="#" class="u-dropdown-item text-nowrap">Item A</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item B</a>
+      <a href="#" class="u-dropdown-item text-nowrap">Item C</a>
+    </div>
+  </div>
+</span>
+
+              </div>
+              <pre><code class="html"></code></pre>
             </div>
           </div>
         </div>

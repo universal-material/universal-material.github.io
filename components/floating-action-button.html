@@ -45,7 +45,7 @@
         <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
-              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+              <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
             </div>
             <div class="u-toolbar-title">Material</div>
             <div class="u-toolbar-end">
@@ -61,113 +61,87 @@
             <h4 class="u-headline4 chapter-title">Floating action button</h4>
             <h5 class="u-headline5 article-title">Floating buttons</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <button class="u-btn-floating u-btn-default"><i class="u-btn-icon mdi mdi-plus"></i></button>
-                <button class="u-btn-floating u-btn-default" disabled><i class="u-btn-icon mdi mdi-plus"></i></button>
+              <div class="example-box-header"><button class="u-btn-floating u-btn-default">
+  <i class="u-btn-icon mdi mdi-plus"></i>
+</button>
+<button class="u-btn-floating u-btn-default" disabled>
+  <i class="u-btn-icon mdi mdi-plus"></i>
+</button>
+
               </div>
-              <pre><code class="html">&lt;button class=&quot;u-btn-floating btn-default&quot;&gt;
-  &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;u-btn-floating btn-default&quot; disabled&gt;
-  &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
             <h5 class="u-headline5 article-title">Small floating buttons</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <button class="u-btn-floating u-btn-floating-sm u-btn-default"><i class="u-btn-icon mdi mdi-plus"></i></button>
-                <button class="u-btn-floating u-btn-floating-sm u-btn-default" disabled><i class="u-btn-icon mdi mdi-plus"></i></button>
+              <div class="example-box-header"><button class="u-btn-floating u-btn-floating-sm u-btn-default">
+  <i class="u-btn-icon mdi mdi-plus"></i>
+</button>
+<button class="u-btn-floating u-btn-floating-sm u-btn-default" disabled>
+  <i class="u-btn-icon mdi mdi-plus"></i>
+</button>
+
               </div>
-              <pre><code class="html">&lt;button class=&quot;u-btn-floating btn-floating-sm btn-default&quot;&gt;
-  &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button class=&quot;u-btn-floating btn-floating-sm btn-default&quot; disabled&gt;
-  &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
-&lt;/button&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
             <h5 class="u-headline5 article-title">Floating extended buttons</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <button class="u-btn-floating u-btn-floating-extended u-btn-default"><i class="u-btn-icon mdi mdi-plus"></i>Floating extended</button>
-                <button class="u-btn-floating u-btn-floating-extended u-btn-default" disabled><i class="u-btn-icon mdi mdi-plus"></i>Floating extended</button>
+              <div class="example-box-header"><button class="u-btn-floating u-btn-floating-sm u-btn-default">
+  <i class="u-btn-icon mdi mdi-plus"></i>
+</button>
+<button class="u-btn-floating u-btn-floating-sm u-btn-default" disabled>
+  <i class="u-btn-icon mdi mdi-plus"></i>
+</button>
+
               </div>
-              <pre><code class="html">&lt;button class=&quot;u-btn-floating btn-floating-extended btn-default&quot;&gt;
-  &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;Floating extended
-&lt;/button&gt;
-&lt;button class=&quot;u-btn-floating btn-floating-extended btn-default&quot; disabled&gt;
-  &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;Floating extended
-&lt;/button&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
             <h5 class="u-headline5 article-title">Floating action area</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <div class="u-floating-action-area u-text-end">
-                  <button class="u-btn-floating u-btn-primary"><i class="u-btn-icon mdi mdi-plus"></i></button>
-                </div>
+              <div class="example-box-header"><div class="u-floating-action-area">
+  <button class="u-btn-floating u-btn-primary">
+    <i class="u-btn-icon mdi mdi-plus"></i>
+  </button>
+</div>
+
               </div>
-              <pre><code class="html">&lt;div class=&quot;u-floating-action-area&quot;&gt;
-  &lt;button class=&quot;u-btn-floating btn-primary&quot;&gt;
-    &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
-  &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
             <h5 class="u-headline5 article-title">Floating menu</h5>
             <div class="example-box">
-              <div class="example-box-header">
-                <div class="u-floating-action-area u-floating-menu u-text-end"><span class="u-btn-floating u-btn-danger u-floating-menu-toggle" tabindex="1"><i class="u-btn-icon mdi mdi-plus"></i></span>
-                  <div class="u-floating-menu-items">
-                    <div class="u-floating-menu-item">
-                      <div class="u-floating-menu-label">Write</div>
-                      <div class="u-floating-menu-action">
-                        <button class="u-btn-floating u-btn-danger"><i class="u-btn-icon mdi mdi-pencil"></i></button>
-                      </div>
-                    </div>
-                    <div class="u-floating-menu-item">
-                      <div class="u-floating-menu-label">Reminder</div>
-                      <div class="u-floating-menu-action">
-                        <button class="u-btn-floating u-btn-floating-sm u-btn-primary"><i class="u-btn-icon mdi mdi-reminder"></i></button>
-                      </div>
-                    </div>
-                    <div class="u-floating-menu-item">
-                      <div class="u-floating-menu-label">Checklist</div>
-                      <div class="u-floating-menu-action">
-                        <button class="u-btn-floating u-btn-floating-sm u-btn-default"><i class="u-btn-icon mdi mdi-format-list-checkbox"></i></button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="example-box-header u-text-end"><div class="u-floating-action-area u-floating-menu">
+  <span class="u-btn-floating u-btn-danger u-floating-menu-toggle" tabindex="1">
+    <i class="u-btn-icon mdi mdi-plus"></i>
+  </span>
+  <div class="u-floating-menu-items">
+    <div class="u-floating-menu-item">
+      <div class="u-floating-menu-label">Write</div>
+      <div class="u-floating-menu-action">
+        <button class="u-btn-floating u-btn-danger">
+          <i class="u-btn-icon mdi mdi-pencil"></i>
+         </button>
+      </div>
+    </div>
+    <div class="u-floating-menu-item">
+      <div class="u-floating-menu-label">Reminder</div>
+      <div class="u-floating-menu-action">
+        <button class="u-btn-floating u-btn-floating-sm u-btn-primary">
+          <i class="u-btn-icon mdi mdi-reminder"></i>
+         </button>
+      </div>
+    </div>
+    <div class="u-floating-menu-item">
+      <div class="u-floating-menu-label">Checklist</div>
+      <div class="u-floating-menu-action">
+        <button class="u-btn-floating u-btn-floating-sm u-btn-default">
+          <i class="u-btn-icon mdi mdi-format-list-checkbox"></i>
+         </button>
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
-              <pre><code class="html">&lt;div class=&quot;u-floating-action-area u-floating-menu&quot;&gt;
-  &lt;span class=&quot;u-btn-floating btn-danger u-floating-menu-toggle&quot; tabindex=&quot;1&quot;&gt;
-    &lt;i class=&quot;u-btn-icon mdi mdi-plus&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-  &lt;div class=&quot;u-floating-menu-items&quot;&gt;
-    &lt;div class=&quot;u-floating-menu-item&quot;&gt;
-      &lt;div class=&quot;u-floating-menu-label&quot;&gt;Write&lt;/div&gt;
-      &lt;div class=&quot;u-floating-menu-action&quot;&gt;
-        &lt;button class=&quot;u-btn-floating btn-danger&quot;&gt;
-          &lt;i class=&quot;u-btn-icon mdi mdi-pencil&quot;&gt;&lt;/i&gt;
-         &lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;u-floating-menu-item&quot;&gt;
-      &lt;div class=&quot;u-floating-menu-label&quot;&gt;Reminder&lt;/div&gt;
-      &lt;div class=&quot;u-floating-menu-action&quot;&gt;
-        &lt;button class=&quot;u-btn-floating btn-floating-sm btn-primary&quot;&gt;
-          &lt;i class=&quot;u-btn-icon mdi mdi-reminder&quot;&gt;&lt;/i&gt;
-         &lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;u-floating-menu-item&quot;&gt;
-      &lt;div class=&quot;u-floating-menu-label&quot;&gt;Checklist&lt;/div&gt;
-      &lt;div class=&quot;u-floating-menu-action&quot;&gt;
-        &lt;button class=&quot;u-btn-floating btn-floating-sm btn-default&quot;&gt;
-          &lt;i class=&quot;u-btn-icon mdi mdi-format-list-checkbox&quot;&gt;&lt;/i&gt;
-         &lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+              <pre><code class="html"></code></pre>
             </div>
           </div>
         </div>

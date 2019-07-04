@@ -641,9 +641,33 @@ var umd;
                 var tab = event.currentTarget;
                 _this.setActiveTab(tab.index);
             };
+            if (!TabBar._attachedKeyEvents) {
+                document.addEventListener('keydown', function (e) {
+                    var tabBar = document.activeElement.parentElement && document.activeElement.parentElement['tabBar'];
+                    if (!tabBar) {
+                        return;
+                    }
+                    var tabFocusIndex = document.activeElement.index;
+                    if (e.keyCode === 37) {
+                        tabFocusIndex--;
+                        if (tabFocusIndex < 0) {
+                            tabFocusIndex = tabBar._tabMap.length - 1;
+                        }
+                    }
+                    else if (e.keyCode === 39) {
+                        tabFocusIndex++;
+                        if (tabFocusIndex >= tabBar._tabMap.length) {
+                            tabFocusIndex = 0;
+                        }
+                    }
+                    console.log(tabFocusIndex);
+                    tabBar._tabMap[tabFocusIndex].focus();
+                });
+            }
             this._tabIndicatorElement = _tabBarElement.querySelector('.u-tab-indicator');
-            this._setTabInfoMap();
+            this._setTabs();
             this.setActiveTab(0);
+            _tabBarElement['tabBar'] = this;
             if (window) {
                 window.addEventListener('resize', function () {
                     _this._updateTabIndicator();
@@ -654,6 +678,8 @@ var umd;
             var _this = this;
             if (!isNaN(this.currentTabIndex)) {
                 this._tabMap[this.currentTabIndex].classList.remove('active');
+                this._tabMap[this.currentTabIndex].setAttribute('tabindex', '-1');
+                this._tabMap[this.currentTabIndex].setAttribute('aria-selected', 'false');
             }
             this.currentTabIndex = tabIndex;
             this._tabBarElement.dispatchEvent(new CustomEvent('tabchange', {
@@ -662,11 +688,13 @@ var umd;
                 }
             }));
             this._tabMap[this.currentTabIndex].classList.add('active');
+            this._tabMap[this.currentTabIndex].setAttribute('tabindex', '0');
+            this._tabMap[this.currentTabIndex].setAttribute('aria-selected', 'true');
             setTimeout(function () { return _this._updateTabIndicator(); }, 100);
         };
         TabBar.prototype.recalculateBounds = function () {
             this._tabMap.length = 0;
-            this._setTabInfoMap();
+            this._setTabs();
             this._updateTabIndicator();
         };
         TabBar.prototype._updateTabIndicator = function () {
@@ -676,12 +704,14 @@ var umd;
             this._tabIndicatorElement.style.left = offset + 'px';
             this._tabIndicatorElement.style.width = tabBounds.width + 'px';
         };
-        TabBar.prototype._setTabInfoMap = function () {
+        TabBar.prototype._setTabs = function () {
             var tabs = this._tabBarElement.querySelectorAll('.u-tab');
             for (var i = 0; i < tabs.length; i++) {
                 var tab = tabs[i];
                 tab.removeEventListener('click', this._tabClick);
                 tab.addEventListener('click', this._tabClick);
+                tab.setAttribute('tabindex', i === this.currentTabIndex ? '0' : '-1');
+                tab.setAttribute('aria-selected', i === this.currentTabIndex ? 'true' : 'false');
                 tab.index = i;
                 this._tabMap.push(tab);
             }
@@ -696,6 +726,7 @@ var umd;
                 TabBar.attach(tabBar);
             }
         };
+        TabBar._attachedKeyEvents = false;
         return TabBar;
     }());
     umd.TabBar = TabBar;

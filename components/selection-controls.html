@@ -45,7 +45,7 @@
         <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
-              <div class="u-toolbar-navigation u-btn-borderless u-btn-default" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></div>
+              <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
             </div>
             <div class="u-toolbar-title">Material</div>
             <div class="u-toolbar-end">
@@ -61,7 +61,11 @@
           <h5 class="u-headline5 article-title">Checkbox</h5>
           <div class="example-box">
             <div class="example-box-header"><label class="u-checkbox">
-  <input type="checkbox" /><span class="u-selection-control"><span class="u-check-indicator"></span></span><span class="u-selection-control-label">Checkbox</span>
+  <input type="checkbox" aria-labelledby="checkboxLabel" />
+  <span class="u-selection-control">
+    <span class="u-check-indicator"></span>
+  </span>
+  <span id="checkboxLabel" class="u-selection-control-label">Checkbox</span>
 </label>
 
             </div>
@@ -70,13 +74,25 @@
           <h5 class="u-headline5 article-title">Radio</h5>
           <div class="example-box">
             <div class="example-box-header"><label class="u-radio">
-  <input type="radio" name="radio" /><span class="u-selection-control"><span class="u-check-indicator"></span></span><span class="u-selection-control-label">Radio A</span>
+  <input type="radio" name="radio" />
+  <span class="u-selection-control">
+    <span class="u-check-indicator"></span>
+  </span>
+  <span class="u-selection-control-label">Radio A</span>
 </label>
 <label class="u-radio">
-  <input type="radio" name="radio" /><span class="u-selection-control"><span class="u-check-indicator"></span></span><span class="u-selection-control-label">Radio B</span>
+  <input type="radio" name="radio" />
+  <span class="u-selection-control">
+    <span class="u-check-indicator"></span>
+  </span>
+  <span class="u-selection-control-label">Radio B</span>
 </label>
 <label class="u-radio">
-  <input type="radio" name="radio" /><span class="u-selection-control"><span class="u-check-indicator"></span></span><span class="u-selection-control-label">Radio C</span>
+  <input type="radio" name="radio" />
+  <span class="u-selection-control">
+    <span class="u-check-indicator"></span>
+  </span>
+  <span class="u-selection-control-label">Radio C</span>
 </label>
 
             </div>
@@ -85,7 +101,10 @@
           <h5 class="u-headline5 article-title">Switch</h5>
           <div class="example-box">
             <div class="example-box-header"><label class="u-switch">
-  <input type="checkbox" /><span class="u-selection-control"><span class="u-check-indicator"></span></span><span class="u-selection-control-label">Switch</span>
+  <input type="checkbox" />
+  <span class="u-selection-control">
+    <span class="u-check-indicator"></span></span>
+  <span class="u-selection-control-label">Switch</span>
 </label>
 
             </div>

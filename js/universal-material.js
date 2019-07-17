@@ -407,7 +407,9 @@ var umd;
         };
         Ripple.prototype.createRipple = function (rippleContainer, releaseEventName, releaseCallback, pageX, pageY) {
             var _this = this;
-            if (this.disabled)
+            if (this.disabled ||
+                rippleContainer.hasAttribute('disabled') ||
+                rippleContainer.classList.contains('disabled'))
                 return;
             var rippleWrapper = document.createElement('DIV');
             rippleWrapper.classList.add('u-ripple-wrapper');

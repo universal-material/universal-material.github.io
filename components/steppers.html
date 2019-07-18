@@ -45,9 +45,13 @@
         <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
-              <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
+              <div class="u-toolbar-actions">
+                <button class="u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
+              </div>
             </div>
-            <div class="u-toolbar-title">Material</div>
+            <div class="u-toolbar-center">
+              <div class="u-toolbar-title">Material</div>
+            </div>
             <div class="u-toolbar-end">
               <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
                 <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
@@ -60,7 +64,14 @@
           <h4 class="u-headline4 chapter-title">Steppers</h4>
           <h5 class="u-headline5 article-title">Horizontal stepper</h5>
           <div class="u-card">
-            <div class="u-stepper horizontal-stepper">
+            <div class="u-stepper u-horizontal-stepper">
+              <div class="u-step completed">
+                <div class="u-step-indicator">
+                  <div class="u-step-circle">1</div>
+                </div>
+                <div class="u-step-label">Step 1</div>
+              </div>
+              <div class="u-step-line"></div>
               <div class="u-step active">
                 <div class="u-step-indicator">
                   <div class="u-step-circle">1</div>
@@ -92,14 +103,23 @@
           </div>
           <h5 class="u-headline5 article-title">Vertical stepper</h5>
           <div class="u-card">
-            <div class="u-stepper vertical-stepper">
-              <div class="u-step active">
+            <div class="u-stepper u-vertical-stepper">
+              <div class="u-step completed">
                 <div class="u-step-indicator">
                   <div class="u-step-circle">1</div>
                   <div class="u-step-line"></div>
                 </div>
                 <div class="u-step-content">
                   <div class="u-step-label">Step 1</div>
+                </div>
+              </div>
+              <div class="u-step active">
+                <div class="u-step-indicator">
+                  <div class="u-step-circle">2</div>
+                  <div class="u-step-line"></div>
+                </div>
+                <div class="u-step-content">
+                  <div class="u-step-label">Step 2</div>
                   <div class="example-step-content"></div>
                   <div class="u-step-actions">
                     <button class="u-step-action u-btn-solid u-btn-primary">Continue</button>
@@ -109,10 +129,10 @@
               </div>
               <div class="u-step">
                 <div class="u-step-indicator">
-                  <div class="u-step-circle">2</div>
+                  <div class="u-step-circle">3</div>
                 </div>
                 <div class="u-step-content">
-                  <div class="u-step-label">Step 2</div>
+                  <div class="u-step-label">Step 3</div>
                 </div>
               </div>
             </div>

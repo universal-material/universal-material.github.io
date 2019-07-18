@@ -45,9 +45,13 @@
         <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
-              <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
+              <div class="u-toolbar-actions">
+                <button class="u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
+              </div>
             </div>
-            <div class="u-toolbar-title">Material</div>
+            <div class="u-toolbar-center">
+              <div class="u-toolbar-title">Material</div>
+            </div>
             <div class="u-toolbar-end">
               <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
                 <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
@@ -60,104 +64,42 @@
           <h4 class="u-headline4 chapter-title">Toolbars</h4>
           <h5 class="u-headline5 article-title">Simple toolbar</h5>
           <div class="example-box">
-            <div class="example-box-header">
-              <div class="u-toolbar">
-                <div class="u-toolbar-row">
-                  <div class="u-toolbar-start">
-                    <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-menu"></i></button>
-                  </div>
-                  <div class="u-toolbar-title">Title here</div>
-                  <div class="u-toolbar-end">
-                    <div class="u-toolbar-actions">
-                      <button class="u-toolbar-action u-btn-borderless u-btn-default" type="button" disabled=""><i class="u-btn-icon mdi mdi-phone"></i></button>
-                      <div class="u-toolbar-action u-dropdown">
-                        <button class="u-btn-borderless u-btn-default u-dropdown-toggle" type="button"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                        <div class="u-dropdown-menu down-left">
-                          <div class="u-dropdown-content"><a class="u-dropdown-item text-nowrap" href="#">Item A</a><a class="u-dropdown-item text-nowrap" href="#">Item B</a><a class="u-dropdown-item text-nowrap" href="#">Item C</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="example-box-header"><div class="u-toolbar">
+  <div class="u-toolbar-row">
+    <div class="u-toolbar-start">
+      <div class="u-toolbar-actions">
+        <button class="u-btn-borderless u-btn-default" type="button">
+          <i class="u-btn-icon mdi mdi-menu"></i>
+        </button>
+      </div>
+    </div>
+    <div class="u-toolbar-center">
+      <div class="u-toolbar-title">Title here</div>
+    </div>
+    <div class="u-toolbar-end">
+      <div class="u-toolbar-actions">
+        <button class="u-toolbar-action u-btn-borderless u-btn-default" type="button">
+          <i class="u-btn-icon mdi mdi-phone"></i>
+        </button>
+        <div class="u-toolbar-action u-dropdown">
+          <button class="u-btn-borderless u-btn-default u-dropdown-toggle" type="button">
+            <i class="u-btn-icon mdi mdi-dots-vertical"></i>
+          </button>
+          <div class="u-dropdown-menu down-left">
+            <div class="u-dropdown-content">
+              <a class="u-dropdown-item text-nowrap" href="#">Item A</a>
+              <a class="u-dropdown-item text-nowrap" href="#">Item B</a>
+              <a class="u-dropdown-item text-nowrap" href="#">Item C</a>
             </div>
-            <pre><code class="html">&lt;div class=&quot;u-toolbar&quot;&gt;
-  &lt;div class=&quot;u-toolbar-row&quot;&gt;
-    &lt;div class=&quot;u-toolbar-navigation btn-borderless btn-default&quot;&gt;
-      &lt;i class=&quot;u-btn-icon mdi mdi-menu&quot;&gt;&lt;/i&gt;
-     &lt;/div&gt;
-    &lt;div class=&quot;u-toolbar-title&quot;&gt;Title here&lt;/div&gt;
-    &lt;div class=&quot;u-toolbar-actions&quot;&gt;
-      &lt;button type=&quot;button&quot; disabled=&quot;&quot; class=&quot;u-btn-borderless btn-default&quot;&gt;
-        &lt;i class=&quot;u-btn-icon mdi mdi-phone&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-      &lt;button type=&quot;button&quot; class=&quot;u-btn-borderless btn-default&quot;&gt;
-        &lt;i class=&quot;u-btn-icon mdi mdi-dots-vertical&quot;&gt;&lt;/i&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
           </div>
-          <h5 class="u-headline5 article-title">Toolbar with tabs</h5>
-          <div class="example-box">
-            <div class="example-box-header">
-              <div class="u-toolbar">
-                <div class="u-toolbar-row">
-                  <div class="u-toolbar-start">
-                    <button class="u-toolbar-navigation u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-menu"></i></button>
-                  </div>
-                  <div class="u-toolbar-title">Title here</div>
-                  <div class="u-toolbar-end">
-                    <div class="u-toolbar-actions">
-                      <button class="u-toolbar-action u-btn-borderless u-btn-default" type="button"><i class="u-btn-icon mdi mdi-dots-vertical"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="u-tab-bar u-toolbar-icon-padding">
-                  <div class="u-tab active">
-                    <div class="u-tab-content">
-                      <div class="u-tab-text">Item one</div>
-                    </div>
-                  </div>
-                  <div class="u-tab">
-                    <div class="u-tab-content">
-                      <div class="u-tab-text">Item two</div>
-                    </div>
-                  </div>
-                  <div class="u-tab">
-                    <div class="u-tab-content">
-                      <div class="u-tab-text">Item three</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
             </div>
-            <pre><code class="html">&lt;div class=&quot;u-toolbar&quot;&gt;
-  &lt;div class=&quot;u-toolbar-row&quot;&gt;
-    &lt;div class=&quot;u-toolbar-navigation btn-borderless btn-default&quot;&gt;&lt;i class=&quot;u-btn-icon mdi mdi-menu&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-    &lt;div class=&quot;u-toolbar-title&quot;&gt;Title here&lt;/div&gt;
-    &lt;button class=&quot;u-btn-borderless btn-default&quot;&gt;
-      &lt;i class=&quot;u-btn-icon mdi mdi-dots-vertical&quot;&gt;&lt;/i&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;tab-bar toolbar-icon-padding&quot;&gt;
-    &lt;div class=&quot;tab active&quot;&gt;
-      &lt;div class=&quot;tab-content&quot;&gt;
-        &lt;div class=&quot;tab-text&quot;&gt;Item one&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;tab&quot;&gt;
-      &lt;div class=&quot;tab-content&quot;&gt;
-        &lt;div class=&quot;tab-text&quot;&gt;Item two&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;tab&quot;&gt;
-      &lt;div class=&quot;tab-content&quot;&gt;
-        &lt;div class=&quot;tab-text&quot;&gt;Item three&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            <pre><code class="html"></code></pre>
           </div>
         </div>
       </div>

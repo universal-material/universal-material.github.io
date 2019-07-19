@@ -4285,7 +4285,7 @@ mark,
   margin-left: 0; }
 
 .u-btn, .u-btn-flat, .u-btn-outline, .u-btn-outline-gray,
-.u-btn-solid, .u-btn-raised, .u-btn-floating, .u-btn-borderless, .u-datepicker-year-month-button, .u-tab {
+.u-btn-solid, .u-btn-raised, .u-btn-floating, .u-btn-borderless, .u-datepicker-year-month-button, .u-tab, .u-datepicker-day {
   font-size: 0.875rem;
   line-height: 2.25rem;
   font-weight: 500;
@@ -4317,7 +4317,7 @@ mark,
   border: none;
   position: relative; }
   .u-btn::before, .u-btn-flat::before, .u-btn-outline::before, .u-btn-outline-gray::before,
-  .u-btn-solid::before, .u-btn-raised::before, .u-btn-floating::before, .u-btn-borderless::before, .u-datepicker-year-month-button::before, .u-tab::before {
+  .u-btn-solid::before, .u-btn-raised::before, .u-btn-floating::before, .u-btn-borderless::before, .u-datepicker-year-month-button::before, .u-tab::before, .u-datepicker-day::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -4330,32 +4330,32 @@ mark,
     -webkit-transition: opacity 250ms linear;
     transition: opacity 250ms linear; }
   .u-btn:hover::before, .u-btn-flat:hover::before, .u-btn-outline:hover::before, .u-btn-outline-gray:hover::before,
-  .u-btn-solid:hover::before, .u-btn-raised:hover::before, .u-btn-floating:hover::before, .u-btn-borderless:hover::before, .u-datepicker-year-month-button:hover::before, .u-tab:hover::before {
+  .u-btn-solid:hover::before, .u-btn-raised:hover::before, .u-btn-floating:hover::before, .u-btn-borderless:hover::before, .u-datepicker-year-month-button:hover::before, .u-tab:hover::before, .u-datepicker-day:hover::before {
     opacity: .12; }
   .u-btn:focus::before, .u-btn-flat:focus::before, .u-btn-outline:focus::before, .u-btn-outline-gray:focus::before,
-  .u-btn-solid:focus::before, .u-btn-raised:focus::before, .u-btn-floating:focus::before, .u-btn-borderless:focus::before, .u-datepicker-year-month-button:focus::before, .u-tab:focus::before {
+  .u-btn-solid:focus::before, .u-btn-raised:focus::before, .u-btn-floating:focus::before, .u-btn-borderless:focus::before, .u-datepicker-year-month-button:focus::before, .u-tab:focus::before, .u-datepicker-day:focus::before {
     opacity: .12; }
   .u-btn:active::before, .u-btn-flat:active::before, .u-btn-outline:active::before, .u-btn-outline-gray:active::before,
-  .u-btn-solid:active::before, .u-btn-raised:active::before, .u-btn-floating:active::before, .u-btn-borderless:active::before, .u-datepicker-year-month-button:active::before, .u-tab:active::before {
+  .u-btn-solid:active::before, .u-btn-raised:active::before, .u-btn-floating:active::before, .u-btn-borderless:active::before, .u-datepicker-year-month-button:active::before, .u-tab:active::before, .u-datepicker-day:active::before {
     opacity: .2; }
   .u-btn:hover, .u-btn-flat:hover, .u-btn-outline:hover, .u-btn-outline-gray:hover,
-  .u-btn-solid:hover, .u-btn-raised:hover, .u-btn-floating:hover, .u-btn-borderless:hover, .u-datepicker-year-month-button:hover, .u-tab:hover, .u-btn:focus, .u-btn-flat:focus, .u-btn-outline:focus, .u-btn-outline-gray:focus,
-  .u-btn-solid:focus, .u-btn-raised:focus, .u-btn-floating:focus, .u-btn-borderless:focus, .u-datepicker-year-month-button:focus, .u-tab:focus {
+  .u-btn-solid:hover, .u-btn-raised:hover, .u-btn-floating:hover, .u-btn-borderless:hover, .u-datepicker-year-month-button:hover, .u-tab:hover, .u-datepicker-day:hover, .u-btn:focus, .u-btn-flat:focus, .u-btn-outline:focus, .u-btn-outline-gray:focus,
+  .u-btn-solid:focus, .u-btn-raised:focus, .u-btn-floating:focus, .u-btn-borderless:focus, .u-datepicker-year-month-button:focus, .u-tab:focus, .u-datepicker-day:focus {
     text-decoration: none; }
   .u-btn:focus, .u-btn-flat:focus, .u-btn-outline:focus, .u-btn-outline-gray:focus,
-  .u-btn-solid:focus, .u-btn-raised:focus, .u-btn-floating:focus, .u-btn-borderless:focus, .u-datepicker-year-month-button:focus, .u-tab:focus, .focus.u-btn, .focus.u-btn-flat, .focus.u-btn-outline, .focus.u-btn-outline-gray,
-  .focus.u-btn-solid, .focus.u-btn-raised, .focus.u-btn-floating, .focus.u-btn-borderless, .focus.u-datepicker-year-month-button, .focus.u-tab {
+  .u-btn-solid:focus, .u-btn-raised:focus, .u-btn-floating:focus, .u-btn-borderless:focus, .u-datepicker-year-month-button:focus, .u-tab:focus, .u-datepicker-day:focus, .focus.u-btn, .focus.u-btn-flat, .focus.u-btn-outline, .focus.u-btn-outline-gray,
+  .focus.u-btn-solid, .focus.u-btn-raised, .focus.u-btn-floating, .focus.u-btn-borderless, .focus.u-datepicker-year-month-button, .focus.u-tab, .focus.u-datepicker-day {
     outline: 0; }
   .u-btn:active, .u-btn-flat:active, .u-btn-outline:active, .u-btn-outline-gray:active,
-  .u-btn-solid:active, .u-btn-raised:active, .u-btn-floating:active, .u-btn-borderless:active, .u-datepicker-year-month-button:active, .u-tab:active, .active.u-btn, .active.u-btn-flat, .active.u-btn-outline, .active.u-btn-outline-gray,
-  .active.u-btn-solid, .active.u-btn-raised, .active.u-btn-floating, .active.u-btn-borderless, .active.u-datepicker-year-month-button, .active.u-tab {
+  .u-btn-solid:active, .u-btn-raised:active, .u-btn-floating:active, .u-btn-borderless:active, .u-datepicker-year-month-button:active, .u-tab:active, .u-datepicker-day:active, .active.u-btn, .active.u-btn-flat, .active.u-btn-outline, .active.u-btn-outline-gray,
+  .active.u-btn-solid, .active.u-btn-raised, .active.u-btn-floating, .active.u-btn-borderless, .active.u-datepicker-year-month-button, .active.u-tab, .active.u-datepicker-day {
     background-image: none; }
   .disabled.u-btn, .disabled.u-btn-flat, .disabled.u-btn-outline, .disabled.u-btn-outline-gray,
-  .disabled.u-btn-solid, .disabled.u-btn-raised, .disabled.u-btn-floating, .disabled.u-btn-borderless, .disabled.u-datepicker-year-month-button, .disabled.u-tab, .u-btn:disabled, .u-btn-flat:disabled, .u-btn-outline:disabled, .u-btn-outline-gray:disabled,
-  .u-btn-solid:disabled, .u-btn-raised:disabled, .u-btn-floating:disabled, .u-btn-borderless:disabled, .u-datepicker-year-month-button:disabled, .u-tab:disabled {
+  .disabled.u-btn-solid, .disabled.u-btn-raised, .disabled.u-btn-floating, .disabled.u-btn-borderless, .disabled.u-datepicker-year-month-button, .disabled.u-tab, .disabled.u-datepicker-day, .u-btn:disabled, .u-btn-flat:disabled, .u-btn-outline:disabled, .u-btn-outline-gray:disabled,
+  .u-btn-solid:disabled, .u-btn-raised:disabled, .u-btn-floating:disabled, .u-btn-borderless:disabled, .u-datepicker-year-month-button:disabled, .u-tab:disabled, .u-datepicker-day:disabled {
     cursor: default; }
   .u-btn, .u-btn-flat, .u-btn-outline, .u-btn-outline-gray,
-  .u-btn-solid, .u-btn-raised, .u-btn-floating, .u-btn-borderless, .u-datepicker-year-month-button, .u-tab,
+  .u-btn-solid, .u-btn-raised, .u-btn-floating, .u-btn-borderless, .u-datepicker-year-month-button, .u-tab, .u-datepicker-day,
   .u-btn *,
   .u-btn-flat *,
   .u-btn-outline *,
@@ -4365,7 +4365,8 @@ mark,
   .u-btn-floating *,
   .u-btn-borderless *,
   .u-datepicker-year-month-button *,
-  .u-tab * {
+  .u-tab *,
+  .u-datepicker-day * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
 
@@ -4450,6 +4451,7 @@ mark,
       -ms-flex-pack: start;
           justify-content: flex-start; }
   .u-toolbar-start .u-toolbar-actions {
+    margin-right: 16px;
     margin-left: -16px; }
 
 .u-toolbar-end {
@@ -4461,11 +4463,16 @@ mark,
           justify-content: flex-end;
   margin-left: auto; }
   .u-toolbar-end .u-toolbar-actions {
-    margin-right: -16px; }
+    margin-right: -16px;
+    margin-left: 16px; }
 
 .u-toolbar-center {
-  margin-right: 16px;
-  margin-left: 16px; }
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0; }
+  .u-toolbar-center:last-child {
+    margin-right: 0; }
 
 .u-toolbar-title {
   font-size: 1.25rem;
@@ -4492,7 +4499,15 @@ mark,
 .rtl .u-toolbar-start .u-toolbar-actions,
 [dir="rtl"] .u-toolbar-start .u-toolbar-actions {
   margin-right: -16px;
-  margin-left: 0; }
+  margin-left: 16px; }
+
+.rtl .u-toolbar-center,
+[dir="rtl"] .u-toolbar-center {
+  margin-right: 0;
+  margin-left: 16px; }
+  .rtl .u-toolbar-center:last-child,
+  [dir="rtl"] .u-toolbar-center:last-child {
+    margin-left: 0; }
 
 .rtl .u-toolbar-end,
 [dir="rtl"] .u-toolbar-end {
@@ -4500,7 +4515,7 @@ mark,
   margin-left: 0; }
   .rtl .u-toolbar-end .u-toolbar-actions,
   [dir="rtl"] .u-toolbar-end .u-toolbar-actions {
-    margin-right: 0;
+    margin-right: 16px;
     margin-left: -16px; }
 
 .u-btn, .u-btn-flat, .u-btn-outline, .u-btn-outline-gray,

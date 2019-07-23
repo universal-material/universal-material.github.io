@@ -408,12 +408,14 @@ var umd;
                 return;
             var release;
             var cancel = false;
-            rippleContainer.addEventListener("touchmove", function () {
+            var touchMove = function () {
                 cancel = true;
+                rippleContainer.removeEventListener("touchmove", touchMove);
                 if (release) {
                     release();
                 }
-            });
+            };
+            rippleContainer.addEventListener("touchmove", touchMove);
             setTimeout(function () {
                 if (cancel) {
                     return;
@@ -438,11 +440,12 @@ var umd;
                 };
                 window.addEventListener(releaseEventName, release);
                 rippleContainer.addEventListener("dragover", release);
+                rippleContainer.addEventListener("mouseleave", release);
                 ripple.addEventListener('transitionend', function () {
                     if (ripple.classList.contains('dismiss')) {
                         rippleContainer.removeChild(rippleWrapper);
                         rippleContainer.removeEventListener("dragover", release);
-                        rippleContainer.addEventListener("touchmove", release);
+                        rippleContainer.removeEventListener("mouseleave", release);
                         window.removeEventListener(releaseEventName, release);
                     }
                 });

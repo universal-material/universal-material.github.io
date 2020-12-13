@@ -42,11 +42,11 @@
               <div class="u-list-item-primary-content"><span>Toolbars</span></div></a></nav>
         </aside>
         <div class="u-drawer-backdrop d-lg-none"></div>
-        <div class="u-toolbar u-toolbar-primary u-toolbar-fixed" id="app-bar">
+        <div class="u-toolbar u-toolbar-primary u-bg-dark u-toolbar-fixed" id="app-bar">
           <div class="u-toolbar-row">
             <div class="u-toolbar-start">
               <div class="u-toolbar-actions">
-                <button class="u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
+                <button class="u-toolbar-action u-btn-borderless u-btn-default" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
               </div>
             </div>
             <div class="u-toolbar-center">
@@ -55,7 +55,6 @@
             <div class="u-toolbar-end">
               <div class="u-toolbar-actions"><a class="u-toolbar-action u-btn-borderless u-btn-default" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
                 <button class="u-toolbar-action u-btn-borderless u-btn-default" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
-                <button class="u-toolbar-action u-btn-borderless u-btn-default" id="dense-toggle" type="button" title="Dense layout"><i class="u-btn-icon mdi mdi-format-size"></i></button>
               </div>
             </div>
           </div>
@@ -137,13 +136,12 @@
     <table>
       <thead>
       <tr>
-      <tr>
         <th>Dessert (100g serving)&#x200E;</th>
         <th class="u-text-end">Calories</th>
         <th class="u-text-end">Fat (g)&#x200E;</th>
         <th class="u-text-end">Carbs(g)&#x200E;</th>
       </tr>
-      </tr>
+      </thead>
       <tbody>
       <tr>
         <td>Frozen yogurt</td>
@@ -164,7 +162,6 @@
         <td class="u-text-end">24</td>
       </tr>
       </tbody>
-      </thead>
     </table>
   </div>
 </div>
@@ -194,7 +191,6 @@
         <thead>
         <tr>
           <th class="text-nowrap">Dessert (100g serving)&#x200E;</th>
-          <th>Type</th>
           <th class="u-text-end">Calories</th>
           <th class="u-text-end">Fat (g)&#x200E;</th>
           <th class="u-text-end">Carbs(g)&#x200E;</th>
@@ -203,57 +199,18 @@
         <tbody>
         <tr>
           <td class="text-nowrap">Frozen yogurt</td>
-          <td class="text-nowrap u-dropdown">
-            <button class="u-btn-flat u-btn-default u-dropdown-toggle">
-              <div class="u-dropdown-toggle-label">Ice cream</div>
-              <div class="u-dropdown-toggle-icon"></div>
-            </button>
-            <div class="u-dropdown-menu down-right fit-width">
-              <div class="u-dropdown-content">
-                <div class="u-dropdown-item">Ice cream</div>
-                <div class="u-dropdown-item">Pastry</div>
-                <div class="u-dropdown-item">Other</div>
-              </div>
-            </div>
-          </td>
           <td class="u-text-end">159</td>
           <td class="u-text-end">6.0</td>
           <td class="u-text-end">24</td>
         </tr>
         <tr>
           <td class="text-nowrap">Ice cream sandwich</td>
-          <td class="text-nowrap u-dropdown">
-            <button class="u-btn-flat u-btn-default u-dropdown-toggle">
-              <div class="u-dropdown-toggle-label">Ice cream</div>
-              <div class="u-dropdown-toggle-icon"></div>
-            </button>
-            <div class="u-dropdown-menu up-right fit-width">
-              <div class="u-dropdown-content">
-                <div class="u-dropdown-item">Ice cream</div>
-                <div class="u-dropdown-item">Pastry</div>
-                <div class="u-dropdown-item">Other</div>
-              </div>
-            </div>
-          </td>
           <td class="u-text-end">237</td>
           <td class="u-text-end">9.0</td>
           <td class="u-text-end">37</td>
         </tr>
         <tr>
           <td class="text-nowrap">Eclair</td>
-          <td class="text-nowrap u-dropdown">
-            <button class="u-btn-flat u-btn-default u-dropdown-toggle">
-              <div class="u-dropdown-toggle-label">Pastry</div>
-              <div class="u-dropdown-toggle-icon"></div>
-            </button>
-            <div class="u-dropdown-menu up-right fit-width">
-              <div class="u-dropdown-content">
-                <div class="u-dropdown-item">Ice cream</div>
-                <div class="u-dropdown-item">Pastry</div>
-                <div class="u-dropdown-item">Other</div>
-              </div>
-            </div>
-          </td>
           <td class="u-text-end">262</td>
           <td class="u-text-end">16.0</td>
           <td class="u-text-end">24</td>

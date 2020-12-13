@@ -20,10 +20,6 @@
     }
   }
 
-  function toggleDenseLayout() {
-    document.body.classList.toggle("dense-layout");
-  }
-
   function toggleRtl() {
     document.body.classList.toggle("rtl");
   }
@@ -39,10 +35,6 @@
   document
     .getElementById("menu-toggle")
     .addEventListener("click", toggleSidebar);
-
-  document
-    .getElementById("dense-toggle")
-    .addEventListener("click", toggleDenseLayout);
 
   document
     .getElementById("rtl-toggle")

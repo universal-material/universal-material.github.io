@@ -1,12 +1,15 @@
 .u-drawer-content {
   height: 100%;
   overflow: auto;
-  border-right: 1px solid rgba(0, 0, 0, 0.12); }
-  .u-drawer-content .u-toolbar {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.u-drawer-content .u-toolbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
 
 #main-content {
-  padding-top: 56px; }
+  padding-top: 56px;
+}
 
 .example-box {
   display: -webkit-box;
@@ -16,71 +19,91 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: .5rem;
+  padding: 0.5rem;
   overflow: auto;
-  background: #e0e0e0; }
-  .example-box .u-floating-action-area {
-    position: static; }
-  .example-box .u-floating-menu {
-    position: relative;
-    margin-top: 200px; }
+  background: #e0e0e0;
+}
+.example-box .u-floating-action-area {
+  position: static;
+}
+.example-box .u-floating-menu {
+  position: relative;
+  margin-top: 200px;
+}
 
 .example-box-header {
   padding: 1rem;
-  margin-bottom: .5rem;
-  background: #f5f5f5; }
-  .example-box-header .u-toolbar {
-    width: 100%; }
+  margin-bottom: 0.5rem;
+  background: #f5f5f5;
+}
+.example-box-header .u-toolbar {
+  width: 100%;
+}
+.example-box-header .u-dropdown {
+  display: inline-block;
+}
 
 .limited-height {
   max-height: 300px;
-  overflow: auto; }
+  overflow: auto;
+}
 
 .example-box .u-chip-avatar {
-  background: rgba(0, 0, 0, 0.54); }
+  background: rgba(0, 0, 0, 0.54);
+}
 
 .example-step-content {
   width: 100%;
   height: 300px;
-  background: #ccc; }
+  background: #ccc;
+}
 
 .menu-example .example-box-header {
-  height: 14rem; }
-
+  height: 14rem;
+}
 .menu-example .u-toolbar {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .u-card {
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+}
 
 .u-card-media,
 .u-card-media-wide {
   background: url("/img/venice.jpg") center;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .u-list-item-avatar {
   background: url("/img/woman-avatar.jpg") center;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .chapter,
 .article-title {
-  margin-top: 80px; }
+  margin-top: 80px;
+}
 
 .chapter-title,
 .article-title {
   margin-bottom: 48px;
   font-size: 2rem;
   font-weight: 400;
-  color: #3f51b5; }
+  color: #3f51b5;
+}
 
 .article-title {
   margin-bottom: 1rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+}
 
 pre {
-  margin: 0; }
+  margin: 0;
+}
 
 code {
   unicode-bidi: plaintext;
   padding: 1rem !important;
-  background: transparent !important; }
+  background: transparent !important;
+}

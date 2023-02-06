@@ -2,10 +2,12 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -45,7 +47,7 @@ var umd;
                 }
             };
             this._template = template;
-            this._config = __assign({}, QuickDialogConfig.default, config);
+            this._config = __assign(__assign({}, QuickDialogConfig.default), config);
             if (beforeCreateDialog)
                 beforeCreateDialog();
             this._createDialog();
@@ -85,6 +87,19 @@ var umd;
         return QuickDialog;
     }());
     umd.QuickDialog = QuickDialog;
+    var ChipField = (function () {
+        function ChipField() {
+        }
+        ChipField.initializeChipFields = function () {
+            var chipFields = document.querySelectorAll('.u-chip-field');
+            for (var i = 0; i < chipFields.length; i++) {
+                var chipField = chipFields[i];
+                new TextFieldBase(chipField, function () { return this.defaultIsEmpty() && !this.element.querySelector('.u-chip'); });
+            }
+        };
+        return ChipField;
+    }());
+    umd.ChipField = ChipField;
     var ConfirmDialogConfig = (function (_super) {
         __extends(ConfirmDialogConfig, _super);
         function ConfirmDialogConfig() {
@@ -94,11 +109,11 @@ var umd;
         return ConfirmDialogConfig;
     }(QuickDialogConfig));
     umd.ConfirmDialogConfig = ConfirmDialogConfig;
-    var confirmDialogTemplate = "\n<div class=\"u-dialog show\">\n  <div class=\"u-dialog-backdrop\"></div>\n  <div class=\"u-dialog-content\">\n    <div class=\"u-dialog-header\">\n      <div class=\"u-dialog-title\"></div>\n    </div>    \n    <div class=\"u-dialog-body\"></div>\n    <div class=\"u-dialog-actions\">\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" cancelButton></button>\n      <button type=\"button\" class=\"u-btn-flat u-btn-primary\" confirmButton></button>\n    </div>\n  </div>\n</div>";
+    var confirmDialogTemplate = "\n<div class=\"u-dialog show\">\n  <div class=\"u-dialog-backdrop\"></div>\n  <div class=\"u-dialog-content\">\n    <div class=\"u-dialog-header\">\n      <div class=\"u-dialog-title\"></div>\n    </div>\n    <div class=\"u-dialog-body\"></div>\n    <div class=\"u-dialog-actions\">\n      <button type=\"button\" class=\"u-text-btn u-btn-primary\" cancelButton></button>\n      <button type=\"button\" class=\"u-text-btn u-btn-primary\" confirmButton></button>\n    </div>\n  </div>\n</div>";
     var ConfirmDialog = (function (_super) {
         __extends(ConfirmDialog, _super);
         function ConfirmDialog(message, config) {
-            var _this = _super.call(this, confirmDialogTemplate, __assign({}, ConfirmDialogConfig.default, { _message: message }, config)) || this;
+            var _this = _super.call(this, confirmDialogTemplate, __assign(__assign(__assign({}, ConfirmDialogConfig.default), { _message: message }), config)) || this;
             _this._message = message;
             return _this;
         }
@@ -135,18 +150,6 @@ var umd;
         return ConfirmDialog;
     }(QuickDialog));
     umd.ConfirmDialog = ConfirmDialog;
-    (function () {
-        if (typeof window['CustomEvent'] === "function")
-            return;
-        function CustomEvent(event, params) {
-            params = params || { bubbles: false, cancelable: false, detail: undefined };
-            var evt = document.createEvent('CustomEvent');
-            evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-            return evt;
-        }
-        CustomEvent.prototype = window['Event'].prototype;
-        window['CustomEvent'] = CustomEvent;
-    })();
     var DialogConfig = (function () {
         function DialogConfig() {
         }
@@ -187,7 +190,7 @@ var umd;
                 _this._showing = false;
                 _this.addAnimationEndEvents();
             };
-            this._dialogConfig = __assign({}, DialogConfig.default, dialogConfig);
+            this._dialogConfig = __assign(__assign({}, DialogConfig.default), dialogConfig);
             this._dialogBodyElement = this._dialogElement.querySelector('.u-dialog-body');
             if (this._dialogBodyElement) {
                 this._setBodyDividers();
@@ -259,7 +262,7 @@ var umd;
             this._dropdownMenu = _dropdownElement.querySelector('.u-dropdown-menu');
             if (!this._dropdownToggle || !this._dropdownToggle)
                 return;
-            this._dropdownConfig = __assign({}, DropdownConfig.default, dropdownConfig);
+            this._dropdownConfig = __assign(__assign({}, DropdownConfig.default), dropdownConfig);
             this._attachEvents();
         }
         Dropdown.attach = function (element, dropdownConfig) {
@@ -305,7 +308,7 @@ var umd;
         function ProgressDialogConfig() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        ProgressDialogConfig.default = __assign({}, QuickDialogConfig.default, { closeOnBackdropClick: false, closeOnEsc: false });
+        ProgressDialogConfig.default = __assign(__assign({}, QuickDialogConfig.default), { closeOnBackdropClick: false, closeOnEsc: false });
         return ProgressDialogConfig;
     }(QuickDialogConfig));
     umd.ProgressDialogConfig = ProgressDialogConfig;
@@ -313,7 +316,7 @@ var umd;
     var ProgressDialog = (function (_super) {
         __extends(ProgressDialog, _super);
         function ProgressDialog(message, config) {
-            var _this = _super.call(this, progressDialogTemplate, __assign({}, ProgressDialogConfig.default, { _message: message }, config)) || this;
+            var _this = _super.call(this, progressDialogTemplate, __assign(__assign(__assign({}, ProgressDialogConfig.default), { _message: message }), config)) || this;
             _this._message = message;
             return _this;
         }
@@ -333,16 +336,19 @@ var umd;
     }(QuickDialog));
     umd.ProgressDialog = ProgressDialog;
     umd.RippleContainersSelector = [
-        '.u-btn',
-        '.u-btn-flat',
-        '.u-btn-solid',
-        '.u-btn-raised',
-        '.u-btn-outline',
-        '.u-btn-floating',
-        '.u-btn-borderless',
+        '.u-text-btn',
+        '.u-filled-btn',
+        '.u-filled-tonal-btn',
+        '.u-outlined-btn',
+        '.u-elevated-btn',
+        '.u-floating-btn',
+        '.u-icon-filled-btn',
+        '.u-icon-filled-tonal-btn',
+        '.u-icon-outlined-btn',
+        '.u-icon-btn',
         '.u-tab',
         '.u-dropdown-item',
-        '.u-chip-remove',
+        '.u-chip-icon.u-chip-icon-action',
         '.u-chip-hover',
         '.u-text-input.u-dropdown-toggle'
     ].join(',');
@@ -364,10 +370,6 @@ var umd;
         {
             selector: '.u-radio',
             subSelector: '.u-selection-control'
-        },
-        {
-            selector: '.u-switch',
-            subSelector: '.u-check-indicator'
         },
         {
             selector: '.u-checkbox',
@@ -500,7 +502,7 @@ var umd;
             this._sliderTrackMarker = _sliderElement.querySelector('.u-slider-track-marker');
             this._sliderThumb = _sliderElement.querySelector('.u-slider-thumb');
             this._sliderInputElement = _sliderElement.querySelector('input[type=range]');
-            this._sliderInputElement.addEventListener(window.navigator.userAgent.indexOf('Trident/') > -1 ? 'change' : 'input', function () { return _this._setThumbAndTrack(); });
+            this._sliderInputElement.addEventListener('input', function () { return _this._setThumbAndTrack(); });
             this._sliderInputElement.setAttribute('aria-hidden', 'true');
             this._sliderElement.setAttribute('role', 'slider');
             this._sliderElement.setAttribute('aria-valuemin', this._sliderInputElement.min);
@@ -529,18 +531,17 @@ var umd;
             var offset = max - min;
             value -= min;
             var position = value * 100 / offset;
-            this._sliderThumb.style.width = position + "%";
-            this._sliderTrack.style.width = position + "%";
+            this._sliderThumb.style.width = "".concat(position, "%");
+            this._sliderTrack.style.width = "".concat(position, "%");
         };
         Slider.prototype.setDisabled = function (disabled) {
             if (disabled) {
                 this._sliderElement.setAttribute('aria-disabled', disabled.toString());
                 this._sliderInputElement.setAttribute('disabled', '');
+                return;
             }
-            else {
-                this._sliderElement.removeAttribute('aria-disabled');
-                this._sliderInputElement.removeAttribute('disabled');
-            }
+            this._sliderElement.removeAttribute('aria-disabled');
+            this._sliderInputElement.removeAttribute('disabled');
         };
         Slider.initializeSliders = function () {
             var sliders = document.querySelectorAll('.u-slider');
@@ -606,7 +607,7 @@ var umd;
         Snackbar.createButton = function (buttonDefinition) {
             var snackbarButton = document.createElement("button");
             snackbarButton.type = "button";
-            snackbarButton.className = "u-btn-flat u-btn-secondary";
+            snackbarButton.className = "u-text-btn";
             snackbarButton.innerText = buttonDefinition.text;
             new Ripple(snackbarButton);
             if (buttonDefinition.action) {
@@ -676,7 +677,6 @@ var umd;
                             tabFocusIndex = 0;
                         }
                     }
-                    console.log(tabFocusIndex);
                     tabBar._tabMap[tabFocusIndex].focus();
                 });
             }
@@ -746,56 +746,69 @@ var umd;
         return TabBar;
     }());
     umd.TabBar = TabBar;
-    var TextField = (function () {
-        function TextField(element) {
+    var TextFieldBase = (function () {
+        function TextFieldBase(element, isEmptyOverride) {
             var _this = this;
             var input = element.querySelector('input, textarea');
-            if (input) {
-                input.addEventListener('focus', function () {
-                    element.classList.add('focus');
-                });
-                input.addEventListener('blur', function () {
-                    element.classList.remove('focus');
-                });
-                this.element = element;
-                var prototype = void 0;
-                if (input.nodeName.toLowerCase() === 'input') {
-                    prototype = HTMLInputElement.prototype;
-                }
-                else if (input.nodeName.toLowerCase() === 'textarea') {
-                    prototype = HTMLTextAreaElement.prototype;
-                }
-                if (!prototype)
-                    return;
-                input.addEventListener('input', function () {
-                    _this.setEmpty();
-                });
-                var descriptor_1 = Object.getOwnPropertyDescriptor(prototype, 'value');
-                var inputSetter_1 = descriptor_1.set;
-                descriptor_1.set = function (val) {
-                    Object.defineProperty(input, "value", { set: inputSetter_1 });
-                    input.value = val;
-                    _this.setEmpty();
-                    Object.defineProperty(input, "value", descriptor_1);
-                };
-                Object.defineProperty(input, "value", descriptor_1);
-                this.input = input;
-                this.setEmpty();
+            if (!input) {
+                return;
             }
+            if (isEmptyOverride) {
+                this.isEmptyOverride = isEmptyOverride.bind(this);
+            }
+            element.addEventListener('click', function () { return input.focus(); });
+            input.addEventListener('focus', function () { return element.classList.add('focus'); });
+            input.addEventListener('blur', function () { return element.classList.remove('focus'); });
+            this.element = element;
+            var prototype;
+            if (input.nodeName.toLowerCase() === 'input') {
+                prototype = HTMLInputElement.prototype;
+            }
+            else if (input.nodeName.toLowerCase() === 'textarea') {
+                prototype = HTMLTextAreaElement.prototype;
+            }
+            if (!prototype)
+                return;
+            input.addEventListener('input', function () { return _this.setEmpty(); });
+            var descriptor = Object.getOwnPropertyDescriptor(prototype, 'value');
+            var inputSetter = descriptor.set;
+            descriptor.set = function (val) {
+                Object.defineProperty(input, "value", { set: inputSetter });
+                input.value = val;
+                _this.setEmpty();
+                Object.defineProperty(input, "value", descriptor);
+            };
+            Object.defineProperty(input, "value", descriptor);
+            this.input = input;
+            this.setEmpty();
         }
-        TextField.prototype.setEmpty = function () {
-            if (this.input.value) {
-                this.element.classList.remove('empty');
-            }
-            else {
+        TextFieldBase.prototype.setEmpty = function () {
+            if (this.isEmpty()) {
                 this.element.classList.add('empty');
+                return;
             }
+            this.element.classList.remove('empty');
         };
+        TextFieldBase.prototype.isEmpty = function () {
+            if (this.isEmptyOverride) {
+                return this.isEmptyOverride();
+            }
+            return this.defaultIsEmpty();
+        };
+        TextFieldBase.prototype.defaultIsEmpty = function () {
+            return !this.input.value;
+        };
+        return TextFieldBase;
+    }());
+    umd.TextFieldBase = TextFieldBase;
+    var TextField = (function () {
+        function TextField() {
+        }
         TextField.initializeTextFields = function () {
-            var textFields = document.querySelectorAll('.u-text-field');
+            var textFields = document.querySelectorAll('.u-text-field:not(.u-chip-field)');
             for (var i = 0; i < textFields.length; i++) {
                 var textField = textFields[i];
-                new TextField(textField);
+                new TextFieldBase(textField);
             }
         };
         return TextField;

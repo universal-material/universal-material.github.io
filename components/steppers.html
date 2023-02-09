@@ -22,8 +22,15 @@
             <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
                 <div class="u-list-item-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
                 <div class="u-list-item-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
-                <div class="u-list-item-content"><span>Typography</span></div></a><a class="u-list-item" href="/utilities/colors.html">
-                <div class="u-list-item-content"><span>Color</span></div></a>
+                <div class="u-list-item-content"><span>Typography</span></div></a>
+              <div class="u-list-item">
+                <div class="u-list-item-content"><span>Colors</span></div>
+                <div class="u-list-item-icon mdi mdi-chevron-down"></div>
+              </div>
+              <div class="nested-menu-items"><a class="u-list-item" href="/utilities/text-colors.html">
+                  <div class="u-list-item-content"><span>Text</span></div></a><a class="u-list-item" href="/utilities/background-colors.html">
+                  <div class="u-list-item-content"><span>Background</span></div></a><a class="u-list-item" href="/utilities/text-and-background-colors.html">
+                  <div class="u-list-item-content"><span>Text and background</span></div></a></div>
               <div class="u-list-item">
                 <div class="u-list-item-content"><span>Buttons</span></div>
                 <div class="u-list-item-icon mdi mdi-chevron-down"></div>
@@ -60,7 +67,15 @@
               <div class="u-toolbar-title">Material</div>
             </div>
             <div class="u-toolbar-end">
-              <div class="u-toolbar-actions"><a class="u-toolbar-action u-icon-btn" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+              <div class="u-toolbar-actions"><span class="u-dropdown u-toolbar-action">
+                  <button class="u-icon-btn u-dropdown-toggle"><i class="u-btn-icon mdi mdi-theme-light-dark"></i></button>
+                  <div class="u-dropdown-menu down-start">
+                    <div class="u-dropdown-content">
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Auto)">System</button>
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Light)">Light</button>
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Dark)">Dark</button>
+                    </div>
+                  </div></span><a class="u-toolbar-action u-icon-btn" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
                 <button class="u-toolbar-action u-icon-btn" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
               </div>
             </div>

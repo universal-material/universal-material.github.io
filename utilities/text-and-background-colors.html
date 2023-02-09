@@ -22,8 +22,15 @@
             <nav class="u-list u-list-selectable"><a class="u-list-item" href="/">
                 <div class="u-list-item-content">Introduction</div></a><a class="u-list-item" href="/layout/grid.html">
                 <div class="u-list-item-content"><span>Grid</span></div></a><a class="u-list-item" href="/content/typography.html">
-                <div class="u-list-item-content"><span>Typography</span></div></a><a class="u-list-item" href="/utilities/colors.html">
-                <div class="u-list-item-content"><span>Color</span></div></a>
+                <div class="u-list-item-content"><span>Typography</span></div></a>
+              <div class="u-list-item">
+                <div class="u-list-item-content"><span>Colors</span></div>
+                <div class="u-list-item-icon mdi mdi-chevron-down"></div>
+              </div>
+              <div class="nested-menu-items"><a class="u-list-item" href="/utilities/text-colors.html">
+                  <div class="u-list-item-content"><span>Text</span></div></a><a class="u-list-item" href="/utilities/background-colors.html">
+                  <div class="u-list-item-content"><span>Background</span></div></a><a class="u-list-item" href="/utilities/text-and-background-colors.html">
+                  <div class="u-list-item-content"><span>Text and background</span></div></a></div>
               <div class="u-list-item">
                 <div class="u-list-item-content"><span>Buttons</span></div>
                 <div class="u-list-item-icon mdi mdi-chevron-down"></div>
@@ -60,7 +67,15 @@
               <div class="u-toolbar-title">Material</div>
             </div>
             <div class="u-toolbar-end">
-              <div class="u-toolbar-actions"><a class="u-toolbar-action u-icon-btn" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+              <div class="u-toolbar-actions"><span class="u-dropdown u-toolbar-action">
+                  <button class="u-icon-btn u-dropdown-toggle"><i class="u-btn-icon mdi mdi-theme-light-dark"></i></button>
+                  <div class="u-dropdown-menu down-start">
+                    <div class="u-dropdown-content">
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Auto)">System</button>
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Light)">Light</button>
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Dark)">Dark</button>
+                    </div>
+                  </div></span><a class="u-toolbar-action u-icon-btn" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
                 <button class="u-toolbar-action u-icon-btn" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
               </div>
             </div>
@@ -68,147 +83,211 @@
         </div>
         <div class="u-container u-margin-lg-40 chapter" id="main-content">
           <h4 class="u-headline4 chapter-title">Colors</h4>
-          <h5 class="u-headline5 article-title">Text</h5>
-          <div class="u-card-elevated example-card">
-            <div class="u-card-content"><div class="u-headline-s u-text-primary">.u-text-primary</div>
-<div class="u-headline-s u-text-secondary">.u-text-secondary</div>
-<div class="u-headline-s u-text-tertiary">.u-text-tertiary</div>
-<div class="u-headline-s u-text-info">.u-text-info</div>
-<div class="u-headline-s u-text-warning">.u-text-warning</div>
-<div class="u-headline-s u-text-error">.u-text-error</div>
-<div class="u-headline-s u-text-high-emphasis">.u-text-high-emphasis</div>
-<div class="u-headline-s u-text-low-emphasis">.u-text-low-emphasis</div>
-<div class="u-headline-s u-text-lower-emphasis">.u-text-lower-emphasis</div>
-
-            </div>
-            <pre class="u-card-content example-card-code"><code class="language-html"></code></pre>
-          </div>
-          <h5 class="u-headline5 article-title">Background</h5>
-          <div class="u-card-elevated example-card">
-            <div class="u-card-content"><div class="p-4 u-bg-primary">.u-bg-primary</div>
-<div class="p-4 u-bg-secondary">.u-bg-secondary</div>
-<div class="p-4 u-bg-tertiary">.u-bg-tertiary</div>
-<div class="p-4 u-bg-surface">.u-bg-surface</div>
-<div class="p-4 u-bg-surface-variant">.u-bg-surface-variant</div>
-<div class="p-4 u-bg-body">.u-bg-body</div>
-
-            </div>
-            <pre class="u-card-content example-card-code"><code class="language-html"></code></pre>
-          </div>
-          <h5 class="u-headline5 article-title">Background & text</h5>
+          <h5 class="u-headline5 article-title">Theme colors</h5>
           <div class="u-card-elevated example-card">
             <div class="u-card-content"><div class="p-4 u-text-bg-primary">
-  <div>.u-bg-primary</div>
+  <div>.u-text-bg-primary</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
-    <button class="u-text-btn">Text button</button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-primary-container">
-  <div>.u-bg-primary-container</div>
+  <div>.u-text-bg-primary-container</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
-    <button class="u-text-btn">Text button</button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-secondary">
-  <div>.u-bg-secondary</div>
+  <div>.u-text-bg-secondary</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
-    <button class="u-text-btn">Text button</button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-secondary-container">
-  <div>.u-bg-secondary-container</div>
+  <div>.u-text-bg-secondary-container</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
-    <button class="u-text-btn">Text button</button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-tertiary">
-  <div>.u-bg-tertiary</div>
+  <div>.u-text-bg-tertiary</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
-    <button class="u-text-btn">Text button</button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-tertiary-container">
-  <div>.u-bg-tertiary-container</div>
+  <div>.u-text-bg-tertiary-container</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-error">
+  <div>.u-text-bg-error</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-error-container">
+  <div>.u-text-bg-error-container</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn u-text-high-emphasis">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-surface">
+  <div>.u-text-bg-surface</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
     <button class="u-text-btn">Text button</button>
   </div>
 </div>
-<div class="p-4 u-text-bg-surface">
-  <div>.u-bg-surface</div>
+<div class="p-4 u-text-bg-inverse-surface">
+  <div>.u-text-bg-inverse-surface</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
     <button class="u-text-btn">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-surface-variant">
-  <div>.u-bg-surface-variant</div>
+  <div>.u-text-bg-surface-variant</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-inverse-surface-variant">
+  <div>.u-text-bg-inverse-surface-variant</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
     <button class="u-text-btn">Text button</button>
   </div>
 </div>
 <div class="p-4 u-text-bg-body">
-  <div>.u-bg-body</div>
+  <div>.u-text-bg-body</div>
   <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
   <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
   <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
   <div class="u-divider"></div>
   <div class="u-btn-set">
-    <button class="u-icon-btn">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-inverse-mode">
+  <div>.u-text-bg-inverse-mode</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-light-mode">
+  <div>.u-text-bg-light-mode</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
+      <i class="u-btn-icon mdi mdi-heart"></i>
+    </button>
+    <button class="u-text-btn">Text button</button>
+  </div>
+</div>
+<div class="p-4 u-text-bg-dark-mode">
+  <div>.u-text-bg-dark-mode</div>
+  <div class="u-text-high-emphasis">.u-text-high-emphasis</div>
+  <div class="u-text-low-emphasis">.u-text-low-emphasis</div>
+  <div class="u-text-lower-emphasis">.u-text-lower-emphasis</div>
+  <div class="u-divider"></div>
+  <div class="u-btn-set">
+    <button class="u-icon-btn u-text-high-emphasis">
       <i class="u-btn-icon mdi mdi-heart"></i>
     </button>
     <button class="u-text-btn">Text button</button>

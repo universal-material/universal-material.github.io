@@ -1,3 +1,9 @@
+const ThemeMode = {
+  Auto: 0,
+  Light: 1,
+  Dark: 2
+};
+
 (function () {
 
   setExampleCodeText();
@@ -148,212 +154,25 @@ function setExampleCodeText() {
 }
 
 hljs.highlightAll();
-//
-// class uButton extends HTMLElement {
-//   #color = null;
-//   #variant = null;
-//   #iconSlot = null;
-//
-//   connectedCallback() {
-//
-//     this.attachShadow({mode: 'open'});
-//     this.shadowRoot.innerHTML = '<slot name="content"><slot part="icon" name="icon"></slot><slot></slot></slot>';
-//     this.#iconSlot = this.shadowRoot.querySelector('slot[name="icon"]');
-//     // this.#iconSlot.style.setProperty('display', 'none', 'important');
-//     // this.#iconSlot.addEventListener('slotchange', () => {
-//     //   if (!this.#iconSlot.children.length) {
-//     //     this.#iconSlot.style.setProperty('display', 'none', 'important');
-//     //     return;
-//     //   }
-//     //
-//     //   this.#iconSlot.style.display = '';
-//     // });
-//
-//     console.log();
-//   }
-//
-//   static get observedAttributes() {
-//     return ['color', 'variant'];
-//   }
-//
-//   set color(value) {
-//     const previousValue = this.#color;
-//     this.#color = value;
-//
-//
-//     if (previousValue) {
-//       this.classList.remove(`u-btn-${previousValue}`);
-//     }
-//
-//     this.classList.add(`u-btn-${value}`);
-//   }
-//
-//   get color() {
-//     return this.#color;
-//   }
-//
-//   set variant(value) {
-//     const previousValue = this.#variant;
-//     this.#variant = value;
-//
-//
-//     if (previousValue) {
-//       this.classList.remove(`u-${previousValue}-btn`);
-//     }
-//
-//     this.classList.add(`u-${value}-btn`);
-//   }
-//
-//   get variant() {
-//     return this.#variant;
-//   }
-//
-//   attributeChangedCallback(name, oldValue, newValue) {
-//
-//     switch (name) {
-//       case 'color':
-//         this.color = newValue;
-//         break;
-//       case 'variant':
-//         this.variant = newValue;
-//         break;
-//     }
-//   }
-// }
-//
-// customElements.define('u-button', uButton);
 
-class CustomButton extends HTMLButtonElement {
-  #internals = null;
-  #container = document.createElement('DIV');
-  #color = null;
-  #variant = null;
+let currentThemeMode = parseInt(localStorage.currentThemeMode, 10) || 0;
 
-  constructor() {
-    super();
-    const styles = new CSSStyleSheet();
-    styles.replaceSync(`
-:host {
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid;
-  border-radius: 20px;
-}`);
-
-    this.#container.innerHTML = this.innerHTML;
-    this.innerHTML = '';
-    this.#container.attachShadow({ mode: "open" });
-    this.#container.shadowRoot.innerHTML = '<slot></slot>';
-    this.#container.shadowRoot.adoptedStyleSheets = [styles];
-    this.appendChild(this.#container);
-    this.variant = null;
-  }
-
-  static get observedAttributes() {
-    return ['color', 'variant'];
-  }
-
-  set color(value) {
-    const previousValue = this.#color;
-    this.#color = value;
-
-
-    if (previousValue) {
-      this.classList.remove(`u-btn-${previousValue}`);
-    }
-
-    if (value) {
-      this.classList.add(`u-btn-${value}`);
-    }
-  }
-
-  get color() {
-    return this.#color;
-  }
-
-  set variant(value) {
-    value ??= 'filled';
-
-    const previousValue = this.#variant;
-    this.#variant = value;
-
-
-    if (previousValue) {
-      this.classList.remove(`u-${previousValue}-btn`);
-    }
-
-    this.classList.add(`u-${value}-btn`);
-  }
-
-  get variant() {
-    return this.#variant;
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-
-    switch (name) {
-      case 'color':
-        this.color = newValue;
-        break;
-      case 'variant':
-        this.variant = newValue;
-        break;
-    }
-  }
+function setThemeMode(mode) {
+  currentThemeMode = mode;
+  localStorage.currentThemeMode = mode;
+  applyThemeMode();
 }
 
-customElements.define('u-button', CustomButton, { extends: 'button'});
+function applyThemeMode() {
+  const darkMode = currentThemeMode === ThemeMode.Dark ||
+    currentThemeMode  === ThemeMode.Auto && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-class TextField extends HTMLInputElement {
-  constructor() {
-    super();
-
-    this.attachShadow({mode: 'open'});
-    this.shadowRoot.innerHTML = '<slot></slot>';
+  if (!darkMode) {
+    document.body.classList.remove('u-dark-mode');
+    return;
   }
 
-  attachInput(input) {
-    
-  }
+  document.body.classList.add('u-dark-mode');
 }
 
-customElements.define('u-text-field', TextField);
-class uInput extends HTMLInputElement {
-  connectedCallback() {
-    let parent = this.parentElement;
-
-    while (parent) {
-      if (parent instanceof TextField) {
-        parent.attachInput(this);
-        break;
-      }
-
-      parent = parent.parentElement;
-    }
-  }
-
-
-
-}
-
-customElements.define('u-input', uInput, { extends: 'input'});
-
-class CustomButton2 extends HTMLElement {
-  constructor() {
-    super();
-    const styles = new CSSStyleSheet();
-    styles.replaceSync(`
-:host {
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid;
-  border-radius: 20px;
-}`);
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.innerHTML = '<slot></slot>';
-    this.shadowRoot.adoptedStyleSheets = [styles];
-  }
-
-}
-
-customElements.define('u-button2', CustomButton2);
+applyThemeMode();

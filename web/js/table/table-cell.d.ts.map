@@ -1,1 +1,0 @@
-{"version":3,"file":"table-cell.d.ts","sourceRoot":"","sources":["../../src/table/table-cell.ts"],"names":[],"mappings":"AAAA,OAAO,EAAQ,kBAAkB,EAAE,UAAU,EAAE,MAAM,KAAK,CAAC;AAM3D,qBACa,SAAU,SAAQ,UAAU;IAEvC,OAAgB,MAAM,4BAAwB;cAE3B,MAAM,IAAI,kBAAkB;CAGhD;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,MAAM,EAAE,SAAS,CAAC;KACnB;CACF"}

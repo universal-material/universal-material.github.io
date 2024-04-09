@@ -1,1 +1,0 @@
-{"version":3,"file":"table-row.styles.js","sourceRoot":"","sources":["../../src/table/table-row.styles.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAE,MAAM,KAAK,CAAC;AAE1B,MAAM,CAAC,MAAM,MAAM,GAAG,GAAG,CAAC;;;;CAIzB,CAAC","sourcesContent":["import { css } from 'lit';\n\nexport const styles = css `\n  :host {\n    display: table-row;\n  }\n`;\n"]}

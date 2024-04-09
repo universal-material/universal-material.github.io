@@ -1,1 +1,0 @@
-{"version":3,"file":"elevation.d.ts","sourceRoot":"","sources":["../../src/elevation/elevation.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,KAAK,CAAC;AAKjC,qBACa,SAAU,SAAQ,UAAU;IACvC,OAAgB,MAAM,0BAAU;IAEvB,UAAU,SAAU;CAC9B;AAED,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,qBAAqB;QAC7B,aAAa,EAAE,SAAS,CAAC;KAC1B;CACF"}

@@ -9,7 +9,7 @@ import { customElement, property, queryAssignedElements } from 'lit/decorators.j
 import { ButtonBase } from './button-base';
 import { styles as buttonBaseStyles } from './button-base.styles';
 import { styles } from './button.styles';
-import '../ripple/ripple';
+import '../ripple/ripple.js';
 let Button = class Button extends ButtonBase {
     constructor() {
         super(...arguments);

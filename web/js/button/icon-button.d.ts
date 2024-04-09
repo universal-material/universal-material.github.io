@@ -1,5 +1,5 @@
 import { CSSResult, HTMLTemplateResult, nothing } from 'lit';
-import '../ripple/ripple';
+import '../ripple/ripple.js';
 import { ButtonBase } from './button-base';
 export declare class IconButton extends ButtonBase {
     static styles: CSSResult | CSSResult[];

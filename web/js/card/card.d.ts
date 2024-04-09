@@ -1,7 +1,7 @@
 import { HTMLTemplateResult, LitElement } from 'lit';
-import './card-content';
-import './card-media';
-import '../elevation/elevation';
+import './card-content.js';
+import './card-media.js';
+import '../elevation/elevation.js';
 export declare class Card extends LitElement {
     static styles: import("lit").CSSResult[];
     /**

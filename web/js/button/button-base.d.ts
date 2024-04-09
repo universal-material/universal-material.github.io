@@ -1,6 +1,6 @@
 import { HTMLTemplateResult, LitElement, nothing } from 'lit';
-import '../elevation/elevation';
-import '../ripple/ripple';
+import '../elevation/elevation.js';
+import '../ripple/ripple.js';
 export declare abstract class ButtonBase extends LitElement {
     #private;
     static readonly formAssociated = true;

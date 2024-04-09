@@ -8,9 +8,9 @@ import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styles as baseStyles } from '../shared/base.styles';
 import { styles } from './card.styles';
-import './card-content';
-import './card-media';
-import '../elevation/elevation';
+import './card-content.js';
+import './card-media.js';
+import '../elevation/elevation.js';
 let Card = class Card extends LitElement {
     constructor() {
         super(...arguments);

@@ -1,6 +1,6 @@
 import { CSSResult, HTMLTemplateResult } from 'lit';
 import { ButtonBase } from './button-base';
-import '../ripple/ripple';
+import '../ripple/ripple.js';
 export declare class Button extends ButtonBase {
     static styles: CSSResult | CSSResult[];
     /**

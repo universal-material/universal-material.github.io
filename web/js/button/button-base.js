@@ -18,8 +18,8 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
 var _ButtonBase_elementInternals;
 import { html, LitElement, nothing } from 'lit';
 import { property, query } from 'lit/decorators.js';
-import '../elevation/elevation';
-import '../ripple/ripple';
+import '../elevation/elevation.js';
+import '../ripple/ripple.js';
 export class ButtonBase extends LitElement {
     /**
      * The `<form>` element to associate the button with (its form owner). The value of this attribute must be the id of a `<form>` in the same document. (If this attribute is not set, the button is associated with its ancestor `<form>` element, if any.)

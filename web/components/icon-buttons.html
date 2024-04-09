@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <base href="/web/">
+    <title>Universal Material</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/base16/atelier-sulphurpool-light.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/docs.css">
+    <script type="module" src="js/index.js"></script>
+    <body class="u-android">
+      <div class="u-drawer u-drawer-lg-dismissible">
+        <aside class="u-drawer-content u-navigation-drawer">
+          <div class="u-drawer-scrollable-container">
+            <h6 class="u-navigation-drawer-headline u-headline-s">Material Design</h6>
+            <nav class="u-list u-list-selectable"><a class="u-list-item" href="">
+                <div class="u-list-item-content">Introduction</div></a>
+              <!--a.u-list-item(href="layout/grid.html")
+              .u-list-item-content
+                span Grid
+              
+              -->
+              <!--a.u-list-item(href="content/typography.html")
+              .u-list-item-content
+                span Typography
+              
+              -->
+              <!--.u-list-item
+              .u-list-item-content
+                span Colors
+              .u-list-item-icon.mdi.mdi-chevron-down
+              
+              -->
+              <!--.nested-menu-items
+              a.u-list-item(href="utilities/text-colors.html")
+                .u-list-item-content
+                  span Text
+              a.u-list-item(href="utilities/background-colors.html")
+                .u-list-item-content
+                  span Background
+              a.u-list-item(href="utilities/text-and-background-colors.html")
+                .u-list-item-content
+                  span Text and background
+              
+              -->
+              <div class="u-list-item">
+                <div class="u-list-item-content"><span>Buttons</span></div>
+                <div class="u-list-item-icon mdi mdi-chevron-down"></div>
+              </div>
+              <div class="nested-menu-items"><a class="u-list-item" href="components/common-buttons.html">
+                  <div class="u-list-item-content"><span>Common buttons</span></div></a><a class="u-list-item" href="components/fab.html">
+                  <div class="u-list-item-content"><span>Floating Action Button (FAB)</span></div></a><a class="u-list-item" href="components/icon-buttons.html">
+                  <div class="u-list-item-content"><span>Icon buttons</span></div></a><a class="u-list-item" href="components/button-set.html">
+                  <div class="u-list-item-content"><span>Button set</span></div></a></div><a class="u-list-item" href="components/cards.html">
+                <div class="u-list-item-content"><span>Cards</span></div></a>
+              <!--a.u-list-item(href="components/checkbox.html")
+              .u-list-item-content
+                span Checkbox
+              
+              -->
+              <!--a.u-list-item(href="components/chips.html")
+              .u-list-item-content
+                span Chips
+              
+              --><a class="u-list-item" href="components/data-tables.html">
+                <div class="u-list-item-content"><span>Data tables</span></div></a>
+              <!--a.u-list-item(href="components/dialogs.html")
+              .u-list-item-content
+                span Dialogs
+              
+              --><a class="u-list-item" href="components/dividers.html">
+                <div class="u-list-item-content"><span>Dividers</span></div></a>
+              <!--a.u-list-item(href="components/lists.html")
+              .u-list-item-content
+                span Lists
+              
+              -->
+              <!--a.u-list-item(href="components/menus.html")
+              .u-list-item-content
+                span Menus
+              
+              -->
+              <!--a.u-list-item(href="components/progress.html")
+              .u-list-item-content
+                span Progress
+              
+              -->
+              <!--a.u-list-item(href="components/selection-controls.html")
+              .u-list-item-content
+                span Selection controls
+              
+              -->
+              <!--a.u-list-item(href="components/sliders.html")
+              .u-list-item-content
+                span Sliders
+              
+              -->
+              <!--a.u-list-item(href="components/snackbars.html")
+              .u-list-item-content
+                span Snackbars
+              
+              -->
+              <!--a.u-list-item(href="components/tabs.html")
+              .u-list-item-content
+                span Tabs
+              
+              -->
+              <!--a.u-list-item(href="components/text-fields.html")
+              .u-list-item-content
+                span Text fields
+              
+              -->
+              <!--a.u-list-item(href="components/toolbars.html")
+              .u-list-item-content
+                span Toolbars
+              
+              -->
+            </nav>
+          </div>
+        </aside>
+        <div class="u-drawer-backdrop d-lg-none"></div>
+        <div class="u-toolbar u-toolbar-fixed" id="app-bar">
+          <div class="u-toolbar-row">
+            <div class="u-toolbar-start">
+              <div class="u-toolbar-actions">
+                <button class="u-toolbar-action u-icon-btn" type="button" id="menu-toggle"><i class="u-btn-icon mdi mdi-menu"></i></button>
+              </div>
+            </div>
+            <div class="u-toolbar-center">
+              <div class="u-toolbar-title">Material</div>
+            </div>
+            <div class="u-toolbar-end">
+              <div class="u-toolbar-actions"><span class="u-dropdown u-toolbar-action">
+                  <button class="u-icon-btn u-dropdown-toggle"><i class="u-btn-icon mdi mdi-theme-light-dark"></i></button>
+                  <div class="u-dropdown-menu down-start">
+                    <div class="u-dropdown-content">
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Auto)">System</button>
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Light)">Light</button>
+                      <button class="u-dropdown-item" href="#" onclick="setThemeMode(ThemeMode.Dark)">Dark</button>
+                    </div>
+                  </div></span><a class="u-toolbar-action u-icon-btn" href="/angular" title="Universal Material Angular"><i class="u-btn-icon mdi mdi-angular"></i></a>
+                <button class="u-toolbar-action u-icon-btn" id="rtl-toggle" type="button" title="Rtl"><i class="u-btn-icon mdi mdi-format-align-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <u-container class="chapter" id="main-content">
+          <h4 class="u-display-m chapter-title">Icon buttons</h4>
+          <h5 class="u-headline-m article-title">Variants</h5>
+          <u-card class="example-card" variant="outlined">
+<u-card-content><u-icon-button>
+  <i class="mdi mdi-cards-heart-outline"></i>
+</u-icon-button>
+<u-icon-button variant="outlined">
+  <i class="mdi mdi-cards-heart-outline"></i>
+</u-icon-button>
+<u-icon-button variant="filled">
+  <i class="mdi mdi-heart"></i>
+</u-icon-button>
+<u-icon-button variant="tonal">
+  <i class="mdi mdi-heart"></i>
+</u-icon-button>
+<u-icon-button disabled>
+  <i class="mdi mdi-cards-heart-outline"></i>
+</u-icon-button>
+</u-card-content>
+<u-card-content class="example-card-code" slot="after-content">
+  <pre><code class="language-html">&lt;u-icon-button&gt;
+  &lt;i class=&quot;mdi mdi-cards-heart-outline&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button variant=&quot;outlined&quot;&gt;
+  &lt;i class=&quot;mdi mdi-cards-heart-outline&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button variant=&quot;filled&quot;&gt;
+  &lt;i class=&quot;mdi mdi-heart&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button variant=&quot;tonal&quot;&gt;
+  &lt;i class=&quot;mdi mdi-heart&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button disabled&gt;
+  &lt;i class=&quot;mdi mdi-cards-heart-outline&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+</code></pre>
+</u-card-content>
+          </u-card>
+          <h5 class="u-headline-m article-title">Anchor buttons</h5>
+          <u-card class="example-card" variant="outlined">
+<u-card-content><u-icon-button href="https://github.com/universal-material/universal-material-web" target="_blank">
+  <i class="mdi mdi-share"></i>
+</u-icon-button>
+<u-icon-button variant="outlined" href="https://github.com/universal-material/universal-material-web" target="_blank">
+  <i class="mdi mdi-share"></i>
+</u-icon-button>
+<u-icon-button variant="filled">
+  <i class="mdi mdi-share"></i>
+</u-icon-button>
+<u-icon-button variant="tonal" href="https://github.com/universal-material/universal-material-web" target="_blank">
+  <i class="mdi mdi-share"></i>
+</u-icon-button>
+<u-icon-button disabled href="https://github.com/universal-material/universal-material-web" target="_blank">
+  <i class="mdi mdi-share"></i>
+</u-icon-button>
+</u-card-content>
+<u-card-content class="example-card-code" slot="after-content">
+  <pre><code class="language-html">&lt;u-icon-button href=&quot;https://github.com/universal-material/universal-material-web&quot; target=&quot;_blank&quot;&gt;
+  &lt;i class=&quot;mdi mdi-share&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button variant=&quot;outlined&quot; href=&quot;https://github.com/universal-material/universal-material-web&quot; target=&quot;_blank&quot;&gt;
+  &lt;i class=&quot;mdi mdi-share&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button variant=&quot;filled&quot;&gt;
+  &lt;i class=&quot;mdi mdi-share&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button variant=&quot;tonal&quot; href=&quot;https://github.com/universal-material/universal-material-web&quot; target=&quot;_blank&quot;&gt;
+  &lt;i class=&quot;mdi mdi-share&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+&lt;u-icon-button disabled href=&quot;https://github.com/universal-material/universal-material-web&quot; target=&quot;_blank&quot;&gt;
+  &lt;i class=&quot;mdi mdi-share&quot;&gt;&lt;/i&gt;
+&lt;/u-icon-button&gt;
+</code></pre>
+</u-card-content>
+          </u-card>
+          <h5 class="u-headline-m article-title">Toggles</h5>
+          <u-card class="example-card" variant="outlined">
+<u-card-content><div>
+  <u-icon-button toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="outlined" toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="filled" toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="tonal" toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button disabled toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+</div>
+<div>
+  <u-icon-button selected toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="outlined" selected toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="filled" selected toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="tonal" selected toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button disabled selected toggle>
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button selected toggle aria-label="off" aria-label-selected="on">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+</div>
+</u-card-content>
+<u-card-content class="example-card-code" slot="after-content">
+  <pre><code class="language-html">&lt;div&gt;
+  &lt;u-icon-button toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;outlined&quot; toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;filled&quot; toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;tonal&quot; toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button disabled toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;u-icon-button selected toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;outlined&quot; selected toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;filled&quot; selected toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;tonal&quot; selected toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button disabled selected toggle&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button selected toggle aria-label=&quot;off&quot; aria-label-selected=&quot;on&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+&lt;/div&gt;
+</code></pre>
+</u-card-content>
+          </u-card>
+          <h5 class="u-headline-m article-title">Toggles (manual)</h5>
+          <u-card class="example-card" variant="outlined">
+<u-card-content><div>
+  <u-icon-button onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="outlined" onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="filled" onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="tonal" onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button disabled onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+</div>
+<div>
+  <u-icon-button selected onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="outlined" selected onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="filled" selected onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button variant="tonal" selected onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+  <u-icon-button disabled selected onclick="this.selected = !this.selected">
+    <i class="mdi mdi-close"></i>
+    <i slot="selected" class="mdi mdi-check"></i>
+  </u-icon-button>
+</div>
+</u-card-content>
+<u-card-content class="example-card-code" slot="after-content">
+  <pre><code class="language-html">&lt;div&gt;
+  &lt;u-icon-button onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;outlined&quot; onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;filled&quot; onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;tonal&quot; onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button disabled onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;u-icon-button selected onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;outlined&quot; selected onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;filled&quot; selected onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button variant=&quot;tonal&quot; selected onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+  &lt;u-icon-button disabled selected onclick=&quot;this.selected = !this.selected&quot;&gt;
+    &lt;i class=&quot;mdi mdi-close&quot;&gt;&lt;/i&gt;
+    &lt;i slot=&quot;selected&quot; class=&quot;mdi mdi-check&quot;&gt;&lt;/i&gt;
+  &lt;/u-icon-button&gt;
+&lt;/div&gt;
+</code></pre>
+</u-card-content>
+          </u-card>
+          <h5 class="u-headline-m article-title">API</h5>
+          <u-card class="api-card" variant="outlined">
+            <u-table slot="before-content">
+              <u-thead>
+                <u-tr>
+                  <u-th>Property</u-th>
+                  <u-th>Attribute</u-th>
+                  <u-th>Type</u-th>
+                  <u-th>Default</u-th>
+                  <u-th>Description</u-th>
+                </u-tr>
+              </u-thead>
+              <u-tbody>
+                <u-tr>
+                  <u-td><code>variant</code>
+                  </u-td>
+                  <u-td><code>variant</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>'standard'</code>
+                  </u-td>
+                  <u-td class="api-description-cell"></u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>toggle</code>
+                  </u-td>
+                  <u-td><code>toggle</code>
+                  </u-td>
+                  <u-td><code>boolean</code></u-td>
+                  <u-td><code>false</code>
+                  </u-td>
+                  <u-td class="api-description-cell">When true, the button will toggle between selected and unselected
+states</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>hasSelectionIcon</code>
+                  </u-td>
+                  <u-td><code>has-selection-icon</code>
+                  </u-td>
+                  <u-td><code>boolean</code></u-td>
+                  <u-td><code>false</code>
+                  </u-td>
+                  <u-td class="api-description-cell"></u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>selected</code>
+                  </u-td>
+                  <u-td><code>selected</code>
+                  </u-td>
+                  <u-td><code>boolean</code></u-td>
+                  <u-td><code>false</code>
+                  </u-td>
+                  <u-td class="api-description-cell">Sets the selected state. When false, displays the default icon. When true,
+displays the selected icon, or the default icon If no <code>slot=&quot;selected&quot;</code>
+icon is provided.</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>ariaLabelSelected</code>
+                  </u-td>
+                  <u-td><code>aria-label-selected</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>''</code>
+                  </u-td>
+                  <u-td class="api-description-cell">The <code>aria-label</code> of the button when the button is toggleable and selected.</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>disabled</code>
+                  </u-td>
+                  <u-td><code>disabled</code>
+                  </u-td>
+                  <u-td><code>boolean</code></u-td>
+                  <u-td><code>false</code>
+                  </u-td>
+                  <u-td class="api-description-cell">Whether the button is disabled.</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>href</code>
+                  </u-td>
+                  <u-td><code>href</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>''</code>
+                  </u-td>
+                  <u-td class="api-description-cell">The URL that the link button points to.</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>target</code>
+                  </u-td>
+                  <u-td><code>target</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>''</code>
+                  </u-td>
+                  <u-td class="api-description-cell">Where to display the linked <code>href</code> URL for a link button. Common options
+include <code>_blank</code> to open in a new tab.</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>type</code>
+                  </u-td>
+                  <u-td><code>type</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>'submit'</code>
+                  </u-td>
+                  <u-td class="api-description-cell"></u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>value</code>
+                  </u-td>
+                  <u-td><code>value</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>''</code>
+                  </u-td>
+                  <u-td class="api-description-cell"></u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>name</code>
+                  </u-td>
+                  <u-td><code>name</code>
+                  </u-td>
+                  <u-td><code>string</code></u-td>
+                  <u-td><code>undefined</code>
+                  </u-td>
+                  <u-td class="api-description-cell"></u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>form</code>
+                  </u-td>
+                  <u-td><code>form</code>
+                  </u-td>
+                  <u-td><code>HTMLFormElement</code></u-td>
+                  <u-td>
+                  </u-td>
+                  <u-td class="api-description-cell">The <code>&lt;form&gt;</code> element to associate the button with (its form owner). The value of this attribute must be the id of a <code>&lt;form&gt;</code> in the same document. (If this attribute is not set, the button is associated with its ancestor <code>&lt;form&gt;</code> element, if any.)
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#form" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#form</a></u-td>
+                </u-tr>
+              </u-tbody>
+            </u-table>
+          </u-card>
+        </u-container>
+      </div>
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="js/universal-material.js"></script>
+    <script src="js/docs.js"></script>
+  </head>
+</html>

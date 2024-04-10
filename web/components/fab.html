@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/docs.css">
-    <script type="module" src="js/index.bundled.js"></script>
+    <script type="module" src="js/index.js"></script>
     <body class="u-android">
       <div class="u-drawer u-drawer-lg-dismissible">
         <aside class="u-drawer-content u-navigation-drawer">
@@ -92,7 +92,8 @@
               .u-list-item-content
                 span Progress
               
-              -->
+              --><a class="u-list-item" href="components/ripple.html">
+                <div class="u-list-item-content"><span>Ripple</span></div></a>
               <!--a.u-list-item(href="components/selection-controls.html")
               .u-list-item-content
                 span Selection controls
@@ -158,28 +159,28 @@
             <h5 class="u-headline-m article-title">Sizes</h5>
             <u-card class="example-card" variant="outlined">
 <u-card-content><u-fab size="small">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 
 <u-fab>
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 
 <u-fab size="large">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 </u-card-content>
 <u-card-content class="example-card-code" slot="after-content">
   <pre><code class="language-html">&lt;u-fab size=&quot;small&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 
 &lt;u-fab&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 
 &lt;u-fab size=&quot;large&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 </code></pre>
 </u-card-content>
@@ -187,42 +188,42 @@
             <h5 class="u-headline-m article-title">Colors</h5>
             <u-card class="example-card" variant="outlined">
 <u-card-content><u-fab>
-  <i slot="icon" class="mdi mdi-pencil"></i>
-</u-fab>
-<u-fab color="surface">
-  <i slot="icon" class="mdi mdi-pencil"></i>
-</u-fab>
-<u-fab color="branded">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab color="secondary">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab color="tertiary">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
+</u-fab>
+<u-fab color="surface">
+  <i class="mdi mdi-pencil"></i>
+</u-fab>
+<u-fab color="branded">
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab disabled>
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 </u-card-content>
 <u-card-content class="example-card-code" slot="after-content">
   <pre><code class="language-html">&lt;u-fab&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
-&lt;/u-fab&gt;
-&lt;u-fab color=&quot;surface&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
-&lt;/u-fab&gt;
-&lt;u-fab color=&quot;branded&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab color=&quot;secondary&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab color=&quot;tertiary&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+&lt;/u-fab&gt;
+&lt;u-fab color=&quot;surface&quot;&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+&lt;/u-fab&gt;
+&lt;u-fab color=&quot;branded&quot;&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab disabled&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 </code></pre>
 </u-card-content>
@@ -230,42 +231,42 @@
             <h5 class="u-headline-m article-title">Extended</h5>
             <u-card class="example-card" variant="outlined">
 <u-card-content><u-fab label="Compose">
-  <i slot="icon" class="mdi mdi-pencil"></i>
-</u-fab>
-<u-fab color="surface" label="Compose">
-  <i slot="icon" class="mdi mdi-pencil"></i>
-</u-fab>
-<u-fab color="branded" label="Compose">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab color="secondary" label="Compose">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab color="tertiary" label="Compose">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
+</u-fab>
+<u-fab color="surface" label="Compose">
+  <i class="mdi mdi-pencil"></i>
+</u-fab>
+<u-fab color="branded" label="Compose">
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab disabled label="Compose">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 </u-card-content>
 <u-card-content class="example-card-code" slot="after-content">
   <pre><code class="language-html">&lt;u-fab label=&quot;Compose&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
-&lt;/u-fab&gt;
-&lt;u-fab color=&quot;surface&quot; label=&quot;Compose&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
-&lt;/u-fab&gt;
-&lt;u-fab color=&quot;branded&quot; label=&quot;Compose&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab color=&quot;secondary&quot; label=&quot;Compose&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab color=&quot;tertiary&quot; label=&quot;Compose&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+&lt;/u-fab&gt;
+&lt;u-fab color=&quot;surface&quot; label=&quot;Compose&quot;&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+&lt;/u-fab&gt;
+&lt;u-fab color=&quot;branded&quot; label=&quot;Compose&quot;&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab disabled label=&quot;Compose&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 </code></pre>
 </u-card-content>
@@ -273,18 +274,18 @@
             <h5 class="u-headline-m article-title">Lowered</h5>
             <u-card class="example-card" variant="outlined">
 <u-card-content><u-fab color="branded">
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 <u-fab color="branded" lowered>
-  <i slot="icon" class="mdi mdi-pencil"></i>
+  <i class="mdi mdi-pencil"></i>
 </u-fab>
 </u-card-content>
 <u-card-content class="example-card-code" slot="after-content">
   <pre><code class="language-html">&lt;u-fab color=&quot;branded&quot;&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 &lt;u-fab color=&quot;branded&quot; lowered&gt;
-  &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
 &lt;/u-fab&gt;
 </code></pre>
 </u-card-content>
@@ -293,14 +294,14 @@
             <u-card class="example-card" variant="outlined">
 <u-card-content><div class="u-floating-action-area">
   <u-fab>
-    <i slot="icon" class="mdi mdi-plus"></i>
+    <i class="mdi mdi-plus"></i>
   </u-fab>
 </div>
 </u-card-content>
 <u-card-content class="example-card-code" slot="after-content">
   <pre><code class="language-html">&lt;div class=&quot;u-floating-action-area&quot;&gt;
   &lt;u-fab&gt;
-    &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-plus&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;mdi mdi-plus&quot;&gt;&lt;/i&gt;
   &lt;/u-fab&gt;
 &lt;/div&gt;
 </code></pre>
@@ -311,10 +312,10 @@
 <u-card-content><div class="u-floating-action-area">
   <div class="u-floating-menu">
     <u-fab size="small" color="tertiary" lowered>
-      <i slot="icon" class="mdi mdi-crosshairs-gps"></i>
+      <i class="mdi mdi-crosshairs-gps"></i>
     </u-fab>
     <u-fab label="Navigate" lowered>
-      <i slot="icon" class="mdi mdi-crosshairs-gps"></i>
+      <i class="mdi mdi-crosshairs-gps"></i>
     </u-fab>
   </div>
 </div>
@@ -323,10 +324,10 @@
   <pre><code class="language-html">&lt;div class=&quot;u-floating-action-area&quot;&gt;
   &lt;div class=&quot;u-floating-menu&quot;&gt;
     &lt;u-fab size=&quot;small&quot; color=&quot;tertiary&quot; lowered&gt;
-      &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-crosshairs-gps&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;mdi mdi-crosshairs-gps&quot;&gt;&lt;/i&gt;
     &lt;/u-fab&gt;
     &lt;u-fab label=&quot;Navigate&quot; lowered&gt;
-      &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-crosshairs-gps&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;mdi mdi-crosshairs-gps&quot;&gt;&lt;/i&gt;
     &lt;/u-fab&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -351,7 +352,7 @@
                     </u-td>
                     <u-td><code>color</code>
                     </u-td>
-                    <u-td><code>string</code></u-td>
+                    <u-td><code>import(&quot;D:/Projects/universal-material-web/src/button/fab&quot;).UmFabColor</code></u-td>
                     <u-td><code>'primary'</code>
                     </u-td>
                     <u-td class="api-description-cell">The FAB color variant to render.</u-td>
@@ -361,7 +362,7 @@
                     </u-td>
                     <u-td><code>size</code>
                     </u-td>
-                    <u-td><code>string</code></u-td>
+                    <u-td><code>import(&quot;D:/Projects/universal-material-web/src/button/fab&quot;).UmFabSize</code></u-td>
                     <u-td><code>'medium'</code>
                     </u-td>
                     <u-td class="api-description-cell">The size of the FAB.</u-td>
@@ -404,7 +405,7 @@
                     <u-td><code>boolean</code></u-td>
                     <u-td><code>false</code>
                     </u-td>
-                    <u-td class="api-description-cell">Whether the button is disabled.</u-td>
+                    <u-td class="api-description-cell">Whether the button is disabled or not.</u-td>
                   </u-tr>
                   <u-tr>
                     <u-td><code>href</code>
@@ -477,7 +478,6 @@ include <code>_blank</code> to open in a new tab.</u-td>
       </div>
     </body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script src="js/universal-material.js"></script>
-    <script src="js/docs.js"></script>
+    <script src="js/docs.js" type="module"></script>
   </head>
 </html>

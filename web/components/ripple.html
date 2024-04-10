@@ -154,42 +154,57 @@
           </div>
         </div>
         <u-container class="chapter" id="main-content">
-          <h4 class="u-display-m chapter-title">Typography</h4>
+          <h4 class="u-display-m chapter-title">Ripple</h4>
+          <h5 class="u-headline-m article-title">Usage</h5>
           <u-card class="example-card" variant="outlined">
-<u-card-content><h1 class="u-display-l">Display</h1>
-<h2 class="u-display-m">Display</h2>
-<h3 class="u-display-s">Display</h3>
-<h4 class="u-headline-l">Headline</h4>
-<h5 class="u-headline-m">Headline</h5>
-<h6 class="u-headline-s">Headline</h6>
-<h6 class="u-title-l">Title</h6>
-<h6 class="u-title-m">Title</h6>
-<h6 class="u-title-s">Title</h6>
-<div class="u-label-l">Label</div>
-<div class="u-label-m">Label</div>
-<div class="u-label-s">Label</div>
-<div class="u-body-l">Body</div>
-<div class="u-body-m">Body</div>
-<div class="u-body-s">Body</div>
+<u-card-content><div class="d-flex">
+  <div class="ripple-example-container">
+    <u-ripple></u-ripple>
+  </div>
+
+  <div class="ripple-example-container round ml-3">
+    <u-ripple></u-ripple>
+  </div>
+</div>
 </u-card-content>
 <u-card-content class="example-card-code" slot="after-content">
-  <pre><code class="language-html">&lt;h1 class=&quot;u-display-l&quot;&gt;Display&lt;/h1&gt;
-&lt;h2 class=&quot;u-display-m&quot;&gt;Display&lt;/h2&gt;
-&lt;h3 class=&quot;u-display-s&quot;&gt;Display&lt;/h3&gt;
-&lt;h4 class=&quot;u-headline-l&quot;&gt;Headline&lt;/h4&gt;
-&lt;h5 class=&quot;u-headline-m&quot;&gt;Headline&lt;/h5&gt;
-&lt;h6 class=&quot;u-headline-s&quot;&gt;Headline&lt;/h6&gt;
-&lt;h6 class=&quot;u-title-l&quot;&gt;Title&lt;/h6&gt;
-&lt;h6 class=&quot;u-title-m&quot;&gt;Title&lt;/h6&gt;
-&lt;h6 class=&quot;u-title-s&quot;&gt;Title&lt;/h6&gt;
-&lt;div class=&quot;u-label-l&quot;&gt;Label&lt;/div&gt;
-&lt;div class=&quot;u-label-m&quot;&gt;Label&lt;/div&gt;
-&lt;div class=&quot;u-label-s&quot;&gt;Label&lt;/div&gt;
-&lt;div class=&quot;u-body-l&quot;&gt;Body&lt;/div&gt;
-&lt;div class=&quot;u-body-m&quot;&gt;Body&lt;/div&gt;
-&lt;div class=&quot;u-body-s&quot;&gt;Body&lt;/div&gt;
+  <pre><code class="language-html">&lt;div class=&quot;d-flex&quot;&gt;
+  &lt;div class=&quot;ripple-example-container&quot;&gt;
+    &lt;u-ripple&gt;&lt;/u-ripple&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;ripple-example-container round ml-3&quot;&gt;
+    &lt;u-ripple&gt;&lt;/u-ripple&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 </u-card-content>
+          </u-card>
+          <h5 class="u-headline-m article-title">API</h5>
+          <u-card class="api-card" variant="outlined">
+            <u-table slot="before-content">
+              <u-thead>
+                <u-tr>
+                  <u-th>Property</u-th>
+                  <u-th>Attribute</u-th>
+                  <u-th>Type</u-th>
+                  <u-th>Default</u-th>
+                  <u-th>Description</u-th>
+                </u-tr>
+              </u-thead>
+              <u-tbody>
+                <u-tr>
+                  <u-td><code>disabled</code>
+                  </u-td>
+                  <u-td><code>disabled</code>
+                  </u-td>
+                  <u-td><code>boolean</code></u-td>
+                  <u-td><code>false</code>
+                  </u-td>
+                  <u-td class="api-description-cell">Disables the ripple.</u-td>
+                </u-tr>
+              </u-tbody>
+            </u-table>
           </u-card>
         </u-container>
       </div>

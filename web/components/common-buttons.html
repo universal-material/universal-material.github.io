@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/docs.css">
-    <script type="module" src="js/index.bundled.js"></script>
+    <script type="module" src="js/index.js"></script>
     <body class="u-android">
       <div class="u-drawer u-drawer-lg-dismissible">
         <aside class="u-drawer-content u-navigation-drawer">
@@ -92,7 +92,8 @@
               .u-list-item-content
                 span Progress
               
-              -->
+              --><a class="u-list-item" href="components/ripple.html">
+                <div class="u-list-item-content"><span>Ripple</span></div></a>
               <!--a.u-list-item(href="components/selection-controls.html")
               .u-list-item-content
                 span Selection controls
@@ -170,6 +171,21 @@
 &lt;u-button variant=&quot;outlined&quot;&gt;Outlined&lt;/u-button&gt;
 &lt;u-button variant=&quot;text&quot;&gt;Text&lt;/u-button&gt;
 &lt;u-button variant=&quot;elevated&quot; disabled&gt;Disabled&lt;/u-button&gt;
+</code></pre>
+</u-card-content>
+          </u-card>
+          <h5 class="u-headline-m article-title">Filled colors</h5>
+          <u-card class="example-card" variant="outlined">
+<u-card-content><u-button>Filled</u-button>
+<u-button color="secondary">Secondary</u-button>
+<u-button color="tertiary">Tertiary</u-button>
+<u-button color="error">Error</u-button>
+</u-card-content>
+<u-card-content class="example-card-code" slot="after-content">
+  <pre><code class="language-html">&lt;u-button&gt;Filled&lt;/u-button&gt;
+&lt;u-button color=&quot;secondary&quot;&gt;Secondary&lt;/u-button&gt;
+&lt;u-button color=&quot;tertiary&quot;&gt;Tertiary&lt;/u-button&gt;
+&lt;u-button color=&quot;error&quot;&gt;Error&lt;/u-button&gt;
 </code></pre>
 </u-card-content>
           </u-card>
@@ -322,10 +338,22 @@
                   </u-td>
                   <u-td><code>variant</code>
                   </u-td>
-                  <u-td><code>string</code></u-td>
+                  <u-td><code>import(&quot;D:/Projects/universal-material-web/src/button/button&quot;).UmButtonVariant</code></u-td>
                   <u-td><code>'filled'</code>
                   </u-td>
-                  <u-td class="api-description-cell">The Button variant to render.</u-td>
+                  <u-td class="api-description-cell">The Button variant to render</u-td>
+                </u-tr>
+                <u-tr>
+                  <u-td><code>color</code>
+                  </u-td>
+                  <u-td><code>color</code>
+                  </u-td>
+                  <u-td><code>import(&quot;D:/Projects/universal-material-web/src/button/button&quot;).UmButtonColor</code></u-td>
+                  <u-td><code>undefined</code>
+                  </u-td>
+                  <u-td class="api-description-cell">The Button color
+
+<em>Note:</em> Filled buttons only</u-td>
                 </u-tr>
                 <u-tr>
                   <u-td><code>trailingIcon</code>
@@ -357,7 +385,7 @@
                   <u-td><code>boolean</code></u-td>
                   <u-td><code>false</code>
                   </u-td>
-                  <u-td class="api-description-cell">Whether the button is disabled.</u-td>
+                  <u-td class="api-description-cell">Whether the button is disabled or not.</u-td>
                 </u-tr>
                 <u-tr>
                   <u-td><code>href</code>
@@ -429,7 +457,6 @@ include <code>_blank</code> to open in a new tab.</u-td>
       </div>
     </body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script src="js/universal-material.js"></script>
-    <script src="js/docs.js"></script>
+    <script src="js/docs.js" type="module"></script>
   </head>
 </html>

@@ -1,4 +1,6 @@
-const ThemeMode = {
+import { ThemeBuilder } from './theme/index.js';
+
+window.ThemeMode = {
   Auto: 0,
   Light: 1,
   Dark: 2
@@ -41,6 +43,14 @@ const ThemeMode = {
     .addEventListener("click", toggleSidebar);
 
   document
+    .querySelector(".u-dropdown-toggle")
+    .addEventListener("click", e => e.currentTarget.nextElementSibling.classList.toggle('show'));
+
+  document
+    .querySelector(".u-dropdown-menu")
+    .addEventListener("click", e => e.currentTarget.classList.remove('show'));
+
+  document
     .getElementById("rtl-toggle")
     .addEventListener("click", toggleRtl);
 
@@ -48,13 +58,6 @@ const ThemeMode = {
   sidebarBackdrop.addEventListener("click", toggleSidebar);
 
   window.addEventListener("scroll", mainContentScroll);
-
-  umd.Ripple.initializeRipples();
-  umd.TextField.initializeTextFields();
-  umd.ChipField.initializeChipFields();
-  umd.Dropdown.initializeDropdowns();
-  umd.TabBar.initializeTabBars();
-  umd.Slider.initializeSliders();
 
   let textField = document.querySelector('.u-text-field-box');
   const textInput = document.querySelector('#text-field-box');
@@ -123,7 +126,7 @@ hljs.highlightAll();
 
 let currentThemeMode = parseInt(localStorage.currentThemeMode, 10) || 0;
 
-function setThemeMode(mode) {
+window.setThemeMode = mode => {
   currentThemeMode = mode;
   localStorage.currentThemeMode = mode;
   applyThemeMode();
@@ -142,3 +145,17 @@ function applyThemeMode() {
 }
 
 applyThemeMode();
+
+window.createTheme = color => {
+  const styles = ThemeBuilder.create(color).build();
+
+  let themeStylesElement = document.getElementById('theme-styles');
+
+  if (!themeStylesElement) {
+    themeStylesElement = document.createElement('style');
+    themeStylesElement.id = 'theme-styles';
+    document.head.appendChild(themeStylesElement);
+  }
+
+  themeStylesElement.innerText = styles;
+}

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/docs.css">
-    <script type="module" src="js/index.bundled.js"></script>
+    <script type="module" src="js/index.js"></script>
     <body class="u-android">
       <div class="u-drawer u-drawer-lg-dismissible">
         <aside class="u-drawer-content u-navigation-drawer">
@@ -92,7 +92,8 @@
               .u-list-item-content
                 span Progress
               
-              -->
+              --><a class="u-list-item" href="components/ripple.html">
+                <div class="u-list-item-content"><span>Ripple</span></div></a>
               <!--a.u-list-item(href="components/selection-controls.html")
               .u-list-item-content
                 span Selection controls
@@ -159,7 +160,7 @@
             <u-card class="example-card" variant="outlined">
 <u-card-content><u-button-set>
   <u-fab>
-    <i slot="icon" class="mdi mdi-pencil"></i>
+    <i class="mdi mdi-pencil"></i>
   </u-fab>
 
   <u-button>Filled</u-button>
@@ -171,7 +172,7 @@
 
 <u-button-set align="center">
   <u-fab>
-    <i slot="icon" class="mdi mdi-pencil"></i>
+    <i class="mdi mdi-pencil"></i>
   </u-fab>
 
   <u-button>Filled</u-button>
@@ -183,7 +184,7 @@
 
 <u-button-set align="start">
   <u-fab>
-    <i slot="icon" class="mdi mdi-pencil"></i>
+    <i class="mdi mdi-pencil"></i>
   </u-fab>
 
   <u-button>Filled</u-button>
@@ -196,7 +197,7 @@
 <u-card-content class="example-card-code" slot="after-content">
   <pre><code class="language-html">&lt;u-button-set&gt;
   &lt;u-fab&gt;
-    &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
   &lt;/u-fab&gt;
 
   &lt;u-button&gt;Filled&lt;/u-button&gt;
@@ -208,7 +209,7 @@
 
 &lt;u-button-set align=&quot;center&quot;&gt;
   &lt;u-fab&gt;
-    &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
   &lt;/u-fab&gt;
 
   &lt;u-button&gt;Filled&lt;/u-button&gt;
@@ -220,7 +221,7 @@
 
 &lt;u-button-set align=&quot;start&quot;&gt;
   &lt;u-fab&gt;
-    &lt;i slot=&quot;icon&quot; class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
+    &lt;i class=&quot;mdi mdi-pencil&quot;&gt;&lt;/i&gt;
   &lt;/u-fab&gt;
 
   &lt;u-button&gt;Filled&lt;/u-button&gt;
@@ -332,7 +333,7 @@
                     </u-td>
                     <u-td><code>align</code>
                     </u-td>
-                    <u-td><code>string</code></u-td>
+                    <u-td><code>import(&quot;D:/Projects/universal-material-web/src/button/button-set&quot;).UmButtonSetAlignment</code></u-td>
                     <u-td><code>'end'</code>
                     </u-td>
                     <u-td class="api-description-cell">Set the alignment of the buttons at the <code>start</code>, <code>center</code> or at the <code>end</code>.</u-td>
@@ -345,7 +346,7 @@
                     <u-td><code>boolean</code></u-td>
                     <u-td><code>false</code>
                     </u-td>
-                    <u-td class="api-description-cell">Whether ot not render the buttons stacked</u-td>
+                    <u-td class="api-description-cell">Whether to render the buttons stacked or not</u-td>
                   </u-tr>
                 </u-tbody>
               </u-table>
@@ -355,7 +356,6 @@
       </div>
     </body>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script src="js/universal-material.js"></script>
-    <script src="js/docs.js"></script>
+    <script src="js/docs.js" type="module"></script>
   </head>
 </html>

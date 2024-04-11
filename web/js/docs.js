@@ -1,4 +1,4 @@
-import { ThemeBuilder } from './theme/index.js';
+import { ThemeBuilder } from './index.js';
 
 window.ThemeMode = {
   Auto: 0,

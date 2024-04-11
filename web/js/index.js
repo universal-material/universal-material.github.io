@@ -317,6 +317,8 @@ const at=t=>(e,r)=>{void 0!==r?r.addInitializer((()=>{customElements.define(t,e)
 
   ::slotted([slot=icon]) {
     display: inline-block;
+    width: var(--u-common-button-icon-size, 1.125rem);
+    height: var(--u-common-button-icon-size, 1.125rem);
     margin-inline-end: 8px;
     font-size: var(--u-common-button-icon-size, 1.125rem);
     line-height: var(--u-common-button-icon-size, 1.125rem);
@@ -432,9 +434,9 @@ const at=t=>(e,r)=>{void 0!==r?r.addInitializer((()=>{customElements.define(t,e)
   }
 
   .icon {
-    display: inline-block;
-    width: var(--u-icon-button-icon-size, 1.5rem);
-    height: var(--u-icon-button-icon-size, 1.5rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: var(--u-icon-button-icon-size, 1.5rem);
     line-height: var(--u-icon-button-icon-size, 1.5rem);
   }

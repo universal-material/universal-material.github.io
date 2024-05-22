@@ -1945,11 +1945,11 @@
   }
 `),Ge=Be`
   :host(.selected) {
-    background-color: var(--u-select-option-selected-bg-color, var(--u-color-primary-container, rgb(234, 221, 255)));
+    background-color: var(--u-select-option-selected-bg-color, rgba(var(--u-color-primary-rgb, 103, 80, 164), 0.12));
   }
   :host(.selected) .icon,
   :host(.selected) .content {
-    color: var(--u-select-option-selected-text-color, var(--u-color-on-primary-container, rgb(33, 0, 93)));
+    color: var(--u-select-option-selected-text-color, var(--u-color-primary, rgb(103, 80, 164)));
   }
 
   :host(:not(.selected):not([has-trailing-icon])) .trailing {
@@ -2041,7 +2041,7 @@
     `}renderDefaultTrailingIcon(){return Hn`
       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 -960 960 960" width="1em" fill="currentColor">
         <path d="M480-360 280-560h400L480-360Z"/>
-      </svg>`}updated(s){super.updated(s),this.empty=!this.selectedOptions[0]?.textContent?.trim(),this.elementInternals.setFormValue(this._nativeSelect.value||null)}attributeChangedCallback(s,u,m){super.attributeChangedCallback(s,u,m),"disabled"===s&&(this._nativeSelect.disabled=null===m)}connectedCallback(){super.connectedCallback(),this.#i=!0,this.#h()}disconnectedCallback(){super.disconnectedCallback(),this.#n.detach(),this.#i=!1,this._nativeSelect.remove(),this._button.removeEventListener("click",this.#a),this._menu.removeEventListener("click",this.#c),this._menu.removeEventListener("open",this.#u),this._menu.removeEventListener("opened",this.#d),this._menu.removeEventListener("close",this.#f)}#a;#c(s){s.stopPropagation()}#u;#d;#f;#h(){var s=this;return(0,I.A)(function*(){yield s.updateComplete,s._nativeSelect.disabled=s.hasAttribute("disabled"),s.#n.attach(s),s._updateOptions(),s._input.appendChild(s._nativeSelect),s._input.appendChild(s.#e),s._button.addEventListener("click",s.#a),s._menu.anchorElement=s._container,s._menu.addEventListener("click",s.#c),s._menu.addEventListener("open",s.#u),s._menu.addEventListener("opened",s.#d),s._menu.addEventListener("close",s.#f)})()}get _menuItems(){return this._options}};vi([zn()],_i.prototype,"value",null),vi([jn("u-menu")],_i.prototype,"_menu",void 0),vi([jn(".button")],_i.prototype,"_button",void 0),vi([jn(".input")],_i.prototype,"_input",void 0),vi([zn()],_i.prototype,"selectedIndex",null),_i=vi([wn("u-select")],_i);const Xi=Be`
+      </svg>`}updated(s){super.updated(s),this.empty=!this.selectedOptions[0]?.textContent?.trim(),this.elementInternals.setFormValue(this._nativeSelect.value||null)}attributeChangedCallback(s,u,m){super.attributeChangedCallback(s,u,m),"disabled"===s&&(this._nativeSelect.disabled=null===m)}connectedCallback(){super.connectedCallback(),this.#i=!0,this.#h()}disconnectedCallback(){super.disconnectedCallback(),this.#p()}#a;#c(s){s.stopPropagation()}#u;#d;#f;#h(){var s=this;return(0,I.A)(function*(){yield s.updateComplete,s._nativeSelect.disabled=s.hasAttribute("disabled"),s.#n.attach(s),s._updateOptions(),s._input.appendChild(s._nativeSelect),s._input.appendChild(s.#e),s._button.addEventListener("click",s.#a),s._menu.anchorElement=s._container,s._menu.addEventListener("click",s.#c),s._menu.addEventListener("open",s.#u),s._menu.addEventListener("opened",s.#d),s._menu.addEventListener("close",s.#f)})()}#p(){var s=this;return(0,I.A)(function*(){yield s.updateComplete,s.#n.detach(),s.#i=!1,s._nativeSelect.remove(),s._button.removeEventListener("click",s.#a),s._menu.removeEventListener("click",s.#c),s._menu.removeEventListener("open",s.#u),s._menu.removeEventListener("opened",s.#d),s._menu.removeEventListener("close",s.#f)})()}get _menuItems(){return this._options}};vi([zn()],_i.prototype,"value",null),vi([jn("u-menu",!0)],_i.prototype,"_menu",void 0),vi([jn(".button",!0)],_i.prototype,"_button",void 0),vi([jn(".input",!0)],_i.prototype,"_input",void 0),vi([zn()],_i.prototype,"selectedIndex",null),_i=vi([wn("u-select")],_i);const Xi=Be`
   :host {
     display: block;
     padding-block: var(--u-list-padding, 8px);

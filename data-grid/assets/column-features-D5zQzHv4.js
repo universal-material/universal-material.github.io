@@ -1,1 +1,0 @@
-const e={title:"Column features",intro:"Resizing, auto width, reordering by drag or keyboard, fixed columns and a column chooser. The user's choices are kept in the grid's own state — your column objects are never modified — and each gesture fires an event.",readme:"#column-features",examples:["resizing","auto-width","fixed-columns","chooser-and-events"]};export{e as default};

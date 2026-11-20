@@ -1,0 +1,31 @@
+import{a as x}from"./chunk-VLPIBHPO.js";import{c as l}from"./chunk-JUHLOZQQ.js";import"./chunk-GRAK4QNI.js";import"./chunk-CSQ3XL6T.js";import"./chunk-A2AONSIM.js";import"./chunk-7ANKUTMV.js";import{Lb as g,Na as r,bb as c,qb as a,rb as n,sb as d,tb as o}from"./chunk-QUVZ4KUC.js";import"./chunk-IPU5OYZE.js";var s=`<div class="u-p-large u-text-bg-primary">.u-text-bg-primary</div>
+<div class="u-p-large u-text-bg-primary-container">.u-text-bg-primary-container</div>
+<div class="u-p-large u-text-bg-primary-fixed">.u-text-bg-primary-fixed</div>
+<div class="u-p-large u-text-bg-primary-fixed-dim">.u-text-bg-primary-fixed-dim</div>
+<div class="u-p-large u-text-bg-secondary">.u-text-bg-secondary</div>
+<div class="u-p-large u-text-bg-secondary-container">.u-text-bg-secondary-container</div>
+<div class="u-p-large u-text-bg-secondary-fixed">.u-text-bg-secondary-fixed</div>
+<div class="u-p-large u-text-bg-secondary-fixed-dim">.u-text-bg-secondary-fixed-dim</div>
+<div class="u-p-large u-text-bg-tertiary">.u-text-bg-tertiary</div>
+<div class="u-p-large u-text-bg-tertiary-container">.u-text-bg-tertiary-container</div>
+<div class="u-p-large u-text-bg-tertiary-fixed">.u-text-bg-tertiary-fixed</div>
+<div class="u-p-large u-text-bg-tertiary-fixed-dim">.u-text-bg-tertiary-fixed-dim</div>
+<div class="u-p-large u-text-bg-info">.u-text-bg-info</div>
+<div class="u-p-large u-text-bg-info-container">.u-text-bg-info-container</div>
+<div class="u-p-large u-text-bg-success">.u-text-bg-success</div>
+<div class="u-p-large u-text-bg-success-container">.u-text-bg-success-container</div>
+<div class="u-p-large u-text-bg-warning">.u-text-bg-warning</div>
+<div class="u-p-large u-text-bg-warning-container">.u-text-bg-warning-container</div>
+<div class="u-p-large u-text-bg-error">.u-text-bg-error</div>
+<div class="u-p-large u-text-bg-error-container">.u-text-bg-error-container</div>
+<div class="u-p-large u-text-bg-surface">.u-text-bg-surface</div>
+<div class="u-p-large u-text-bg-surface-variant">.u-text-bg-surface-variant</div>
+<div class="u-p-large u-text-bg-surface-container">.u-text-bg-surface-container</div>
+<div class="u-p-large u-text-bg-surface-container-highest">.u-text-bg-surface-container-highest</div>
+<div class="u-p-large u-text-bg-surface-container-high">.u-text-bg-surface-container-high</div>
+<div class="u-p-large u-text-bg-surface-container-low">.u-text-bg-surface-container-low</div>
+<div class="u-p-large u-text-bg-surface-container-lowest">.u-text-bg-surface-container-lowest</div>
+<div class="u-p-large u-text-bg-body">.u-text-bg-body</div>
+<div class="u-p-large u-text-bg-light">.u-text-bg-light</div>
+<div class="u-p-large u-text-bg-dark">.u-text-bg-dark</div>
+`;var w=(()=>{let e=class e{constructor(){this.colorsHtml=s,this.inverseColorsHtml=s.replace(/<div class="u-p-large u-text-bg-(primary-fixed|secondary-fixed|tertiary-fixed|info|warning|success|light|dark).+\n/g,"").replace(/-bg-/g,"-bg-inverse-")}};e.\u0275fac=function(t){return new(t||e)},e.\u0275cmp=c({type:e,selectors:[["docs-text-and-background-colors"]],decls:4,vars:2,consts:[["title","Color and background","kind","utility"],["sectionTitle","Colors",3,"html"],["sectionTitle","Inverse colors",3,"html"]],template:function(t,u){t&1&&(n(0,"docs-title",0),g(1,"Combo utilities that pair foreground and background colors with the right contrast out of the box."),d(),o(2,"docs-example",1)(3,"docs-example",2)),t&2&&(r(2),a("html",u.colorsHtml),r(),a("html",u.inverseColorsHtml))},dependencies:[x,l],encapsulation:2});let i=e;return i})();export{w as TextAndBackgroundColorsComponent};

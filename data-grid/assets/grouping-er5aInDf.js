@@ -1,0 +1,1 @@
+const e={title:"Grouping",intro:"Drag a column header to the bar above the table to group by it; drag the chips to reorder or remove levels. `groupIndex` on a column sets the initial grouping, and the API (`groupColumn`, `ungroupColumn`, `expandGroup`, `expandAllGroups`…) drives it from code.",readme:"#grouping",examples:["drag-to-group","api","ranges"]};export{e as default};
